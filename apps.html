@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile App — Dự &#225;n — Nguyễn Trung Kiên, UI/UX Designer</title>
+<meta name="description" content="C&#225;c ứng dụng di động t&#244;i thiết kế: từ nghi&#234;n cứu vấn đề, user flow, style guide đến hệ thống giao diện ho&#224;n chỉnh. Bấm v&#224;o từng dự &#225;n để xem chi tiết.">
+<meta property="og:title" content="Mobile App — Dự &#225;n — Nguyễn Trung Kiên">
+<meta property="og:description" content="C&#225;c ứng dụng di động t&#244;i thiết kế: từ nghi&#234;n cứu vấn đề, user flow, style guide đến hệ thống giao diện ho&#224;n chỉnh. Bấm v&#224;o từng dự &#225;n để xem chi tiết.">
+<meta property="og:image" content="assets/projects/kimdong-1.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;800&family=Be+Vietnam+Pro:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#150A0F;--ink:#FBF2F4;--muted:#9C8B92;--accent:#FF6B81;--line:rgba(251,242,244,.10);--display:'Unbounded',sans-serif;--body:'Be Vietnam Pro',sans-serif;--mono:'Space Mono',monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-weight:300;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;height:auto}
+::selection{background:var(--accent);color:var(--bg)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:900;display:flex;align-items:center;justify-content:space-between;padding:24px 5vw;mix-blend-mode:difference}
+.nav .logo{font-family:var(--display);font-weight:800;font-size:1.05rem}
+.nav .back{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
+.nav .back:hover{opacity:.6}
+.hero{position:relative;padding:20vh 5vw 8vh;overflow:hidden}
+.aura{position:absolute;width:56vmax;height:56vmax;border-radius:50%;filter:blur(130px);opacity:.28;pointer-events:none;background:radial-gradient(circle,var(--accent) 0%,transparent 65%);top:-24vmax;right:-18vmax}
+.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:16px;margin-bottom:4vh;position:relative}
+.eyebrow::before{content:"";width:48px;height:1px;background:var(--accent)}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,8vw,6.8rem);line-height:1;letter-spacing:-.02em;text-transform:uppercase;position:relative}
+h1 .ghost{color:transparent;-webkit-text-stroke:1px var(--muted)}
+.lead{max-width:640px;font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.75;color:var(--muted);margin-top:5vh;position:relative}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:28px;margin-top:7vh;padding-top:4vh;border-top:1px solid var(--line);position:relative}
+.meta dt{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.meta dd{font-weight:500;font-size:1rem}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;border:1px solid var(--line);border-radius:999px;padding:5px 12px}
+.case{padding:2vh 5vw 10vh;max-width:1560px;margin:0 auto}
+.shot{margin:0 0 5vh}
+.shot figcaption{font-family:var(--mono);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;display:flex;align-items:center;gap:14px}
+.shot figcaption::before{content:"";width:28px;height:1px;background:var(--accent)}
+.frame{display:block;border-radius:16px;overflow:hidden;background:#0D060A;border:1px solid var(--line);transition:border-color .3s,transform .3s}
+.frame:hover{border-color:var(--accent)}
+.phones{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:22px;align-items:start;margin:0 0 5vh}
+.phones .frame{border-radius:22px}
+.phones figcaption{margin:10px 2px 0;font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;color:var(--muted)}
+.pager{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.pager a{padding:7vh 5vw;display:flex;flex-direction:column;gap:12px;transition:background .4s}
+.pager a:hover{background:rgba(251,242,244,.04)}
+.pager a+a{border-left:1px solid var(--line);text-align:right;align-items:flex-end}
+.pager small{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.pager strong{font-family:var(--display);font-weight:600;font-size:clamp(1.1rem,2.8vw,2.2rem);text-transform:uppercase}
+.pager a:hover strong{color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:28px;padding:2vh 5vw 10vh;max-width:1560px;margin:0 auto}
+.card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:rgba(251,242,244,.02);transition:transform .35s,border-color .35s}
+.card:hover{transform:translateY(-6px);border-color:var(--ca)}
+.card .media{aspect-ratio:16/10;overflow:hidden;background:#0D060A;position:relative}
+.card .media img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .6s}
+.card:hover .media img{transform:scale(1.04)}
+.card .media.contain{background:color-mix(in srgb,var(--ca) 18%,#0D060A);display:flex;justify-content:center;padding:18px 0 0}
+.card .media.contain img{width:auto;height:100%;object-fit:contain;object-position:top center;border-radius:18px 18px 0 0}
+.card .body{padding:22px 24px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card .tag{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ca)}
+.card h3{font-family:var(--display);font-weight:600;font-size:1.25rem;text-transform:uppercase;line-height:1.15}
+.card p{color:var(--muted);line-height:1.65;font-size:.95rem;flex:1}
+.card .cta{font-family:var(--mono);font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ca);margin-top:6px}
+.switch{display:flex;flex-wrap:wrap;gap:10px;padding:0 5vw 4vh;position:relative}
+.switch a{font-family:var(--mono);font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:8px 16px}
+.switch a:hover,.switch a.on{border-color:var(--accent);color:var(--accent)}
+footer{padding:6vh 5vw;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between;font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;color:var(--muted)}
+footer a:hover{color:var(--accent)}
+@media(max-width:700px){.nav .logo{font-size:.9rem}.pager{grid-template-columns:1fr}.pager a+a{border-left:0;border-top:1px solid var(--line);text-align:left;align-items:flex-start}.phones{grid-template-columns:repeat(2,1fr);gap:14px}.grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.card .media img{transition:none}}
+:root{--accent:#FF6B81}
+</style>
+</head><body>
+<nav class="nav"><a class="logo" href="index.html">KIÊN.</a><a class="back" href="index.html#apps">← Trang chủ</a></nav>
+<header class="hero">
+  <div class="aura"></div>
+  <div class="eyebrow">Dự án · 10 dự án</div>
+  <h1>Mobile App <span class="ghost">Dự &#225;n</span></h1>
+  <p class="lead">C&#225;c ứng dụng di động t&#244;i thiết kế: từ nghi&#234;n cứu vấn đề, user flow, style guide đến hệ thống giao diện ho&#224;n chỉnh. Bấm v&#224;o từng dự &#225;n để xem chi tiết.</p>
+</header>
+<div class="switch"><a href="apps.html" class="on">Mobile App</a><a href="webapps.html">Web App</a><a href="websites.html">Website</a></div>
+<main class="grid">
+  <a class="card" href="project-kimdong.html" style="--ca:#E8485E">
+    <div class="media"><img src="assets/projects/kimdong-1.webp" width="1400" height="1100" loading="lazy" decoding="async" alt="Kim Đồng Bookstore"></div>
+    <div class="body"><span class="tag">Redesign &#183; Mobile App</span><h3>Kim Đồng Bookstore</h3><p>Thiết kế lại trải nghiệm ứng dụng nh&#224; s&#225;ch Kim Đồng: điều hướng, gợi &#253; c&#225; nh&#226;n h&#243;a v&#224; hệ thống giao diện mới cho phụ huynh v&#224; bạn đọc nhỏ tuổi.</p><span class="cta">Xem chi tiết →</span></div>
+  </a>
+  <a class="card" href="project-heartwise.html" style="--ca:#4CC76A">
+    <div class="media"><img src="assets/projects/heartwise-1.webp" width="1400" height="1100" loading="lazy" decoding="async" alt="HeartWise"></div>
+    <div class="body"><span class="tag">Habit Building &#183; Gamification</span><h3>HeartWise</h3><p>Ứng dụng x&#226;y dựng th&#243;i quen ăn uống v&#224; vận động để ph&#242;ng ngừa bệnh tim, giữ động lực mỗi ng&#224;y qua tương t&#225;c dạng tr&#242; chơi.</p><span class="cta">Xem chi tiết →</span></div>
+  </a>
+  <a class="card" href="project-scancalo.html" style="--ca:#FF8A1F">
+    <div class="media"><img src="assets/projects/scancalo-1.webp" width="3000" height="1980" loading="lazy" decoding="async" alt="Scan Calo"></div>
+    <div class="body"><span class="tag">Health &amp; Nutrition &#183; Mobile App</span><h3>Scan Calo</h3><p>Ứng dụng theo d&#245;i dinh dưỡng v&#224; calo: qu&#233;t m&#243;n ăn bằng camera, th&#234;m hoạt động, check-in hằng ng&#224;y, c&#244;ng thức nấu ăn, tủ lạnh, chuỗi streak, mục ti&#234;u uống nước v&#224; g&#243;i trả ph&#237; trong ứng dụng.</p><span class="cta">Xem chi tiết →</span></div>
+  </a>
+  <a class="card" href="project-kinhnguyet.html" style="--ca:#FF6B8B">
+    <div class="media"><img src="assets/projects/kinhnguyet-1.webp" width="2200" height="1750" loading="lazy" decoding="async" alt="Kinh nguyệt"></div>
+    <div class="body"><span class="tag">Women&#39;s Health &#183; Mobile App</span><h3>Kinh nguyệt</h3><p>Ứng dụng theo d&#245;i chu kỳ kinh nguyệt: onboarding, trang chủ dạng lịch, ph&#226;n t&#237;ch chu kỳ, ghi ch&#250; hằng ng&#224;y, tr&#242; chuyện với trợ l&#253; AI v&#224; c&#225;c thiết lập c&#225; nh&#226;n.</p><span class="cta">Xem chi tiết →</span></div>
+  </a>
+  <a class="card" href="project-kinhthanh.html" style="--ca:#C9A66B">
+    <div class="media"><img src="assets/projects/kinhthanh-1.webp" width="2200" height="1977" loading="lazy" decoding="async" alt="Kinh Th&#225;nh"></div>
+    <div class="body"><span class="tag">Lifestyle &#183; Mobile App</span><h3>Kinh Th&#225;nh</h3><p>Ứng dụng đồng h&#224;nh đời sống t&#226;m linh: onboarding, trang chủ, kế hoạch đọc, b&#224;i quiz, lời cầu nguyện c&#225; nh&#226;n h&#243;a v&#224; trang hồ sơ.</p><span class="cta">Xem chi tiết →</span></div>
+  </a>
+  <a class="card" href="project-wallpaper.html" style="--ca:#8B7CFF">
+    <div class="media"><img src="assets/projects/wallpaper-1.webp" width="2200" height="904" loading="lazy" decoding="async" alt="Wallpaper"></div>
+    <div class="body"><span class="tag">Personalization &#183; Mobile App</span><h3>Wallpaper</h3><p>Ứng dụng h&#236;nh nền: duyệt kho h&#236;nh, bộ sưu tập, studio chỉnh sửa với hiệu ứng chiều s&#226;u, đổi font đồng hồ v&#224; c&#225;c thiết lập.</p><span class="cta">Xem chi tiết →</span></div>
+  </a>
+  <a class="card" href="project-print.html" style="--ca:#3A7BFF">
+    <div class="media"><img src="assets/projects/print-1.webp" width="2200" height="2626" loading="lazy" decoding="async" alt="Print Document"></div>
+    <div class="body"><span class="tag">Utility &#183; Mobile App</span><h3>Print Document</h3><p>Ứng dụng in t&#224;i liệu từ điện thoại: hướng dẫn kết nối m&#225;y in qua Wi-Fi, in t&#224;i liệu, ảnh, trang web v&#224; email, bộ c&#244;ng cụ PDF v&#224; Print Studio.</p><span class="cta">Xem chi tiết →</span></div>
+  </a>
+  <a class="card" href="project-game1.html" style="--ca:#F5B82E">
+    <div class="media"><img src="assets/projects/game1-1.webp" width="2200" height="3118" loading="lazy" decoding="async" alt="Game 1"></div>
+    <div class="body"><span class="tag">Mobile Game &#183; UI/UX</span><h3>Game 1</h3><p>Thiết kế giao diện v&#224; luồng chơi cho game di động: bản đồ m&#224;n chơi, gameplay, mở kh&#243;a mảnh gh&#233;p, nhận xu, m&#224;n h&#236;nh ch&#237;nh tr&#234;n điện thoại v&#224; iPad.</p><span class="cta">Xem chi tiết →</span></div>
+  </a>
+  <a class="card" href="project-game2.html" style="--ca:#4CC76A">
+    <div class="media"><img src="assets/projects/game2-1.webp" width="2200" height="991" loading="lazy" decoding="async" alt="Game 2"></div>
+    <div class="body"><span class="tag">Mobile Game &#183; UI/UX</span><h3>Game 2</h3><p>Thiết kế giao diện game di động: đặt h&#224;ng, level kh&#243;, hướng dẫn vật phẩm ẩn, hiệu ứng nhận thưởng, kho đồ v&#224; bộ phần tử giao diện.</p><span class="cta">Xem chi tiết →</span></div>
+  </a>
+  <a class="card" href="project-game3.html" style="--ca:#FF7A59">
+    <div class="media"><img src="assets/projects/game3-1.webp" width="2200" height="2092" loading="lazy" decoding="async" alt="Game 3"></div>
+    <div class="body"><span class="tag">Mobile Game &#183; UI/UX</span><h3>Game 3</h3><p>Thiết kế giao diện game di động: trạng th&#225;i tương t&#225;c ở m&#224;n h&#236;nh ch&#237;nh, gameplay, hướng dẫn đầu game, bộ sưu tập, cửa h&#224;ng, hiệu ứng trợ gi&#250;p v&#224; m&#224;n kết th&#250;c.</p><span class="cta">Xem chi tiết →</span></div>
+  </a>
+
+</main>
+<footer>
+  <span>© Nguyễn Trung Kiên</span>
+  <a href="mailto:ntk1510.work@gmail.com">ntk1510.work@gmail.com</a>
+  <a href="https://www.behance.net/kiennguyen" target="_blank" rel="noopener">Behance</a>
+</footer>
+</body>
+</html>
