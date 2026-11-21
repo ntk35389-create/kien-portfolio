@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PCU x TDI Group — Nguyễn Trung Kiên, UI/UX Designer</title>
+<meta name="description" content="Nền tảng hỗ trợ số h&#243;a quy tr&#236;nh cho ph&#242;ng cung ứng do TDI Group ph&#225;t triển, l&#224; phần mềm nội bộ chuẩn h&#243;a v&#224; tự động h&#243;a c&#225;c nghiệp vụ cung ứng, mua sắm v&#224; quản l&#253; vật tư. Hệ thống hỗ trợ tạo v&#224; theo d&#245;i y&#234;u cầu mua h&#224;ng, kiểm so&#225;t quy tr&#236;nh ph&#234; duyệt, quản l&#253; nh&#224; cung cấp v&#224; cập nhật trạng th&#225;i đơn h&#224;ng theo thời gian thực.">
+<meta property="og:title" content="PCU x TDI Group — Nguyễn Trung Kiên">
+<meta property="og:description" content="Nền tảng hỗ trợ số h&#243;a quy tr&#236;nh cho ph&#242;ng cung ứng do TDI Group ph&#225;t triển, l&#224; phần mềm nội bộ chuẩn h&#243;a v&#224; tự động h&#243;a c&#225;c nghiệp vụ cung ứng, mua sắm v&#224; quản l&#253; vật tư. Hệ thống hỗ trợ tạo v&#224; theo d&#245;i y&#234;u cầu mua h&#224;ng, kiểm so&#225;t quy tr&#236;nh ph&#234; duyệt, quản l&#253; nh&#224; cung cấp v&#224; cập nhật trạng th&#225;i đơn h&#224;ng theo thời gian thực.">
+<meta property="og:image" content="assets/projects/pcu-1.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;800&family=Be+Vietnam+Pro:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#150A0F;--ink:#FBF2F4;--muted:#9C8B92;--accent:#FF5C5C;--line:rgba(251,242,244,.10);--display:'Unbounded',sans-serif;--body:'Be Vietnam Pro',sans-serif;--mono:'Space Mono',monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-weight:300;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;height:auto}
+::selection{background:var(--accent);color:var(--bg)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:900;display:flex;align-items:center;justify-content:space-between;padding:24px 5vw;mix-blend-mode:difference}
+.nav .logo{font-family:var(--display);font-weight:800;font-size:1.05rem}
+.nav .back{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
+.nav .back:hover{opacity:.6}
+.hero{position:relative;padding:20vh 5vw 8vh;overflow:hidden}
+.aura{position:absolute;width:56vmax;height:56vmax;border-radius:50%;filter:blur(130px);opacity:.28;pointer-events:none;background:radial-gradient(circle,var(--accent) 0%,transparent 65%);top:-24vmax;right:-18vmax}
+.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:16px;margin-bottom:4vh;position:relative}
+.eyebrow::before{content:"";width:48px;height:1px;background:var(--accent)}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,8vw,6.8rem);line-height:1;letter-spacing:-.02em;text-transform:uppercase;position:relative}
+.lead{max-width:640px;font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.75;color:var(--muted);margin-top:5vh;position:relative}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:28px;margin-top:7vh;padding-top:4vh;border-top:1px solid var(--line);position:relative}
+.meta dt{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.meta dd{font-weight:500;font-size:1rem}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;border:1px solid var(--line);border-radius:999px;padding:5px 12px}
+.case{padding:2vh 5vw 10vh}
+.case-inner{max-width:1400px;margin:0 auto;border-radius:20px;overflow:hidden;background:#0D060A;border:1px solid var(--line)}
+.case-inner img{background:#0D060A}
+.pager{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.pager a{padding:7vh 5vw;display:flex;flex-direction:column;gap:12px;transition:background .4s}
+.pager a:hover{background:rgba(251,242,244,.04)}
+.pager a+a{border-left:1px solid var(--line);text-align:right;align-items:flex-end}
+.pager small{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.pager strong{font-family:var(--display);font-weight:600;font-size:clamp(1.1rem,2.8vw,2.2rem);text-transform:uppercase}
+.pager a:hover strong{color:var(--accent)}
+footer{padding:6vh 5vw;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between;font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;color:var(--muted)}
+footer a:hover{color:var(--accent)}
+@media(max-width:700px){.nav .logo{font-size:.9rem}.pager{grid-template-columns:1fr}.pager a+a{border-left:0;border-top:1px solid var(--line);text-align:left;align-items:flex-start}.case-inner{border-radius:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav class="nav"><a class="logo" href="index.html">KIÊN.</a><a class="back" href="webapps.html">← Web App</a></nav>
+<header class="hero">
+  <div class="aura"></div>
+  <div class="eyebrow">Web App</div>
+  <h1>PCU x TDI Group</h1>
+  <p class="lead">Nền tảng hỗ trợ số h&#243;a quy tr&#236;nh cho ph&#242;ng cung ứng do TDI Group ph&#225;t triển, l&#224; phần mềm nội bộ chuẩn h&#243;a v&#224; tự động h&#243;a c&#225;c nghiệp vụ cung ứng, mua sắm v&#224; quản l&#253; vật tư. Hệ thống hỗ trợ tạo v&#224; theo d&#245;i y&#234;u cầu mua h&#224;ng, kiểm so&#225;t quy tr&#236;nh ph&#234; duyệt, quản l&#253; nh&#224; cung cấp v&#224; cập nhật trạng th&#225;i đơn h&#224;ng theo thời gian thực.</p>
+  <dl class="meta">
+    <div><dt>Khách hàng / Đơn vị</dt><dd>TDI Group</dd></div>
+    <div><dt>Loại dự án</dt><dd>Nền tảng số h&#243;a quy tr&#236;nh cung ứng</dd></div>
+    <div><dt>Vai trò</dt><dd>UI/UX Designer</dd></div>
+    <div><dt>Nội dung</dt><dd class="tags"><span>Web App</span><span>Enterprise</span><span>Quy tr&#236;nh</span></dd></div>
+  </dl>
+</header>
+<main class="case"><div class="case-inner">
+<img src="assets/projects/pcu-1.webp" width="1400" height="1659" loading="eager" decoding="async" alt="PCU x TDI Group — phần 1">
+<img src="assets/projects/pcu-2.webp" width="1400" height="1659" loading="lazy" decoding="async" alt="PCU x TDI Group — phần 2">
+</div></main>
+<nav class="pager" aria-label="Dự án khác">
+  <a href="project-vcb.html"><small>← Dự án trước</small><strong>Vietcombank TCHM</strong></a>
+  <a href="project-thinkiz.html"><small>Dự án tiếp →</small><strong>Thinkiz &#215; Effi AI</strong></a>
+</nav>
+<footer>
+  <span>© Nguyễn Trung Kiên</span>
+  <a href="mailto:ntk1510.work@gmail.com">ntk1510.work@gmail.com</a>
+  <a href="https://www.behance.net/kiennguyen" target="_blank" rel="noopener">Behance</a>
+</footer>
+
+</body>
+</html>
