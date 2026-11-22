@@ -37,7 +37,8 @@ body.has-cursor,body.has-cursor *{cursor:none!important}
 .hero-aura.two{background:radial-gradient(circle,#FF9D7E 0%,transparent 65%);top:auto;bottom:-26vmax;left:-18vmax;opacity:.15}
 .hero-meta{display:flex;justify-content:space-between;align-items:flex-end;font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;margin-bottom:3vh}
 .hero-title{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,min(calc((100vw - 2*var(--gutter))/10.4),14vh),11rem);line-height:.96;letter-spacing:-.02em;text-transform:uppercase}
-.hero .marquee{margin-left:calc(-1*var(--gutter));margin-right:calc(-1*var(--gutter))}`n.hero-title .line{display:block;white-space:nowrap;overflow:hidden;padding:.5em 0 .06em;margin:-.5em 0 -.06em}
+.hero .marquee{margin-left:calc(-1*var(--gutter));margin-right:calc(-1*var(--gutter))}
+.hero-title .line{display:block;white-space:nowrap;overflow:hidden;padding:.5em 0 .06em;margin:-.5em 0 -.06em}
 .hero-title .line>span{display:inline-block}
 .hero-title .outline{-webkit-text-stroke:1.5px var(--ink);color:transparent;transition:color .5s,-webkit-text-stroke-color .5s}
 .hero-title .outline:hover{color:var(--accent);-webkit-text-stroke:1.5px var(--accent)}
@@ -184,7 +185,39 @@ body.has-cursor,body.has-cursor *{cursor:none!important}
 .app-card .ac-media.contain img{width:auto;height:100%;object-fit:contain;object-position:top center;border-radius:20px 20px 0 0;transform:none!important}.to-top{position:fixed;right:24px;bottom:24px;z-index:950;width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:rgba(21,10,15,.55);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;transform:translateY(14px);pointer-events:none;transition:opacity .35s,transform .35s,background .3s,color .3s,border-color .3s}
 .to-top.show{opacity:1;transform:none;pointer-events:auto}
 .to-top:hover{background:var(--accent);color:var(--bg);border-color:var(--accent)}
-.to-top svg{width:20px;height:20px}@media(max-width:860px){.cta-foot{padding-bottom:92px}}</style>
+.to-top svg{width:20px;height:20px}@media(max-width:860px){.cta-foot{padding-bottom:92px}}html,body{overflow-x:clip}
+.nav-toggle{display:none}
+.nav-menu{display:none}
+.hov-only{display:inline}
+@media(hover:none){.hov-only{display:none}}
+@media(max-width:860px){
+.nav-toggle{display:flex;flex-direction:column;justify-content:center;gap:7px;width:44px;height:44px;margin-right:-8px;padding:0 10px;background:none;border:0;cursor:pointer;position:relative;z-index:960}
+.nav-toggle span{display:block;height:2px;background:var(--ink);border-radius:2px;transition:transform .35s cubic-bezier(.7,0,.2,1),opacity .25s}
+body.menu-open .nav-toggle span:first-child{transform:translateY(4.5px) rotate(45deg)}
+body.menu-open .nav-toggle span:last-child{transform:translateY(-4.5px) rotate(-45deg)}
+.nav{padding:18px var(--gutter)}
+.nav.scrolled{padding:8px var(--gutter)}
+.nav-menu{display:flex;position:fixed;inset:0;z-index:850;flex-direction:column;justify-content:center;gap:3.2vh;padding:0 var(--gutter);background:rgba(21,10,15,.97);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);opacity:0;pointer-events:none;transition:opacity .35s}
+body.menu-open .nav-menu{opacity:1;pointer-events:auto}
+body.menu-open{overflow:hidden}
+.nav-menu a{font-family:var(--display);font-weight:800;font-size:clamp(1.3rem,6.3vw,2.2rem);text-transform:uppercase;line-height:1.1;padding:8px 0;white-space:nowrap;transform:translateY(18px);opacity:0;transition:transform .5s cubic-bezier(.2,1,.3,1),opacity .5s,color .3s}
+body.menu-open .nav-menu a{transform:none;opacity:1}
+body.menu-open .nav-menu a:nth-child(2){transition-delay:.05s}
+body.menu-open .nav-menu a:nth-child(3){transition-delay:.1s}
+body.menu-open .nav-menu a:nth-child(4){transition-delay:.15s}
+body.menu-open .nav-menu a:nth-child(5){transition-delay:.2s}
+.nav-menu a:active{color:var(--accent)}
+.scroll-hint{display:none}
+.about{padding:14vh var(--gutter)}
+.about-photo{max-width:none;width:100%}
+.exp{padding:12vh var(--gutter)}
+.cta-foot .socials a{display:inline-block;padding:10px 6px}
+}
+@media(max-width:700px){
+.stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+.stat{padding:7vh 4vw!important}
+.stat-num{font-size:clamp(2rem,10.5vw,3rem)}
+}@media(max-width:700px){.cta-big{font-size:min(9.2vw,2.4rem)}.socials{flex-wrap:wrap;gap:0 10px}.cta-foot{gap:8px}}</style>
 </head>
 <body>
 <div class="cursor-dot"></div><div class="cursor-ring"><span>Xem →</span></div>
@@ -199,7 +232,15 @@ body.has-cursor,body.has-cursor *{cursor:none!important}
     <li><a class="nav-link" href="#exp"><span class="l-top">Hồ sơ</span><span class="l-bot">Hồ sơ</span></a></li>
     <li><a class="nav-link" href="#contact"><span class="l-top">Liên hệ</span><span class="l-bot">Liên hệ</span></a></li>
   </ul>
+  <button class="nav-toggle" id="navToggle" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span></button>
 </nav>
+<div class="nav-menu" id="navMenu" aria-hidden="true">
+  <a href="#apps">Mobile App/Game</a>
+  <a href="#systems">Web App</a>
+  <a href="#webs">Landing Page</a>
+  <a href="#exp">Hồ sơ</a>
+  <a href="#contact">Liên hệ</a>
+</div>
 
 <header class="hero">
   <div class="hero-aura"></div><div class="hero-aura two"></div>
@@ -295,7 +336,7 @@ body.has-cursor,body.has-cursor *{cursor:none!important}
   <div class="sec-head">
     <div class="eyebrow">02 — Product System</div>
     <h2>Web App <span class="ghost">/ Hệ thống</span></h2>
-    <p>Các nền tảng và hệ thống nội bộ tôi thiết kế tại TDI Group, Effi AI và các đối tác. Bài toán thường là những quy trình phức tạp cần được đơn giản hoá thành trải nghiệm rõ ràng. Di chuột để xem trước, bấm để xem chi tiết.</p>
+    <p>Các nền tảng và hệ thống nội bộ tôi thiết kế tại TDI Group, Effi AI và các đối tác. Bài toán thường là những quy trình phức tạp cần được đơn giản hoá thành trải nghiệm rõ ràng. <span class="hov-only">Di chuột để xem trước, </span>bấm để xem chi tiết.</p>
   </div>
   <a class="see-all" href="webapps.html" data-cursor="view" style="margin-left:var(--gutter)">Xem trang Web App →</a>
   <div class="sys-list">
@@ -599,7 +640,7 @@ gsap.utils.toArray('#webs .web-item').forEach(function(item,i){
       var tl=gsap.timeline({scrollTrigger:{trigger:item,start:'top 78%'}});
       tl.fromTo(media,{clipPath:dir>0?'inset(0 100% 0 0 round 18px)':'inset(0 0 0 100% round 18px)'},{clipPath:'inset(0 0% 0 0% round 18px)',duration:1.3,ease:'power4.inOut'});
       tl.from(img,{scale:1.5,duration:1.7,ease:'power3.out'},'-=1.2');
-      tl.from(parts,{x:70*dir*-1,opacity:0,duration:.9,stagger:.1,ease:'power3.out'},'-=1.0');
+      tl.from(parts,{y:40,opacity:0,duration:.9,stagger:.1,ease:'power3.out'},'-=1.0');
       /* đường kẻ dưới mỗi mục chạy theo cuộn */
       item.style.borderBottomColor='transparent';
       var line=document.createElement('span');line.style.cssText='position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--line);transform-origin:'+(dir>0?'left':'right')+';transform:scaleX(0)';
@@ -709,5 +750,6 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){
 <script>(function(){var n=document.querySelector('.nav');if(!n)return;function s(){n.classList.toggle('scrolled',(window.scrollY||document.documentElement.scrollTop)>40)}s();window.addEventListener('scroll',s,{passive:true})})();</script>
 <button class="to-top" id="toTop" type="button" aria-label="Lên đầu trang"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 <script>(function(){var b=document.getElementById('toTop');if(!b)return;function s(){b.classList.toggle('show',(window.scrollY||document.documentElement.scrollTop)>600)}s();window.addEventListener('scroll',s,{passive:true});b.addEventListener('click',function(){var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;if(reduce||!window.gsap){window.scrollTo(0,0);return;}var o={y:window.scrollY};gsap.to(o,{y:0,duration:Math.min(1.4,.5+o.y/6000),ease:'power3.inOut',onUpdate:function(){window.scrollTo(0,o.y);}});});})();</script>
+<script>(function(){var b=document.getElementById('navToggle'),m=document.getElementById('navMenu');if(!b||!m)return;function set(o){document.body.classList.toggle('menu-open',o);b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'Đóng menu':'Mở menu');m.setAttribute('aria-hidden',o?'false':'true');}b.addEventListener('click',function(){set(!document.body.classList.contains('menu-open'));});m.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});window.addEventListener('resize',function(){if(innerWidth>860)set(false);});})();</script>
 </body>
 </html>
