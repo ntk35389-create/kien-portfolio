@@ -23,6 +23,8 @@ Add-P 'wallpaper' @{ source='figma'; cat='apps'; title='Wallpaper'; tag='Persona
   desc='Ứng dụng hình nền: duyệt kho hình, bộ sưu tập, studio chỉnh sửa với hiệu ứng chiều sâu, đổi font đồng hồ và các thiết lập.'; tags=@('Mobile App','Studio','Personalization') }
 Add-P 'print'     @{ source='figma'; cat='apps'; title='Print Document'; tag='Utility · Mobile App'; color='#3A7BFF'; platform='Mobile App'; kind='Ứng dụng in tài liệu';
   desc='Ứng dụng in tài liệu từ điện thoại: hướng dẫn kết nối máy in qua Wi-Fi, in tài liệu, ảnh, trang web và email, bộ công cụ PDF và Print Studio.'; tags=@('Mobile App','Utility','PDF') }
+Add-P 'autogara'  @{ source='figma'; cat='apps'; title='AUTO GARA'; tag='Mobile App · Quản lý gara'; color='#E5484D'; platform='Mobile App (hệ thống quản lý gara)'; kind='Hệ thống quản lý quy trình gara';
+  desc='Hệ thống quản lý quy trình gara ô tô: tiếp nhận xe, lệnh sửa chữa, báo giá, phát sinh, phiếu xuất kho, hóa đơn, thanh toán và hồ sơ khách hàng.'; tags=@('Hệ thống','Quy trình','Mobile') }
 Add-P 'game1'     @{ source='figma'; cat='apps'; title='Game 1'; tag='Mobile Game · UI/UX'; color='#F5B82E'; platform='Mobile Game (điện thoại và iPad)'; kind='Thiết kế UI/UX game';
   desc='Thiết kế giao diện và luồng chơi cho game di động: bản đồ màn chơi, gameplay, mở khóa mảnh ghép, nhận xu, màn hình chính trên điện thoại và iPad.'; tags=@('Game','Mobile','Level map') }
 Add-P 'game2'     @{ source='figma'; cat='apps'; title='Game 2'; tag='Mobile Game · UI/UX'; color='#4CC76A'; platform='Mobile Game'; kind='Thiết kế UI/UX game';
@@ -34,13 +36,9 @@ Add-P 'game3'     @{ source='figma'; cat='apps'; title='Game 3'; tag='Mobile Gam
 Add-P 'vime'      @{ source='behance'; cat='webapps'; title='VIME × TechPro'; tag='Web App · Dashboard'; color='#8B7CFF'; desc='Nền tảng quản lý phòng họp và lịch họp cho doanh nghiệp: đặt phòng, phê duyệt, check-in và báo cáo hiệu suất sử dụng.' }
 Add-P 'vcb'       @{ source='behance'; cat='webapps'; title='Vietcombank TCHM'; tag='Web App · Quản lý nội bộ'; color='#3DBC8D'; desc='Hệ thống quản lý lưu trú cho cán bộ nhân viên Vietcombank: check-in, sơ đồ phòng, kế hoạch theo quý và đánh giá dịch vụ.' }
 Add-P 'pcu'       @{ source='behance'; cat='webapps'; title='PCU × TDI Group'; tag='Web App · Enterprise'; color='#FF5C5C'; desc='Số hóa quy trình khối cung ứng: yêu cầu mua sắm, so sánh báo giá, phê duyệt vật tư, quản lý nhà cung cấp và tồn kho.' }
-Add-P 'thinkiz'   @{ source='behance'; cat='webapps'; title='Thinkiz × Effi AI'; tag='Web App · AI Workspace'; color='#5EA8FF'; desc='Agentic workspace cho cộng tác người và AI: canvas dự án nơi các AI agent tự phân rã tác vụ, nghiên cứu và tạo nội dung.' }
-Add-P 'vbim'      @{ source='figma'; cat='webapps'; title='Hệ thống VBIM'; tag='Web App · E-learning'; color='#2F6BFF'; platform='Web App (desktop)'; kind='Nền tảng học tập trực tuyến';
+Add-P 'vbim'      @{ source='figma'; cat='webapps'; title='VBIM × TDI Group'; tag='Web App · E-learning'; color='#2F6BFF'; platform='Web App (desktop)'; kind='Nền tảng học tập trực tuyến';
   desc='Nền tảng học tập trực tuyến: đăng nhập, trang chủ có trợ lý trò chuyện, danh sách và chi tiết khóa học, bài học kèm bài kiểm tra cuối khóa, kho cá nhân để lưu video và thư viện tài liệu.'; tags=@('Web App','E-learning','Dashboard') }
-Add-P 'autogara'  @{ source='figma'; cat='webapps'; title='AUTO GARA'; tag='Hệ thống · Quản lý gara'; color='#E5484D'; platform='Ứng dụng di động cho hệ thống quản lý gara'; kind='Hệ thống quản lý quy trình gara';
-  desc='Hệ thống quản lý quy trình gara ô tô: tiếp nhận xe, lệnh sửa chữa, báo giá, phát sinh, phiếu xuất kho, hóa đơn, thanh toán và hồ sơ khách hàng.'; tags=@('Hệ thống','Quy trình','Mobile') }
-Add-P 'giapha'    @{ source='figma'; cat='webapps'; title='Gia phả & Mộ phần'; tag='Hệ thống · App + Web quản trị'; color='#C8963E'; platform='App di động và trang quản lý web'; kind='Hệ thống quản lý gia phả kết hợp dịch vụ mộ phần';
-  desc='Hệ thống quản lý gia phả kết hợp dịch vụ mộ phần: cây phả hệ, kênh gia đình, lịch giỗ, bản đồ và thông tin mộ phần, gói dịch vụ, trò chuyện chung, cùng trang quản lý dành cho đơn vị cung cấp dịch vụ.'; tags=@('Hệ thống','App + Web','Cây phả hệ') }
+Add-P 'thinkiz'   @{ source='behance'; cat='webapps'; title='Thinkiz × Effi AI'; tag='Web App · AI Workspace'; color='#5EA8FF'; desc='Agentic workspace cho cộng tác người và AI: canvas dự án nơi các AI agent tự phân rã tác vụ, nghiên cứu và tạo nội dung.' }
 
 # --- Website ---
 Add-P 'forever'   @{ source='behance'; cat='websites'; title='Forever Young'; tag='Entertainment · Corporate Site'; color='#FF9EC4'; desc='Website công ty quản lý KOL, ca sĩ và nhạc sĩ hàng đầu Việt Nam, thẩm mỹ neon đen hồng.' }
