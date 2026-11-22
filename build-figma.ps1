@@ -41,9 +41,9 @@ Add-P 'vbim'      @{ source='figma'; cover='vbim-web.webp'; cat='webapps'; title
 Add-P 'thinkiz'   @{ source='behance'; cover='thinkiz-web.webp'; cat='webapps'; title='Thinkiz × Effi AI'; tag='Web App · AI Workspace'; color='#5EA8FF'; desc='Agentic workspace cho cộng tác người và AI: canvas dự án nơi các AI agent tự phân rã tác vụ, nghiên cứu và tạo nội dung.' }
 
 # --- Website ---
-Add-P 'forever'   @{ source='behance'; cat='websites'; title='Forever Young'; tag='Entertainment · Corporate Site'; color='#FF9EC4'; desc='Website công ty quản lý KOL, ca sĩ và nhạc sĩ hàng đầu Việt Nam, thẩm mỹ neon đen hồng.' }
-Add-P 'ielts'     @{ source='behance'; cat='websites'; title='IELTS Lab'; tag='Education · Landing Page'; color='#6FA8FF'; desc='Website trung tâm luyện thi IELTS: phương pháp học, lộ trình khóa học, đội ngũ giảng viên và bảng vàng thành tích.' }
-Add-P 'vuonxanh'  @{ source='behance'; cover='vuonxanh-web.webp'; cat='websites'; title='VuonXanh Connect'; tag='E-commerce · Landing Page'; color='#5FD068'; desc='Sàn thương mại điện tử nông sản toàn quốc: gian hàng đối tác, danh mục sản phẩm, chi tiết sản phẩm và tin tức.' }
+Add-P 'forever'   @{ source='behance'; cover='forever-web2.webp'; cat='websites'; title='Forever Young'; tag='Entertainment · Corporate Site'; color='#FF9EC4'; desc='Website công ty quản lý KOL, ca sĩ và nhạc sĩ hàng đầu Việt Nam, thẩm mỹ neon đen hồng.' }
+Add-P 'ielts'     @{ source='behance'; cover='ielts-web2.webp'; cat='websites'; title='IELTS Lab'; tag='Education · Landing Page'; color='#6FA8FF'; desc='Website trung tâm luyện thi IELTS: phương pháp học, lộ trình khóa học, đội ngũ giảng viên và bảng vàng thành tích.' }
+Add-P 'vuonxanh'  @{ source='behance'; cover='vuonxanh-web2.webp'; cat='websites'; title='VuonXanh Connect'; tag='E-commerce · Landing Page'; color='#5FD068'; desc='Sàn thương mại điện tử nông sản toàn quốc: gian hàng đối tác, danh mục sản phẩm, chi tiết sản phẩm và tin tức.' }
 
 $cats = [ordered]@{
   apps     = @{ title='Mobile App/Game'; ghost='Dự án'; file='apps.html';     lead='Các ứng dụng di động tôi thiết kế: từ nghiên cứu vấn đề, user flow, style guide đến hệ thống giao diện hoàn chỉnh. Bấm vào từng dự án để xem chi tiết.'; anchor='apps' }

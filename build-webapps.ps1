@@ -21,18 +21,18 @@ $apps = [ordered]@{
     shots=@('1024x729','1024x729','1024x729','1024x729','1024x729','1024x729','1024x729','1024x729','1024x729','1024x729')
     caps=@('Đăng nhập','Trang chủ','Trợ lý trò chuyện','Trang chủ · Thông báo','Tổng quan quản lý','Khoá học gần đây','Chi tiết khoá học','Học phần nhân sự','Quản lý khoá học','Thư viện tài liệu') }
   # Landing page: ảnh cả trang rất dài -> thẻ cắt phần đầu (win), bấm vào để cuộn xem đủ trong khung xem lớn
-  'vuonxanh' = @{ hero='1732x1156'; title='VuonXanh Connect'; cols=3
+  'vuonxanh' = @{ hero='1800x1200'; title='VuonXanh Connect'; cols=3
     shots=@('1013x4096','1920x1057','1920x1532','1920x2762','1920x3269','1920x3241','1462x2478')
     win=@($true,$false,$true,$true,$true,$true,$true)
     caps=@('Trang chủ','Đăng nhập','Gian hàng đối tác','Danh mục sản phẩm','Chi tiết sản phẩm','Tin tức','Chi tiết tin tức') }
-  'ielts' = @{ hero='1732x1154'; title='IELTS Lab'; cols=3
+  'ielts' = @{ hero='1800x1200'; title='IELTS Lab'; cols=3
     shots=@('852x4096','1321x4096','1233x4096','1158x1908','1600x2331')
     win=@($true,$true,$true,$true,$true)
     caps=@('Trang chủ','Phương pháp học C.C.A.C','Giới thiệu','Lộ trình và lịch học','Đội ngũ giảng viên') }
-  'forever' = @{ hero='1732x1154'; title='Forever Young'; cols=3
-    shots=@('588x4096','803x3921','1141x4096','1600x1066')
-    win=@($true,$true,$true,$false)
-    caps=@('Trang chủ','Dịch vụ','Nghệ sĩ','Hiển thị trên thiết bị') }
+  'forever' = @{ hero='1800x1200'; title='Forever Young'; cols=3
+    shots=@('588x4096','803x3921','1141x4096')
+    win=@($true,$true,$true)
+    caps=@('Trang chủ','Dịch vụ','Nghệ sĩ') }
 }
 
 $css = @'
@@ -165,7 +165,7 @@ foreach ($slug in $apps.Keys) {
   $hw = $a.hero.Split('x')
   $sb = New-Object System.Text.StringBuilder
   [void]$sb.AppendLine('<main class="case"><div class="fg-wrap">')
-  [void]$sb.AppendLine(('<div class="fg-hero"><img src="assets/projects/{0}-web.webp" width="{1}" height="{2}" loading="eager" decoding="async" alt="{3}"></div>' -f $slug, $hw[0], $hw[1], $a.title))
+  [void]$sb.AppendLine(('<div class="fg-hero"><img src="assets/projects/{0}-web{4}.webp" width="{1}" height="{2}" loading="eager" decoding="async" alt="{3}"></div>' -f $slug, $hw[0], $hw[1], $a.title, $(if ($a.cols -eq 3) { '2' } else { '' })))
   [void]$sb.AppendLine('<h2 class="fg-title">Màn hình thiết kế</h2>')
   $gcls = if ($a.cols -eq 3) { 'fg-grid cols3' } else { 'fg-grid' }
   [void]$sb.AppendLine("<div class=`"$gcls`">")
