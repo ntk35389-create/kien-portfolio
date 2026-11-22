@@ -599,18 +599,29 @@ gsap.utils.toArray('#webs .web-item').forEach(function(item,i){
       pin.appendChild(track);pin.appendChild(count);pin.appendChild(bar);sec.appendChild(pin);sec.classList.add('hz');
       var n=count.querySelector('.n'),prog=bar.querySelector('i'),cur=1;
       var dist=function(){return Math.max(0,track.scrollWidth-innerWidth*0.08);};
-      var tween=gsap.to(track,{x:function(){return -dist();},ease:'none',scrollTrigger:{trigger:pin,start:'top top',end:function(){return '+='+dist();},pin:true,scrub:.9,anticipatePin:1,invalidateOnRefresh:true,
+      function hzFocus(){
+        var mid=innerWidth/2,best=0,bd=1e9;
+        items.forEach(function(it,i){
+          var r=it.getBoundingClientRect(),d=Math.abs(r.left+r.width/2-mid);
+          if(d<bd){bd=d;best=i;}
+          var f=1-Math.min(1,d/(innerWidth*0.36));
+          gsap.set(it,{opacity:.25+.75*f,scale:.88+.12*f});
+        });
+        var idx=best+1;
+        if(idx!==cur){cur=idx;gsap.fromTo(n,{yPercent:70,opacity:0},{yPercent:0,opacity:1,duration:.5,ease:'power3.out'});n.textContent=('0'+idx).slice(-2);}
+      }
+      var tween=gsap.to(track,{x:function(){return -dist();},ease:'none',onUpdate:hzFocus,scrollTrigger:{trigger:pin,start:'top top',end:function(){return '+='+dist();},pin:true,scrub:.9,anticipatePin:1,invalidateOnRefresh:true,
         onUpdate:function(self){
           gsap.set(prog,{scaleX:self.progress});
-          var idx=Math.min(items.length,Math.max(1,Math.round(self.progress*(items.length-1))+1));
-          if(idx!==cur){cur=idx;gsap.fromTo(n,{yPercent:60,opacity:0},{yPercent:0,opacity:1,duration:.45,ease:'power3.out'});n.textContent=('0'+idx).slice(-2);}
+          hzFocus();
         }}});
+      hzFocus();
       /* phần giới thiệu mờ dần khi trượt đi */
       gsap.to(intro,{opacity:.12,scale:.94,transformOrigin:'0% 50%',ease:'none',scrollTrigger:{trigger:intro,containerAnimation:tween,start:'left 8%',end:'right 0%',scrub:true}});
       items.forEach(function(item,i){
         var inner=item.querySelector('.wm-inner'),img=item.querySelector('.web-media img'),parts=item.querySelectorAll('.web-tagrow,.web-name,.web-desc,.web-cta');
         /* thẻ lớn dần, thẳng dần khi vào giữa màn hình */
-        gsap.fromTo(item,{scale:.82,opacity:.25,rotate:(i%2?2.5:-2.5)},{scale:1,opacity:1,rotate:0,ease:'none',scrollTrigger:{trigger:item,containerAnimation:tween,start:'left 98%',end:'left 52%',scrub:true}});
+        /* độ rõ và kích thước do hzFocus() điều khiển: thẻ giữa nổi bật, hai bên mờ */
         /* ảnh trôi ngược chiều cuộn (parallax ngang) */
         if(inner)gsap.fromTo(inner,{xPercent:-9},{xPercent:9,ease:'none',scrollTrigger:{trigger:item,containerAnimation:tween,start:'left right',end:'right left',scrub:true}});
         if(img)gsap.fromTo(img,{scale:1.25},{scale:1,ease:'none',scrollTrigger:{trigger:item,containerAnimation:tween,start:'left 100%',end:'left 40%',scrub:true}});
