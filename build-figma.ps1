@@ -13,9 +13,9 @@ function Add-P($slug, $h) { $h.slug = $slug; $PRJ[$slug] = $h }
 # --- App ---
 Add-P 'kimdong'   @{ source='behance'; cover='kimdong-thumb.webp'; cat='apps'; title='Kim Đồng Bookstore'; tag='Redesign · Mobile App'; color='#E8485E'; desc='Thiết kế lại trải nghiệm ứng dụng nhà sách Kim Đồng: điều hướng, gợi ý cá nhân hóa và hệ thống giao diện mới cho phụ huynh và bạn đọc nhỏ tuổi.' }
 Add-P 'heartwise' @{ source='behance'; cover='heartwise-thumb.webp'; cat='apps'; title='HeartWise'; tag='Habit Building · Gamification'; color='#4CC76A'; desc='Ứng dụng xây dựng thói quen ăn uống và vận động để phòng ngừa bệnh tim, giữ động lực mỗi ngày qua tương tác dạng trò chơi.' }
-Add-P 'scancalo'  @{ source='figma'; cover='scancalo-thumb-v2.webp'; cat='apps'; title='Scan Calo'; tag='Health & Nutrition · Mobile App'; color='#FF8A1F'; platform='Mobile App (iOS / Android)'; kind='Ứng dụng quét món ăn và theo dõi calo';
+Add-P 'scancalo'  @{ source='figma'; cover='scancalo-thumb-v2.webp'; cat='apps'; title='Flashcal'; tag='Health & Nutrition · Mobile App'; color='#FF8A1F'; platform='Mobile App (iOS / Android)'; kind='Ứng dụng quét món ăn và theo dõi calo';
   desc='Ứng dụng theo dõi dinh dưỡng và calo: quét món ăn bằng camera, thêm hoạt động, check-in hằng ngày, công thức nấu ăn, tủ lạnh, chuỗi streak, mục tiêu uống nước và gói trả phí trong ứng dụng.'; tags=@('Mobile App','User flow','Health') }
-Add-P 'kinhnguyet' @{ source='figma'; cover='kinhnguyet-mock.webp'; cat='apps'; title='Kinh nguyệt'; tag='Women''s Health · Mobile App'; color='#FF6B8B'; platform='Mobile App'; kind='Ứng dụng theo dõi chu kỳ';
+Add-P 'kinhnguyet' @{ source='figma'; cover='kinhnguyet-mock.webp'; cat='apps'; title='Flovia'; tag='Women''s Health · Mobile App'; color='#FF6B8B'; platform='Mobile App'; kind='Ứng dụng theo dõi chu kỳ';
   desc='Ứng dụng theo dõi chu kỳ kinh nguyệt: onboarding, trang chủ dạng lịch, phân tích chu kỳ, ghi chú hằng ngày, trò chuyện với trợ lý AI và các thiết lập cá nhân.'; tags=@('Mobile App','Lịch','AI chat') }
 Add-P 'kinhthanh' @{ source='figma'; cover='kinhthanh-mock4.webp'; cat='apps'; title='Kinh Thánh'; tag='Lifestyle · Mobile App'; color='#C9A66B'; platform='Mobile App'; kind='Ứng dụng đọc và cầu nguyện';
   desc='Ứng dụng đồng hành đời sống tâm linh: onboarding, trang chủ, kế hoạch đọc, bài quiz, lời cầu nguyện cá nhân hóa và trang hồ sơ.'; tags=@('Mobile App','Onboarding','Cá nhân hóa') }
@@ -27,9 +27,9 @@ Add-P 'autogara'  @{ source='figma'; cover='autogara-mock4.webp'; cat='apps'; ti
   desc='Hệ thống quản lý quy trình gara ô tô: tiếp nhận xe, lệnh sửa chữa, báo giá, phát sinh, phiếu xuất kho, hóa đơn, thanh toán và hồ sơ khách hàng.'; tags=@('Hệ thống','Quy trình','Mobile') }
 Add-P 'giapha'    @{ source='figma'; cover='giapha-mock4.webp'; cat='apps'; title='Tâm Hương'; tag='Gia phả · Mobile App'; color='#C8963E'; platform='App di động và trang quản lý web'; kind='App gia phả kết hợp dịch vụ mộ phần';
   desc='Ứng dụng gia phả kết hợp dịch vụ mộ phần: cây phả hệ, kênh gia đình, lịch giỗ, bản đồ và thông tin mộ phần, gói dịch vụ, trò chuyện chung, cùng trang quản lý dành cho đơn vị cung cấp dịch vụ.'; tags=@('Mobile App','Gia phả','Dịch vụ') }
-Add-P 'game2'     @{ source='figma'; cover='game2-mock.webp'; cat='apps'; title='Game 2'; tag='Mobile Game · UI/UX'; color='#4CC76A'; platform='Mobile Game'; kind='Thiết kế UI/UX game';
+Add-P 'game2'     @{ source='figma'; cover='game2-mock5.webp'; cat='apps'; title='Color Sort: Streak Puzzle'; tag='Mobile Game · UI/UX'; color='#4CC76A'; platform='Mobile Game'; kind='Thiết kế UI/UX game';
   desc='Thiết kế giao diện game di động: đặt hàng, level khó, hướng dẫn vật phẩm ẩn, hiệu ứng nhận thưởng, kho đồ và bộ phần tử giao diện.'; tags=@('Game','Mobile','UI kit') }
-Add-P 'game3'     @{ source='figma'; cover='game3-mock.webp'; cat='apps'; title='Game 3'; tag='Mobile Game · UI/UX'; color='#FF7A59'; platform='Mobile Game (điện thoại và iPad)'; kind='Thiết kế UI/UX game';
+Add-P 'game3'     @{ source='figma'; cover='game3-mock5.webp'; cat='apps'; title='Title Bloom'; tag='Mobile Game · UI/UX'; color='#FF7A59'; platform='Mobile Game (điện thoại và iPad)'; kind='Thiết kế UI/UX game';
   desc='Thiết kế giao diện game di động: trạng thái tương tác ở màn hình chính, gameplay, hướng dẫn đầu game, bộ sưu tập, cửa hàng, hiệu ứng trợ giúp và màn kết thúc.'; tags=@('Game','Mobile','Tutorial') }
 
 # --- Web App ---
