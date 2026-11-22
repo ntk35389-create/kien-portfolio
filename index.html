@@ -39,7 +39,7 @@ body.has-cursor,body.has-cursor *{cursor:none!important}
 .hero-aura.two{background:radial-gradient(circle,#FF9D7E 0%,transparent 65%);top:auto;bottom:-26vmax;left:-18vmax;opacity:.15}
 .hero-meta{display:flex;justify-content:space-between;align-items:flex-end;font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;margin-bottom:3vh}
 .hero-title{font-family:var(--display);font-weight:800;font-size:clamp(2.7rem,min(11.8vw,14vh),11rem);line-height:.96;letter-spacing:-.02em;text-transform:uppercase}
-.hero-title .line{display:block;overflow:hidden;padding:.2em 0 .04em;margin:-.2em 0 -.04em}
+.hero-title .line{display:block;overflow:hidden;padding:.5em 0 .06em;margin:-.5em 0 -.06em}
 .hero-title .line>span{display:inline-block}
 .hero-title .outline{-webkit-text-stroke:1.5px var(--ink);color:transparent;transition:color .5s,-webkit-text-stroke-color .5s}
 .hero-title .outline:hover{color:var(--accent);-webkit-text-stroke:1.5px var(--accent)}
@@ -135,7 +135,7 @@ body.has-cursor,body.has-cursor *{cursor:none!important}
 .stat-label{margin-top:14px;font-family:var(--mono);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
 .cta{min-height:88svh;display:flex;flex-direction:column;justify-content:center;padding:14vh 5vw 0;position:relative;overflow:hidden}
 .cta-big{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(2.6rem,10.5vw,9.5rem);line-height:.98;letter-spacing:-.02em}
-.cta-big .row{display:block;overflow:hidden;padding:.2em 0 .04em;margin:-.2em 0 -.04em}
+.cta-big .row{display:block;overflow:hidden;padding:.5em 0 .06em;margin:-.5em 0 -.06em}
 .cta-big .row>span{display:inline-block}
 .cta-big a{color:transparent;-webkit-text-stroke:1.5px var(--ink);transition:color .45s,-webkit-text-stroke-color .45s}
 .cta-big a:hover{color:var(--accent);-webkit-text-stroke-color:var(--accent)}
@@ -455,7 +455,7 @@ body.has-cursor,body.has-cursor *{cursor:none!important}
     gsap.to('.hero-aura',{yPercent:35,scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:1}});
     gsap.to('.hero-aura.two',{yPercent:-25,scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:1.4}});
     gsap.to('.hero-title',{yPercent:-12,opacity:.25,scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom 30%',scrub:true}});
-    gsap.from('.hero-title .line > span',{y:'115%',duration:1.1,stagger:.12,ease:'power4.out',delay:1.35});
+    gsap.from('.hero-title .line > span',{y:'175%',duration:1.1,stagger:.12,ease:'power4.out',delay:1.35});
     gsap.from(['.hero-sub'],{opacity:0,y:40,duration:1,stagger:.15,ease:'power3.out',delay:1.9});
     gsap.to('#aboutText .w',{opacity:1,stagger:.4,ease:'none',scrollTrigger:{trigger:'#aboutText',start:'top 78%',end:'bottom 45%',scrub:true}});
     gsap.fromTo('.about-photo',{y:60},{y:-60,ease:'none',scrollTrigger:{trigger:'.about',start:'top bottom',end:'bottom top',scrub:true}});
@@ -483,7 +483,7 @@ body.has-cursor,body.has-cursor *{cursor:none!important}
         gsap.to(obj,{v:target,duration:1.8,ease:'power3.out',onUpdate:function(){el.textContent=Math.round(obj.v)+suffix;}});
       }});
     });
-    gsap.from('.cta-big .row > span',{y:'110%',duration:1.1,stagger:.12,ease:'power4.out',scrollTrigger:{trigger:'.cta',start:'top 65%'}});
+    gsap.from('.cta-big .row > span',{y:'175%',duration:1.1,stagger:.12,ease:'power4.out',scrollTrigger:{trigger:'.cta',start:'top 65%'}});
     /* tilt + shine */
     if(false)document.querySelectorAll('.app-card').forEach(function(card){
       card.addEventListener('mousemove',function(e){
