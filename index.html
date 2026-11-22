@@ -82,6 +82,7 @@ body.has-cursor,body.has-cursor *{cursor:none!important}
 .ac-cta{margin-top:18px;font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ca);display:inline-flex;align-items:center;gap:8px}
 .ac-shine{position:absolute;inset:0;pointer-events:none;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.08),transparent 45%);opacity:0;transition:opacity .4s}
 .app-card:hover .ac-shine{opacity:1}
+@media(max-width:860px){.app-card{transform:none!important;transform-style:flat;will-change:auto}.app-card .ac-body{transform:none}.app-card .ac-media img{transform:none!important;transition:none}.ac-shine{display:none}}
 .systems{padding:8vh 0 16vh}
 .sys-list{border-top:1px solid var(--line)}
 .sys-row{display:grid;grid-template-columns:70px 1.1fr 1fr auto;align-items:center;gap:3vw;padding:5vh var(--gutter);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
@@ -598,7 +599,7 @@ body.menu-open .nav-menu a:nth-child(5){transition-delay:.2s}
     var mm=gsap.matchMedia();
 
     /* tiêu đề mục: lộ chữ từ dưới lên + đường kẻ eyebrow */
-    ['#apps'].forEach(function(id){
+    (innerWidth<=860?[]:['#apps']).forEach(function(id){
       var h=document.querySelector(id+' .sec-head h2'),p=document.querySelector(id+' .sec-head p'),e=document.querySelector(id+' .eyebrow');
       if(!h)return;
       var tl=gsap.timeline({scrollTrigger:{trigger:id+' .sec-head',start:'top 82%'}});
@@ -609,7 +610,8 @@ body.menu-open .nav-menu a:nth-child(5){transition-delay:.2s}
     });
 
     /* ===== MOBILE APP: thẻ vào theo lớp 3D, ảnh lộ dần, nội dung nổi từng dòng ===== */
-    var cards=innerWidth<=860?gsap.utils.toArray('#apps .app-card'):[];
+    /* mobile: tắt toàn bộ hiệu ứng ở phần app cho nhẹ máy */
+    var cards=[];
     cards.forEach(function(card,i){
       var img=card.querySelector('.ac-media img'),media=card.querySelector('.ac-media'),body=card.querySelectorAll('.ac-tag,.ac-name,.ac-desc,.ac-cta');
       var tl=gsap.timeline({scrollTrigger:{trigger:card,start:'top 86%'}});
