@@ -171,7 +171,8 @@ body.has-cursor,body.has-cursor *{cursor:none!important}
 #webs .hz-bar i{display:block;height:100%;background:var(--accent);transform-origin:left;transform:scaleX(0)}
 }@media(min-width:861px){
 #apps .app-grid{display:block;position:relative;padding-bottom:8vh}
-#apps .app-card{position:sticky;top:calc(11vh + var(--i,0)*14px);display:grid;grid-template-columns:1fr 1.15fr;height:68vh;margin:0 0 7vh;border-radius:28px;background:color-mix(in srgb,var(--ca) 6%,#15101a);border:1px solid color-mix(in srgb,var(--ca) 22%,transparent);transform-style:flat;box-shadow:0 -18px 50px rgba(0,0,0,.35);transform-origin:50% 0}
+#apps .app-card{position:sticky;top:19vh;display:grid;grid-template-columns:1fr 1.15fr;height:62vh;margin:0 0 26vh;border-radius:28px;background:color-mix(in srgb,var(--ca) 6%,#15101a);border:1px solid color-mix(in srgb,var(--ca) 22%,transparent);transform-style:flat;box-shadow:0 -18px 50px rgba(0,0,0,.35);transform-origin:50% 0}
+#apps .app-card:last-child{margin-bottom:0}
 #apps .app-card .ac-media{grid-column:2;grid-row:1;aspect-ratio:auto;height:100%;border-radius:0 28px 28px 0}
 #apps .app-card .ac-body{grid-column:1;grid-row:1;padding:48px 52px;display:flex;flex-direction:column;justify-content:center;transform:none;align-items:flex-start;position:relative;z-index:2}
 #apps .app-card .ac-name{font-size:clamp(2rem,3.6vw,3.4rem);line-height:1.04}
@@ -545,7 +546,7 @@ body.has-cursor,body.has-cursor *{cursor:none!important}
         /* thẻ phía dưới đè lên: thẻ này thu nhỏ và tối dần */
         var next=list[i+1];
         if(next){
-          gsap.to(card,{scale:.9,opacity:0,ease:'none',force3D:true,scrollTrigger:{trigger:next,start:'top bottom',end:function(){return 'top '+parseFloat(getComputedStyle(next).top);},scrub:true,invalidateOnRefresh:true}});
+          gsap.to(card,{scale:.9,opacity:0,ease:'none',force3D:true,scrollTrigger:{trigger:next,start:'top 64%',end:function(){return 'top '+parseFloat(getComputedStyle(next).top);},scrub:true,invalidateOnRefresh:true}});
         }
       });
       return function(){list.forEach(function(c){var x=c.querySelectorAll('.ac-idx,.ac-kind,.ac-big');x.forEach(function(n){n.remove();});c.style.removeProperty('--i');});};
