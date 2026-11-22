@@ -103,12 +103,12 @@ footer a:hover{color:var(--accent)}
 <div class="fg-hero"><img src="assets/projects/forever-web2.webp" width="1800" height="1200" loading="eager" decoding="async" alt="Forever Young"></div>
 <h2 class="fg-title">Màn hình thiết kế</h2>
 <div class="fg-grid cols3">
-<figure class="fg-item"><div class="fg-img win"><img src="assets/projects/forever-fg-01.webp" width="588" height="4096" loading="lazy" decoding="async" alt="Forever Young — Trang chủ"></div><figcaption><b>01</b>Trang chủ</figcaption></figure>
-<figure class="fg-item"><div class="fg-img win"><img src="assets/projects/forever-fg-02.webp" width="803" height="3921" loading="lazy" decoding="async" alt="Forever Young — Dịch vụ"></div><figcaption><b>02</b>Dịch vụ</figcaption></figure>
-<figure class="fg-item"><div class="fg-img win"><img src="assets/projects/forever-fg-03.webp" width="1141" height="4096" loading="lazy" decoding="async" alt="Forever Young — Nghệ sĩ"></div><figcaption><b>03</b>Nghệ sĩ</figcaption></figure>
+<figure class="fg-item"><div class="fg-img win"><img src="assets/projects/forever-fgt-01.webp" data-full="assets/projects/forever-fg-01.webp" width="760" height="950" loading="lazy" decoding="async" alt="Forever Young — Trang chủ"></div><figcaption><b>01</b>Trang chủ</figcaption></figure>
+<figure class="fg-item"><div class="fg-img win"><img src="assets/projects/forever-fgt-02.webp" data-full="assets/projects/forever-fg-02.webp" width="760" height="950" loading="lazy" decoding="async" alt="Forever Young — Nghệ sĩ"></div><figcaption><b>02</b>Nghệ sĩ</figcaption></figure>
+<figure class="fg-item"><div class="fg-img win"><img src="assets/projects/forever-fgt-03.webp" data-full="assets/projects/forever-fg-03.webp" width="760" height="950" loading="lazy" decoding="async" alt="Forever Young — Dịch vụ"></div><figcaption><b>03</b>Dịch vụ</figcaption></figure>
 </div></div></main>
 <nav class="pager" aria-label="Dự án khác">
-  <a href="project-vuonxanh.html"><small>← Dự án trước</small><strong>VuonXanh Connect</strong></a>
+  <a href="project-longgiang.html"><small>← Dự án trước</small><strong>Long Giang</strong></a>
   <a href="project-ielts.html"><small>Dự án tiếp →</small><strong>IELTS Lab</strong></a>
 </nav>
 <footer>
@@ -154,7 +154,7 @@ footer a:hover{color:var(--accent)}
   }
   function show(i){
     cur=(i+items.length)%items.length; var it=items[cur], src=it.querySelector('img');
-    im.src=src.currentSrc||src.src; im.alt=src.alt; im.style.width='100%'; z=1; st.classList.remove('z'); zl.textContent='100%';
+    im.src=src.getAttribute('data-full')||src.currentSrc||src.src; im.alt=src.alt; im.style.width='100%'; z=1; st.classList.remove('z'); zl.textContent='100%';
     st.scrollTop=0; st.scrollLeft=0;
     nm.textContent=(it.querySelector('figcaption')||{}).textContent.replace(/^\d+/,'');
     sb.textContent=proj+' · '+(cur+1)+' / '+items.length;

@@ -12,4 +12,5 @@ Website tĩnh (HTML), deploy trên Vercel với Framework Preset `Other`, không
 - Chưa có trang: `project-fitapp.html`.
 - `build-projects.ps1` (8 trang từ Behance) và `build-figma.ps1` (10 trang từ Figma + 3 trang danh mục) dùng để tạo lại các trang; chạy `build-projects.ps1` trước, `build-figma.ps1` sau.
 
-- Web App và Landing Page (vime, pcu, thinkiz, vcb, vbim, vuonxanh, ielts, forever): sau khi chạy uild-projects.ps1 và uild-figma.ps1, chạy thêm uild-webapps.ps1 để dựng lại thân trang (thumb lớn + lưới màn hình có chú thích, ảnh *-web.webp và *-fg-NN.webp).
+- Web App và Landing Page (vime, pcu, thinkiz, vcb, vbim, vuonxanh, ielts, forever, laptop, noithat, horeca, longgiang): sau khi chạy uild-projects.ps1 và uild-figma.ps1, chạy thêm uild-webapps.ps1 để dựng lại thân trang (thumb lớn + lưới màn hình có chú thích, ảnh *-web.webp và *-fg-NN.webp).
+- Ảnh Landing Page: màn hình xuất từ Figma ở độ phân giải gốc (ssets/projects/<slug>-fg-NN.webp, dùng cho khung xem to) và bản cắt đầu trang (<slug>-fgt-NN.webp, dùng cho lưới); kích thước ghi trong ssets/projects/manifest_landing.json.

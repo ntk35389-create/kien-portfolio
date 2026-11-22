@@ -103,11 +103,15 @@ footer a:hover{color:var(--accent)}
 <div class="fg-hero"><img src="assets/projects/ielts-web2.webp" width="1800" height="1200" loading="eager" decoding="async" alt="IELTS Lab"></div>
 <h2 class="fg-title">Màn hình thiết kế</h2>
 <div class="fg-grid cols3">
-<figure class="fg-item"><div class="fg-img win"><img src="assets/projects/ielts-fg-01.webp" width="852" height="4096" loading="lazy" decoding="async" alt="IELTS Lab — Trang chủ"></div><figcaption><b>01</b>Trang chủ</figcaption></figure>
-<figure class="fg-item"><div class="fg-img win"><img src="assets/projects/ielts-fg-02.webp" width="1321" height="4096" loading="lazy" decoding="async" alt="IELTS Lab — Phương ph&#225;p học C.C.A.C"></div><figcaption><b>02</b>Phương ph&#225;p học C.C.A.C</figcaption></figure>
-<figure class="fg-item"><div class="fg-img win"><img src="assets/projects/ielts-fg-03.webp" width="1233" height="4096" loading="lazy" decoding="async" alt="IELTS Lab — Giới thiệu"></div><figcaption><b>03</b>Giới thiệu</figcaption></figure>
-<figure class="fg-item"><div class="fg-img win"><img src="assets/projects/ielts-fg-04.webp" width="1158" height="1908" loading="lazy" decoding="async" alt="IELTS Lab — Lộ tr&#236;nh v&#224; lịch học"></div><figcaption><b>04</b>Lộ tr&#236;nh v&#224; lịch học</figcaption></figure>
-<figure class="fg-item"><div class="fg-img win"><img src="assets/projects/ielts-fg-05.webp" width="1600" height="2331" loading="lazy" decoding="async" alt="IELTS Lab — Đội ngũ giảng vi&#234;n"></div><figcaption><b>05</b>Đội ngũ giảng vi&#234;n</figcaption></figure>
+<figure class="fg-item"><div class="fg-img win"><img src="assets/projects/ielts-fgt-01.webp" data-full="assets/projects/ielts-fg-01.webp" width="760" height="950" loading="lazy" decoding="async" alt="IELTS Lab — Trang chủ"></div><figcaption><b>01</b>Trang chủ</figcaption></figure>
+<figure class="fg-item"><div class="fg-img win"><img src="assets/projects/ielts-fgt-02.webp" data-full="assets/projects/ielts-fg-02.webp" width="760" height="950" loading="lazy" decoding="async" alt="IELTS Lab — Giới thiệu"></div><figcaption><b>02</b>Giới thiệu</figcaption></figure>
+<figure class="fg-item"><div class="fg-img win"><img src="assets/projects/ielts-fgt-03.webp" data-full="assets/projects/ielts-fg-03.webp" width="760" height="950" loading="lazy" decoding="async" alt="IELTS Lab — Phương ph&#225;p học C.C.A.C"></div><figcaption><b>03</b>Phương ph&#225;p học C.C.A.C</figcaption></figure>
+<figure class="fg-item"><div class="fg-img win"><img src="assets/projects/ielts-fgt-04.webp" data-full="assets/projects/ielts-fg-04.webp" width="760" height="950" loading="lazy" decoding="async" alt="IELTS Lab — Lộ tr&#236;nh v&#224; lịch học"></div><figcaption><b>04</b>Lộ tr&#236;nh v&#224; lịch học</figcaption></figure>
+<figure class="fg-item"><div class="fg-img win"><img src="assets/projects/ielts-fgt-05.webp" data-full="assets/projects/ielts-fg-05.webp" width="760" height="950" loading="lazy" decoding="async" alt="IELTS Lab — Đội ngũ giảng vi&#234;n"></div><figcaption><b>05</b>Đội ngũ giảng vi&#234;n</figcaption></figure>
+<figure class="fg-item"><div class="fg-img win"><img src="assets/projects/ielts-fgt-06.webp" data-full="assets/projects/ielts-fg-06.webp" width="760" height="950" loading="lazy" decoding="async" alt="IELTS Lab — Lịch khai giảng"></div><figcaption><b>06</b>Lịch khai giảng</figcaption></figure>
+<figure class="fg-item"><div class="fg-img win"><img src="assets/projects/ielts-fgt-07.webp" data-full="assets/projects/ielts-fg-07.webp" width="760" height="950" loading="lazy" decoding="async" alt="IELTS Lab — Chi tiết kho&#225; học"></div><figcaption><b>07</b>Chi tiết kho&#225; học</figcaption></figure>
+<figure class="fg-item"><div class="fg-img win"><img src="assets/projects/ielts-fgt-08.webp" data-full="assets/projects/ielts-fg-08.webp" width="760" height="950" loading="lazy" decoding="async" alt="IELTS Lab — Danh s&#225;ch b&#224;i viết"></div><figcaption><b>08</b>Danh s&#225;ch b&#224;i viết</figcaption></figure>
+<figure class="fg-item"><div class="fg-img win"><img src="assets/projects/ielts-fgt-09.webp" data-full="assets/projects/ielts-fg-09.webp" width="760" height="950" loading="lazy" decoding="async" alt="IELTS Lab — Chi tiết b&#224;i viết"></div><figcaption><b>09</b>Chi tiết b&#224;i viết</figcaption></figure>
 </div></div></main>
 <nav class="pager" aria-label="Dự án khác">
   <a href="project-forever.html"><small>← Dự án trước</small><strong>Forever Young</strong></a>
@@ -156,7 +160,7 @@ footer a:hover{color:var(--accent)}
   }
   function show(i){
     cur=(i+items.length)%items.length; var it=items[cur], src=it.querySelector('img');
-    im.src=src.currentSrc||src.src; im.alt=src.alt; im.style.width='100%'; z=1; st.classList.remove('z'); zl.textContent='100%';
+    im.src=src.getAttribute('data-full')||src.currentSrc||src.src; im.alt=src.alt; im.style.width='100%'; z=1; st.classList.remove('z'); zl.textContent='100%';
     st.scrollTop=0; st.scrollLeft=0;
     nm.textContent=(it.querySelector('figcaption')||{}).textContent.replace(/^\d+/,'');
     sb.textContent=proj+' · '+(cur+1)+' / '+items.length;

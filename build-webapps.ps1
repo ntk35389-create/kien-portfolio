@@ -21,19 +21,30 @@ $apps = [ordered]@{
     shots=@('1024x729','1024x729','1024x729','1024x729','1024x729','1024x729','1024x729','1024x729','1024x729','1024x729')
     caps=@('Đăng nhập','Trang chủ','Trợ lý trò chuyện','Trang chủ · Thông báo','Tổng quan quản lý','Khoá học gần đây','Chi tiết khoá học','Học phần nhân sự','Quản lý khoá học','Thư viện tài liệu') }
   # Landing page: ảnh cả trang rất dài -> thẻ cắt phần đầu (win), bấm vào để cuộn xem đủ trong khung xem lớn
-  'vuonxanh' = @{ hero='1800x1200'; title='VuonXanh Connect'; cols=3
-    shots=@('1013x4096','1920x1057','1920x1532','1920x2762','1920x3269','1920x3241','1462x2478')
+  # kích thước ảnh của các dự án Landing đọc từ assets/projects/manifest_landing.json (cols=3, manifest=$true)
+  'vuonxanh' = @{ title='VuonXanh Connect'; cols=3; manifest=$true
     win=@($true,$false,$true,$true,$true,$true,$true)
     caps=@('Trang chủ','Đăng nhập','Gian hàng đối tác','Danh mục sản phẩm','Chi tiết sản phẩm','Tin tức','Chi tiết tin tức') }
-  'ielts' = @{ hero='1800x1200'; title='IELTS Lab'; cols=3
-    shots=@('852x4096','1321x4096','1233x4096','1158x1908','1600x2331')
-    win=@($true,$true,$true,$true,$true)
-    caps=@('Trang chủ','Phương pháp học C.C.A.C','Giới thiệu','Lộ trình và lịch học','Đội ngũ giảng viên') }
-  'forever' = @{ hero='1800x1200'; title='Forever Young'; cols=3
-    shots=@('588x4096','803x3921','1141x4096')
+  'ielts' = @{ title='IELTS Lab'; cols=3; manifest=$true
+    win=@($true,$true,$true,$true,$true,$true,$true,$true,$true)
+    caps=@('Trang chủ','Giới thiệu','Phương pháp học C.C.A.C','Lộ trình và lịch học','Đội ngũ giảng viên','Lịch khai giảng','Chi tiết khoá học','Danh sách bài viết','Chi tiết bài viết') }
+  'forever' = @{ title='Forever Young'; cols=3; manifest=$true
     win=@($true,$true,$true)
-    caps=@('Trang chủ','Dịch vụ','Nghệ sĩ') }
+    caps=@('Trang chủ','Nghệ sĩ','Dịch vụ') }
+  'laptop' = @{ title='Laptop'; cols=3; manifest=$true
+    win=@($true,$true,$true,$true,$true)
+    caps=@('Trang chủ','Danh mục sản phẩm','Chi tiết sản phẩm','Tin tức','Chi tiết bài viết') }
+  'noithat' = @{ title='Nội thất'; cols=3; manifest=$true
+    win=@($true,$true,$true)
+    caps=@('Trang chủ','Danh mục sản phẩm','Chi tiết sản phẩm') }
+  'horeca' = @{ title='Horeca VN'; cols=3; manifest=$true
+    win=@($true,$true,$true,$true,$true,$true,$true,$true,$true,$true)
+    caps=@('Trang chủ','Giới thiệu','Công thức đồ uống','Chi tiết công thức','Nguyên liệu và máy móc','Chi tiết nguyên liệu','Tin tức','Chi tiết tin tức','Đào tạo','Liên hệ') }
+  'longgiang' = @{ title='Long Giang'; cols=3; manifest=$true
+    win=@($true,$true,$true,$true,$true,$true)
+    caps=@('Trang chủ','Dự án','Thông tin chuyên ngành','Hồ sơ năng lực','Tin tức','Chi tiết tin tức') }
 }
+$landMan = Get-Content "$PSScriptRoot\assets\projects\manifest_landing.json" -Raw -Encoding UTF8 | ConvertFrom-Json
 
 $css = @'
 <style id="fg">
@@ -114,7 +125,7 @@ $js = @'
   }
   function show(i){
     cur=(i+items.length)%items.length; var it=items[cur], src=it.querySelector('img');
-    im.src=src.currentSrc||src.src; im.alt=src.alt; im.style.width='100%'; z=1; st.classList.remove('z'); zl.textContent='100%';
+    im.src=src.getAttribute('data-full')||src.currentSrc||src.src; im.alt=src.alt; im.style.width='100%'; z=1; st.classList.remove('z'); zl.textContent='100%';
     st.scrollTop=0; st.scrollLeft=0;
     nm.textContent=(it.querySelector('figcaption')||{}).textContent.replace(/^\d+/,'');
     sb.textContent=proj+' · '+(cur+1)+' / '+items.length;
@@ -162,7 +173,7 @@ $js = @'
 
 foreach ($slug in $apps.Keys) {
   $a = $apps[$slug]; $file = "project-$slug.html"
-  $hw = $a.hero.Split('x')
+  if ($a.manifest) { $lm = $landMan.$slug; $hw = @([string]$lm.hero[0], [string]$lm.hero[1]) } else { $hw = $a.hero.Split('x') }
   $sb = New-Object System.Text.StringBuilder
   [void]$sb.AppendLine('<main class="case"><div class="fg-wrap">')
   [void]$sb.AppendLine(('<div class="fg-hero"><img src="assets/projects/{0}-web{4}.webp" width="{1}" height="{2}" loading="eager" decoding="async" alt="{3}"></div>' -f $slug, $hw[0], $hw[1], $a.title, $(if ($a.cols -eq 3) { '2' } else { '' })))
@@ -170,9 +181,15 @@ foreach ($slug in $apps.Keys) {
   $gcls = if ($a.cols -eq 3) { 'fg-grid cols3' } else { 'fg-grid' }
   [void]$sb.AppendLine("<div class=`"$gcls`">")
   for ($i = 0; $i -lt $a.caps.Count; $i++) {
-    $d = $a.shots[$i].Split('x'); $cap = [System.Net.WebUtility]::HtmlEncode($a.caps[$i])
+    $cap = [System.Net.WebUtility]::HtmlEncode($a.caps[$i])
     $wcls = if ($a.win -and $a.win[$i]) { 'fg-img win' } else { 'fg-img' }
-    [void]$sb.AppendLine(('<figure class="fg-item"><div class="' + $wcls + '"><img src="assets/projects/{0}-fg-{1:00}.webp" width="{2}" height="{3}" loading="lazy" decoding="async" alt="{4} — {5}"></div><figcaption><b>{1:00}</b>{5}</figcaption></figure>' -f $slug, ($i + 1), $d[0], $d[1], $a.title, $cap))
+    if ($a.manifest) {
+      $s = $lm.shots[$i]
+      [void]$sb.AppendLine(('<figure class="fg-item"><div class="' + $wcls + '"><img src="assets/projects/{0}" data-full="assets/projects/{1}" width="{2}" height="{3}" loading="lazy" decoding="async" alt="{4} — {5}"></div><figcaption><b>{6:00}</b>{5}</figcaption></figure>' -f $s.t, $s.f, $s.tw, $s.th, $a.title, $cap, ($i + 1)))
+    } else {
+      $d = $a.shots[$i].Split('x')
+      [void]$sb.AppendLine(('<figure class="fg-item"><div class="' + $wcls + '"><img src="assets/projects/{0}-fg-{1:00}.webp" width="{2}" height="{3}" loading="lazy" decoding="async" alt="{4} — {5}"></div><figcaption><b>{1:00}</b>{5}</figcaption></figure>' -f $slug, ($i + 1), $d[0], $d[1], $a.title, $cap))
+    }
   }
   [void]$sb.AppendLine('</div></div></main>')
   $body = $sb.ToString().TrimEnd()

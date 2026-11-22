@@ -20,7 +20,15 @@ $projects = @(
   @{ slug='ielts';     title='IELTS Lab'; cat='Landing Page'; anchor='webs'; color='#6FA8FF'; client='IELTS LAB'; kind='Website trung tâm Anh ngữ';
      desc='Website giới thiệu trung tâm đào tạo tiếng Anh IELTS LAB, chuyên luyện thi IELTS cấp tốc với sứ mệnh giúp học viên đạt mục tiêu trong thời gian ngắn nhất. Website cung cấp thông tin chi tiết về khóa học, lịch học và tài nguyên hữu ích để học viên tự tin chinh phục kỳ thi.'; tags=@('Landing Page','Education','Responsive') },
   @{ slug='vuonxanh'; title='VuonXanh Connect'; cat='Landing Page'; anchor='webs'; color='#5FD068'; client='VuonXanh Connect'; kind='Sàn thương mại điện tử nông sản';
-     desc='Sàn thương mại điện tử nông sản toàn quốc, kết nối trực tiếp người tiêu dùng với nhà vườn. Website gồm trang chủ, gian hàng đối tác, danh mục sản phẩm, chi tiết sản phẩm và chuyên mục tin tức, tập trung vào sự tin cậy và trải nghiệm tìm mua nông sản sạch.'; tags=@('Landing Page','E-commerce','Agriculture') }
+     desc='Sàn thương mại điện tử nông sản toàn quốc, kết nối trực tiếp người tiêu dùng với nhà vườn. Website gồm trang chủ, gian hàng đối tác, danh mục sản phẩm, chi tiết sản phẩm và chuyên mục tin tức, tập trung vào sự tin cậy và trải nghiệm tìm mua nông sản sạch.'; tags=@('Landing Page','E-commerce','Agriculture') },
+  @{ slug='laptop'; title='Laptop'; cat='Landing Page'; anchor='webs'; color='#FF4D4D'; client='Laptop'; kind='Website bán laptop';
+     desc='Website thương mại điện tử chuyên bán laptop và phụ kiện công nghệ. Trang chủ nổi bật các chương trình flash sale và sản phẩm bán chạy, danh mục có bộ lọc theo hãng, mức giá và cấu hình, trang chi tiết sản phẩm cùng chuyên mục tin tức công nghệ.'; tags=@('Landing Page','E-commerce','Công nghệ') },
+  @{ slug='noithat'; title='Nội thất'; cat='Landing Page'; anchor='webs'; color='#C8963E'; client='Nội thất'; kind='Website bán nội thất';
+     desc='Website bán nội thất cho gia đình. Trang chủ giới thiệu bộ sưu tập bán chạy, chất lượng và dịch vụ thiết kế thi công; danh mục theo từng phòng với bộ lọc màu sắc, chất liệu, kích thước; trang chi tiết sản phẩm với lựa chọn màu và sản phẩm liên quan.'; tags=@('Landing Page','E-commerce','Nội thất') },
+  @{ slug='horeca'; title='Horeca VN'; cat='Landing Page'; anchor='webs'; color='#FF8A3D'; client='Horeca VN'; kind='Website nguyên liệu và đào tạo F&B';
+     desc='Website của Horeca VN, nhà cung cấp nguyên liệu, máy móc và dịch vụ đào tạo cho ngành pha chế. Website giới thiệu doanh nghiệp, thư viện công thức đồ uống, danh mục nguyên liệu và máy móc, chuyên mục tin tức tuyển dụng và các khoá đào tạo.'; tags=@('Landing Page','F&B','Đào tạo') },
+  @{ slug='longgiang'; title='Long Giang'; cat='Landing Page'; anchor='webs'; color='#5B86FF'; client='Long Giang'; kind='Website doanh nghiệp xây dựng';
+     desc='Website giới thiệu doanh nghiệp xây dựng Long Giang, chuyên thi công cọc khoan nhồi và hạ tầng. Website trình bày các dự án tiêu biểu, thông tin kỹ thuật chuyên ngành, hồ sơ năng lực và tin tức thị trường với phong cách trang trọng, đáng tin cậy.'; tags=@('Landing Page','Construction','Corporate') }
 )
 
 function Esc($s) { [System.Net.WebUtility]::HtmlEncode($s) }
@@ -108,7 +116,7 @@ footer a:hover{color:var(--accent)}
 '@
 
 # thứ tự trong trang chủ: apps -> systems -> webs
-$order = @('kimdong','heartwise','vime','vcb','pcu','thinkiz','forever','ielts','vuonxanh')
+$order = @('kimdong','heartwise','vime','vcb','pcu','thinkiz','forever','ielts','vuonxanh','laptop','noithat','horeca','longgiang')
 $bySlug = @{}; foreach ($p in $projects) { $bySlug[$p.slug] = $p }
 
 for ($i = 0; $i -lt $order.Count; $i++) {

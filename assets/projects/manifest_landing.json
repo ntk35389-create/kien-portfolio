@@ -1,0 +1,402 @@
+﻿{
+    "forever":  {
+                    "hero":  [
+                                 1800,
+                                 1200
+                             ],
+                    "shots":  [
+                                  {
+                                      "f":  "forever-fg-01.webp",
+                                      "fw":  1600,
+                                      "fh":  11144,
+                                      "t":  "forever-fgt-01.webp",
+                                      "tw":  760,
+                                      "th":  950
+                                  },
+                                  {
+                                      "f":  "forever-fg-02.webp",
+                                      "fw":  1600,
+                                      "fh":  5744,
+                                      "t":  "forever-fgt-02.webp",
+                                      "tw":  760,
+                                      "th":  950
+                                  },
+                                  {
+                                      "f":  "forever-fg-03.webp",
+                                      "fw":  1600,
+                                      "fh":  7797,
+                                      "t":  "forever-fgt-03.webp",
+                                      "tw":  760,
+                                      "th":  950
+                                  }
+                              ]
+                },
+    "vuonxanh":  {
+                     "hero":  [
+                                  1800,
+                                  1200
+                              ],
+                     "shots":  [
+                                   {
+                                       "f":  "vuonxanh-fg-01.webp",
+                                       "fw":  1920,
+                                       "fh":  7761,
+                                       "t":  "vuonxanh-fgt-01.webp",
+                                       "tw":  760,
+                                       "th":  950
+                                   },
+                                   {
+                                       "f":  "vuonxanh-fg-02.webp",
+                                       "fw":  1920,
+                                       "fh":  1057,
+                                       "t":  "vuonxanh-fgt-02.webp",
+                                       "tw":  760,
+                                       "th":  418
+                                   },
+                                   {
+                                       "f":  "vuonxanh-fg-03.webp",
+                                       "fw":  1920,
+                                       "fh":  1532,
+                                       "t":  "vuonxanh-fgt-03.webp",
+                                       "tw":  760,
+                                       "th":  606
+                                   },
+                                   {
+                                       "f":  "vuonxanh-fg-04.webp",
+                                       "fw":  1920,
+                                       "fh":  2762,
+                                       "t":  "vuonxanh-fgt-04.webp",
+                                       "tw":  760,
+                                       "th":  950
+                                   },
+                                   {
+                                       "f":  "vuonxanh-fg-05.webp",
+                                       "fw":  1920,
+                                       "fh":  3269,
+                                       "t":  "vuonxanh-fgt-05.webp",
+                                       "tw":  760,
+                                       "th":  950
+                                   },
+                                   {
+                                       "f":  "vuonxanh-fg-06.webp",
+                                       "fw":  1920,
+                                       "fh":  3241,
+                                       "t":  "vuonxanh-fgt-06.webp",
+                                       "tw":  760,
+                                       "th":  950
+                                   },
+                                   {
+                                       "f":  "vuonxanh-fg-07.webp",
+                                       "fw":  1462,
+                                       "fh":  2478,
+                                       "t":  "vuonxanh-fgt-07.webp",
+                                       "tw":  760,
+                                       "th":  950
+                                   }
+                               ]
+                 },
+    "ielts":  {
+                  "hero":  [
+                               1800,
+                               1200
+                           ],
+                  "shots":  [
+                                {
+                                    "f":  "ielts-fg-01.webp",
+                                    "fw":  1600,
+                                    "fh":  7694,
+                                    "t":  "ielts-fgt-01.webp",
+                                    "tw":  760,
+                                    "th":  950
+                                },
+                                {
+                                    "f":  "ielts-fg-02.webp",
+                                    "fw":  1600,
+                                    "fh":  5314,
+                                    "t":  "ielts-fgt-02.webp",
+                                    "tw":  760,
+                                    "th":  950
+                                },
+                                {
+                                    "f":  "ielts-fg-03.webp",
+                                    "fw":  1600,
+                                    "fh":  4961,
+                                    "t":  "ielts-fgt-03.webp",
+                                    "tw":  760,
+                                    "th":  950
+                                },
+                                {
+                                    "f":  "ielts-fg-04.webp",
+                                    "fw":  1600,
+                                    "fh":  5658,
+                                    "t":  "ielts-fgt-04.webp",
+                                    "tw":  760,
+                                    "th":  950
+                                },
+                                {
+                                    "f":  "ielts-fg-05.webp",
+                                    "fw":  1600,
+                                    "fh":  3974,
+                                    "t":  "ielts-fgt-05.webp",
+                                    "tw":  760,
+                                    "th":  950
+                                },
+                                {
+                                    "f":  "ielts-fg-06.webp",
+                                    "fw":  1600,
+                                    "fh":  2920,
+                                    "t":  "ielts-fgt-06.webp",
+                                    "tw":  760,
+                                    "th":  950
+                                },
+                                {
+                                    "f":  "ielts-fg-07.webp",
+                                    "fw":  1600,
+                                    "fh":  6554,
+                                    "t":  "ielts-fgt-07.webp",
+                                    "tw":  760,
+                                    "th":  950
+                                },
+                                {
+                                    "f":  "ielts-fg-08.webp",
+                                    "fw":  1600,
+                                    "fh":  3249,
+                                    "t":  "ielts-fgt-08.webp",
+                                    "tw":  760,
+                                    "th":  950
+                                },
+                                {
+                                    "f":  "ielts-fg-09.webp",
+                                    "fw":  1600,
+                                    "fh":  3999,
+                                    "t":  "ielts-fgt-09.webp",
+                                    "tw":  760,
+                                    "th":  950
+                                }
+                            ]
+              },
+    "laptop":  {
+                   "hero":  [
+                                1800,
+                                1200
+                            ],
+                   "shots":  [
+                                 {
+                                     "f":  "laptop-fg-01.webp",
+                                     "fw":  1600,
+                                     "fh":  7456,
+                                     "t":  "laptop-fgt-01.webp",
+                                     "tw":  760,
+                                     "th":  950
+                                 },
+                                 {
+                                     "f":  "laptop-fg-02.webp",
+                                     "fw":  1600,
+                                     "fh":  5053,
+                                     "t":  "laptop-fgt-02.webp",
+                                     "tw":  760,
+                                     "th":  950
+                                 },
+                                 {
+                                     "f":  "laptop-fg-03.webp",
+                                     "fw":  1600,
+                                     "fh":  5468,
+                                     "t":  "laptop-fgt-03.webp",
+                                     "tw":  760,
+                                     "th":  950
+                                 },
+                                 {
+                                     "f":  "laptop-fg-04.webp",
+                                     "fw":  1600,
+                                     "fh":  2825,
+                                     "t":  "laptop-fgt-04.webp",
+                                     "tw":  760,
+                                     "th":  950
+                                 },
+                                 {
+                                     "f":  "laptop-fg-05.webp",
+                                     "fw":  1600,
+                                     "fh":  3599,
+                                     "t":  "laptop-fgt-05.webp",
+                                     "tw":  760,
+                                     "th":  950
+                                 }
+                             ]
+               },
+    "noithat":  {
+                    "hero":  [
+                                 1800,
+                                 1200
+                             ],
+                    "shots":  [
+                                  {
+                                      "f":  "noithat-fg-01.webp",
+                                      "fw":  1928,
+                                      "fh":  6537,
+                                      "t":  "noithat-fgt-01.webp",
+                                      "tw":  760,
+                                      "th":  950
+                                  },
+                                  {
+                                      "f":  "noithat-fg-02.webp",
+                                      "fw":  1920,
+                                      "fh":  3389,
+                                      "t":  "noithat-fgt-02.webp",
+                                      "tw":  760,
+                                      "th":  950
+                                  },
+                                  {
+                                      "f":  "noithat-fg-03.webp",
+                                      "fw":  1920,
+                                      "fh":  2914,
+                                      "t":  "noithat-fgt-03.webp",
+                                      "tw":  760,
+                                      "th":  950
+                                  }
+                              ]
+                },
+    "horeca":  {
+                   "hero":  [
+                                1800,
+                                1200
+                            ],
+                   "shots":  [
+                                 {
+                                     "f":  "horeca-fg-01.webp",
+                                     "fw":  1600,
+                                     "fh":  7991,
+                                     "t":  "horeca-fgt-01.webp",
+                                     "tw":  760,
+                                     "th":  950
+                                 },
+                                 {
+                                     "f":  "horeca-fg-02.webp",
+                                     "fw":  1600,
+                                     "fh":  7163,
+                                     "t":  "horeca-fgt-02.webp",
+                                     "tw":  760,
+                                     "th":  950
+                                 },
+                                 {
+                                     "f":  "horeca-fg-03.webp",
+                                     "fw":  1600,
+                                     "fh":  4047,
+                                     "t":  "horeca-fgt-03.webp",
+                                     "tw":  760,
+                                     "th":  950
+                                 },
+                                 {
+                                     "f":  "horeca-fg-04.webp",
+                                     "fw":  1600,
+                                     "fh":  2873,
+                                     "t":  "horeca-fgt-04.webp",
+                                     "tw":  760,
+                                     "th":  950
+                                 },
+                                 {
+                                     "f":  "horeca-fg-05.webp",
+                                     "fw":  1600,
+                                     "fh":  3388,
+                                     "t":  "horeca-fgt-05.webp",
+                                     "tw":  760,
+                                     "th":  950
+                                 },
+                                 {
+                                     "f":  "horeca-fg-06.webp",
+                                     "fw":  1600,
+                                     "fh":  6983,
+                                     "t":  "horeca-fgt-06.webp",
+                                     "tw":  760,
+                                     "th":  950
+                                 },
+                                 {
+                                     "f":  "horeca-fg-07.webp",
+                                     "fw":  1600,
+                                     "fh":  2955,
+                                     "t":  "horeca-fgt-07.webp",
+                                     "tw":  760,
+                                     "th":  950
+                                 },
+                                 {
+                                     "f":  "horeca-fg-08.webp",
+                                     "fw":  1600,
+                                     "fh":  4042,
+                                     "t":  "horeca-fgt-08.webp",
+                                     "tw":  760,
+                                     "th":  950
+                                 },
+                                 {
+                                     "f":  "horeca-fg-09.webp",
+                                     "fw":  1600,
+                                     "fh":  4207,
+                                     "t":  "horeca-fgt-09.webp",
+                                     "tw":  760,
+                                     "th":  950
+                                 },
+                                 {
+                                     "f":  "horeca-fg-10.webp",
+                                     "fw":  1600,
+                                     "fh":  1587,
+                                     "t":  "horeca-fgt-10.webp",
+                                     "tw":  760,
+                                     "th":  754
+                                 }
+                             ]
+               },
+    "longgiang":  {
+                      "hero":  [
+                                   1800,
+                                   1200
+                               ],
+                      "shots":  [
+                                    {
+                                        "f":  "longgiang-fg-01.webp",
+                                        "fw":  1920,
+                                        "fh":  4272,
+                                        "t":  "longgiang-fgt-01.webp",
+                                        "tw":  760,
+                                        "th":  950
+                                    },
+                                    {
+                                        "f":  "longgiang-fg-02.webp",
+                                        "fw":  1920,
+                                        "fh":  3420,
+                                        "t":  "longgiang-fgt-02.webp",
+                                        "tw":  760,
+                                        "th":  950
+                                    },
+                                    {
+                                        "f":  "longgiang-fg-03.webp",
+                                        "fw":  1920,
+                                        "fh":  3854,
+                                        "t":  "longgiang-fgt-03.webp",
+                                        "tw":  760,
+                                        "th":  950
+                                    },
+                                    {
+                                        "f":  "longgiang-fg-04.webp",
+                                        "fw":  1920,
+                                        "fh":  2016,
+                                        "t":  "longgiang-fgt-04.webp",
+                                        "tw":  760,
+                                        "th":  798
+                                    },
+                                    {
+                                        "f":  "longgiang-fg-05.webp",
+                                        "fw":  1920,
+                                        "fh":  2956,
+                                        "t":  "longgiang-fgt-05.webp",
+                                        "tw":  760,
+                                        "th":  950
+                                    },
+                                    {
+                                        "f":  "longgiang-fg-06.webp",
+                                        "fw":  1920,
+                                        "fh":  4430,
+                                        "t":  "longgiang-fgt-06.webp",
+                                        "tw":  760,
+                                        "th":  950
+                                    }
+                                ]
+                  }
+}

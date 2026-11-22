@@ -159,7 +159,7 @@ footer a:hover{color:var(--accent)}
   }
   function show(i){
     cur=(i+items.length)%items.length; var it=items[cur], src=it.querySelector('img');
-    im.src=src.currentSrc||src.src; im.alt=src.alt; im.style.width='100%'; z=1; st.classList.remove('z'); zl.textContent='100%';
+    im.src=src.getAttribute('data-full')||src.currentSrc||src.src; im.alt=src.alt; im.style.width='100%'; z=1; st.classList.remove('z'); zl.textContent='100%';
     st.scrollTop=0; st.scrollLeft=0;
     nm.textContent=(it.querySelector('figcaption')||{}).textContent.replace(/^\d+/,'');
     sb.textContent=proj+' · '+(cur+1)+' / '+items.length;
