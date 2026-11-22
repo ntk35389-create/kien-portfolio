@@ -72,6 +72,18 @@ footer a:hover{color:var(--accent)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.card .media img{transition:none}}
 :root{--accent:#2F6BFF}
 </style>
+<style id="fg">
+.fg-wrap{max-width:1400px;margin:0 auto}
+.fg-hero{border-radius:20px;overflow:hidden;background:#0D060A;border:1px solid var(--line)}
+.fg-title{font-family:var(--mono);font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:9vh 0 4vh;display:flex;align-items:center;gap:16px}
+.fg-title::before{content:"";width:48px;height:1px;background:var(--accent)}
+.fg-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 28px;align-items:start}
+.fg-item{margin:0}
+.fg-item .fg-img{border-radius:16px;overflow:hidden;background:#0D060A;border:1px solid var(--line)}
+.fg-item figcaption{margin-top:14px;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:var(--muted)}
+.fg-item figcaption b{color:var(--ink);font-weight:400;margin-right:10px}
+@media(max-width:700px){.fg-grid{grid-template-columns:1fr;gap:32px}.fg-hero,.fg-item .fg-img{border-radius:12px}}
+</style>
 </head><body>
 <nav class="nav"><a class="logo" href="index.html">KIÊN.</a><a class="back" href="webapps.html">← Web App</a></nav>
 <header class="hero">
@@ -86,17 +98,21 @@ footer a:hover{color:var(--accent)}
     <div><dt>Nội dung</dt><dd class="tags"><span>Web App</span><span>E-learning</span><span>Dashboard</span></dd></div>
   </dl>
 </header>
-<main class="case">
-<figure class="shot"><figcaption>Đăng nhập</figcaption><a class="frame" href="assets/projects/vbim-1.webp" target="_blank" rel="noopener"><img src="assets/projects/vbim-1.webp" width="1440" height="1024" loading="eager" decoding="async" alt="Đăng nhập"></a></figure>
-<figure class="shot"><figcaption>Trang chủ - Dạng view sceen</figcaption><a class="frame" href="assets/projects/vbim-2.webp" target="_blank" rel="noopener"><img src="assets/projects/vbim-2.webp" width="1440" height="1024" loading="lazy" decoding="async" alt="Trang chủ - Dạng view sceen"></a></figure>
-<figure class="shot"><figcaption>Trang chủ - Chat</figcaption><a class="frame" href="assets/projects/vbim-3.webp" target="_blank" rel="noopener"><img src="assets/projects/vbim-3.webp" width="1440" height="1425" loading="lazy" decoding="async" alt="Trang chủ - Chat"></a></figure>
-<figure class="shot"><figcaption>Kh&#243;a học bắt buộc</figcaption><a class="frame" href="assets/projects/vbim-4.webp" target="_blank" rel="noopener"><img src="assets/projects/vbim-4.webp" width="865" height="1800" loading="lazy" decoding="async" alt="Kh&#243;a học bắt buộc"></a></figure>
-<figure class="shot"><figcaption>B&#224;i học . Mở rộng</figcaption><a class="frame" href="assets/projects/vbim-5.webp" target="_blank" rel="noopener"><img src="assets/projects/vbim-5.webp" width="1027" height="1800" loading="lazy" decoding="async" alt="B&#224;i học . Mở rộng"></a></figure>
-<figure class="shot"><figcaption>B&#224;i học - L&#224;m b&#224;i kiểm tra</figcaption><a class="frame" href="assets/projects/vbim-6.webp" target="_blank" rel="noopener"><img src="assets/projects/vbim-6.webp" width="1024" height="1800" loading="lazy" decoding="async" alt="B&#224;i học - L&#224;m b&#224;i kiểm tra"></a></figure>
-<figure class="shot"><figcaption>B&#224;i học - Kết quả</figcaption><a class="frame" href="assets/projects/vbim-7.webp" target="_blank" rel="noopener"><img src="assets/projects/vbim-7.webp" width="1024" height="1800" loading="lazy" decoding="async" alt="B&#224;i học - Kết quả"></a></figure>
-<figure class="shot"><figcaption>Kho c&#225; nh&#226;n - Kh&#243;a học</figcaption><a class="frame" href="assets/projects/vbim-8.webp" target="_blank" rel="noopener"><img src="assets/projects/vbim-8.webp" width="1440" height="1024" loading="lazy" decoding="async" alt="Kho c&#225; nh&#226;n - Kh&#243;a học"></a></figure>
-
-</main>
+<main class="case"><div class="fg-wrap">
+<div class="fg-hero"><img src="assets/projects/vbim-web.webp" width="1672" height="941" loading="eager" decoding="async" alt="VBIM x TDI Group"></div>
+<h2 class="fg-title">Màn hình thiết kế</h2>
+<div class="fg-grid">
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vbim-fg-01.webp" width="1024" height="729" loading="lazy" decoding="async" alt="VBIM x TDI Group — Đăng nhập"></div><figcaption><b>01</b>Đăng nhập</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vbim-fg-02.webp" width="1024" height="729" loading="lazy" decoding="async" alt="VBIM x TDI Group — Trang chủ"></div><figcaption><b>02</b>Trang chủ</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vbim-fg-03.webp" width="1024" height="729" loading="lazy" decoding="async" alt="VBIM x TDI Group — Trợ l&#253; tr&#242; chuyện"></div><figcaption><b>03</b>Trợ l&#253; tr&#242; chuyện</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vbim-fg-04.webp" width="1024" height="729" loading="lazy" decoding="async" alt="VBIM x TDI Group — Trang chủ &#183; Th&#244;ng b&#225;o"></div><figcaption><b>04</b>Trang chủ &#183; Th&#244;ng b&#225;o</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vbim-fg-05.webp" width="1024" height="729" loading="lazy" decoding="async" alt="VBIM x TDI Group — Tổng quan quản l&#253;"></div><figcaption><b>05</b>Tổng quan quản l&#253;</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vbim-fg-06.webp" width="1024" height="729" loading="lazy" decoding="async" alt="VBIM x TDI Group — Kho&#225; học gần đ&#226;y"></div><figcaption><b>06</b>Kho&#225; học gần đ&#226;y</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vbim-fg-07.webp" width="1024" height="729" loading="lazy" decoding="async" alt="VBIM x TDI Group — Chi tiết kho&#225; học"></div><figcaption><b>07</b>Chi tiết kho&#225; học</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vbim-fg-08.webp" width="1024" height="729" loading="lazy" decoding="async" alt="VBIM x TDI Group — Học phần nh&#226;n sự"></div><figcaption><b>08</b>Học phần nh&#226;n sự</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vbim-fg-09.webp" width="1024" height="729" loading="lazy" decoding="async" alt="VBIM x TDI Group — Quản l&#253; kho&#225; học"></div><figcaption><b>09</b>Quản l&#253; kho&#225; học</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vbim-fg-10.webp" width="1024" height="729" loading="lazy" decoding="async" alt="VBIM x TDI Group — Thư viện t&#224;i liệu"></div><figcaption><b>10</b>Thư viện t&#224;i liệu</figcaption></figure>
+</div></div></main>
 <nav class="pager" aria-label="Dự án khác">
   <a href="project-pcu.html"><small>← Dự án trước</small><strong>PCU &#215; TDI Group</strong></a>
   <a href="project-thinkiz.html"><small>Dự án tiếp →</small><strong>Thinkiz &#215; Effi AI</strong></a>

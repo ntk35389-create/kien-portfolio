@@ -47,6 +47,18 @@ footer a:hover{color:var(--accent)}
 @media(max-width:700px){.nav .logo{font-size:.9rem}.pager{grid-template-columns:1fr}.pager a+a{border-left:0;border-top:1px solid var(--line);text-align:left;align-items:flex-start}.case-inner{border-radius:12px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
+<style id="fg">
+.fg-wrap{max-width:1400px;margin:0 auto}
+.fg-hero{border-radius:20px;overflow:hidden;background:#0D060A;border:1px solid var(--line)}
+.fg-title{font-family:var(--mono);font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:9vh 0 4vh;display:flex;align-items:center;gap:16px}
+.fg-title::before{content:"";width:48px;height:1px;background:var(--accent)}
+.fg-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 28px;align-items:start}
+.fg-item{margin:0}
+.fg-item .fg-img{border-radius:16px;overflow:hidden;background:#0D060A;border:1px solid var(--line)}
+.fg-item figcaption{margin-top:14px;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:var(--muted)}
+.fg-item figcaption b{color:var(--ink);font-weight:400;margin-right:10px}
+@media(max-width:700px){.fg-grid{grid-template-columns:1fr;gap:32px}.fg-hero,.fg-item .fg-img{border-radius:12px}}
+</style>
 </head>
 <body>
 <nav class="nav"><a class="logo" href="index.html">KIÊN.</a><a class="back" href="webapps.html">← Web App</a></nav>
@@ -62,10 +74,19 @@ footer a:hover{color:var(--accent)}
     <div><dt>Nội dung</dt><dd class="tags"><span>Web App</span><span>Quản l&#253; nội bộ</span><span>Dashboard</span></dd></div>
   </dl>
 </header>
-<main class="case"><div class="case-inner">
-<img src="assets/projects/vcb-1.webp" width="1400" height="1740" loading="eager" decoding="async" alt="Vietcombank TCHM — phần 1">
-<img src="assets/projects/vcb-2.webp" width="1400" height="1739" loading="lazy" decoding="async" alt="Vietcombank TCHM — phần 2">
-</div></main>
+<main class="case"><div class="fg-wrap">
+<div class="fg-hero"><img src="assets/projects/vcb-web.webp" width="1500" height="1000" loading="eager" decoding="async" alt="Vietcombank TCHM"></div>
+<h2 class="fg-title">Màn hình thiết kế</h2>
+<div class="fg-grid">
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vcb-fg-01.webp" width="1024" height="724" loading="lazy" decoding="async" alt="Vietcombank TCHM — Chọn phương thức đăng k&#253; Check-in"></div><figcaption><b>01</b>Chọn phương thức đăng k&#253; Check-in</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vcb-fg-02.webp" width="1024" height="733" loading="lazy" decoding="async" alt="Vietcombank TCHM — Danh s&#225;ch nhận trả ph&#242;ng"></div><figcaption><b>02</b>Danh s&#225;ch nhận trả ph&#242;ng</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vcb-fg-03.webp" width="1024" height="757" loading="lazy" decoding="async" alt="Vietcombank TCHM — Kế hoạch theo qu&#253;"></div><figcaption><b>03</b>Kế hoạch theo qu&#253;</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vcb-fg-04.webp" width="1024" height="757" loading="lazy" decoding="async" alt="Vietcombank TCHM — Chương tr&#236;nh xung đột"></div><figcaption><b>04</b>Chương tr&#236;nh xung đột</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vcb-fg-05.webp" width="1024" height="728" loading="lazy" decoding="async" alt="Vietcombank TCHM — Quản l&#253; thực đơn"></div><figcaption><b>05</b>Quản l&#253; thực đơn</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vcb-fg-06.webp" width="1024" height="730" loading="lazy" decoding="async" alt="Vietcombank TCHM — Check-in &#183; Đối chiếu th&#244;ng tin"></div><figcaption><b>06</b>Check-in &#183; Đối chiếu th&#244;ng tin</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vcb-fg-07.webp" width="1024" height="728" loading="lazy" decoding="async" alt="Vietcombank TCHM — Sơ đồ chuẩn bị ph&#242;ng"></div><figcaption><b>07</b>Sơ đồ chuẩn bị ph&#242;ng</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vcb-fg-08.webp" width="1024" height="728" loading="lazy" decoding="async" alt="Vietcombank TCHM — Chi tiết kho&#225; lưu tr&#250; &#183; Đ&#225;nh gi&#225;"></div><figcaption><b>08</b>Chi tiết kho&#225; lưu tr&#250; &#183; Đ&#225;nh gi&#225;</figcaption></figure>
+</div></div></main>
 <nav class="pager" aria-label="Dự án khác">
   <a href="project-vime.html"><small>← Dự án trước</small><strong>VIME &#215; TechPro</strong></a>
   <a href="project-pcu.html"><small>Dự án tiếp →</small><strong>PCU &#215; TDI Group</strong></a>

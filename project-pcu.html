@@ -47,6 +47,18 @@ footer a:hover{color:var(--accent)}
 @media(max-width:700px){.nav .logo{font-size:.9rem}.pager{grid-template-columns:1fr}.pager a+a{border-left:0;border-top:1px solid var(--line);text-align:left;align-items:flex-start}.case-inner{border-radius:12px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
+<style id="fg">
+.fg-wrap{max-width:1400px;margin:0 auto}
+.fg-hero{border-radius:20px;overflow:hidden;background:#0D060A;border:1px solid var(--line)}
+.fg-title{font-family:var(--mono);font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:9vh 0 4vh;display:flex;align-items:center;gap:16px}
+.fg-title::before{content:"";width:48px;height:1px;background:var(--accent)}
+.fg-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 28px;align-items:start}
+.fg-item{margin:0}
+.fg-item .fg-img{border-radius:16px;overflow:hidden;background:#0D060A;border:1px solid var(--line)}
+.fg-item figcaption{margin-top:14px;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:var(--muted)}
+.fg-item figcaption b{color:var(--ink);font-weight:400;margin-right:10px}
+@media(max-width:700px){.fg-grid{grid-template-columns:1fr;gap:32px}.fg-hero,.fg-item .fg-img{border-radius:12px}}
+</style>
 </head>
 <body>
 <nav class="nav"><a class="logo" href="index.html">KIÊN.</a><a class="back" href="webapps.html">← Web App</a></nav>
@@ -62,10 +74,21 @@ footer a:hover{color:var(--accent)}
     <div><dt>Nội dung</dt><dd class="tags"><span>Web App</span><span>Enterprise</span><span>Quy tr&#236;nh</span></dd></div>
   </dl>
 </header>
-<main class="case"><div class="case-inner">
-<img src="assets/projects/pcu-1.webp" width="1400" height="1659" loading="eager" decoding="async" alt="PCU x TDI Group — phần 1">
-<img src="assets/projects/pcu-2.webp" width="1400" height="1659" loading="lazy" decoding="async" alt="PCU x TDI Group — phần 2">
-</div></main>
+<main class="case"><div class="fg-wrap">
+<div class="fg-hero"><img src="assets/projects/pcu-web.webp" width="1732" height="1155" loading="eager" decoding="async" alt="PCU x TDI Group"></div>
+<h2 class="fg-title">Màn hình thiết kế</h2>
+<div class="fg-grid">
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/pcu-fg-01.webp" width="1024" height="566" loading="lazy" decoding="async" alt="PCU x TDI Group — Chi tiết dự &#225;n"></div><figcaption><b>01</b>Chi tiết dự &#225;n</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/pcu-fg-02.webp" width="1024" height="566" loading="lazy" decoding="async" alt="PCU x TDI Group — Chi tiết đơn h&#224;ng &#183; Tiến tr&#236;nh ph&#234; duyệt"></div><figcaption><b>02</b>Chi tiết đơn h&#224;ng &#183; Tiến tr&#236;nh ph&#234; duyệt</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/pcu-fg-03.webp" width="1024" height="566" loading="lazy" decoding="async" alt="PCU x TDI Group — Chi tiết vật tư"></div><figcaption><b>03</b>Chi tiết vật tư</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/pcu-fg-04.webp" width="1024" height="576" loading="lazy" decoding="async" alt="PCU x TDI Group — Danh s&#225;ch nh&#224; cung cấp"></div><figcaption><b>04</b>Danh s&#225;ch nh&#224; cung cấp</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/pcu-fg-05.webp" width="1024" height="576" loading="lazy" decoding="async" alt="PCU x TDI Group — Tạo đơn h&#224;ng từ b&#225;o gi&#225;"></div><figcaption><b>05</b>Tạo đơn h&#224;ng từ b&#225;o gi&#225;</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/pcu-fg-06.webp" width="1024" height="576" loading="lazy" decoding="async" alt="PCU x TDI Group — So s&#225;nh b&#225;o gi&#225;"></div><figcaption><b>06</b>So s&#225;nh b&#225;o gi&#225;</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/pcu-fg-07.webp" width="1024" height="576" loading="lazy" decoding="async" alt="PCU x TDI Group — Y&#234;u cầu thanh to&#225;n"></div><figcaption><b>07</b>Y&#234;u cầu thanh to&#225;n</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/pcu-fg-08.webp" width="1024" height="576" loading="lazy" decoding="async" alt="PCU x TDI Group — Ph&#234; duyệt vật tư"></div><figcaption><b>08</b>Ph&#234; duyệt vật tư</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/pcu-fg-09.webp" width="1024" height="708" loading="lazy" decoding="async" alt="PCU x TDI Group — Cấu h&#236;nh &#183; Ph&#226;n quyền vai tr&#242;"></div><figcaption><b>09</b>Cấu h&#236;nh &#183; Ph&#226;n quyền vai tr&#242;</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/pcu-fg-10.webp" width="1024" height="696" loading="lazy" decoding="async" alt="PCU x TDI Group — Lịch sử gi&#225; theo nh&#224; cung cấp"></div><figcaption><b>10</b>Lịch sử gi&#225; theo nh&#224; cung cấp</figcaption></figure>
+</div></div></main>
 <nav class="pager" aria-label="Dự án khác">
   <a href="project-vcb.html"><small>← Dự án trước</small><strong>Vietcombank TCHM</strong></a>
   <a href="project-vbim.html"><small>Dự án tiếp →</small><strong>VBIM &#215; TDI Group</strong></a>

@@ -47,6 +47,18 @@ footer a:hover{color:var(--accent)}
 @media(max-width:700px){.nav .logo{font-size:.9rem}.pager{grid-template-columns:1fr}.pager a+a{border-left:0;border-top:1px solid var(--line);text-align:left;align-items:flex-start}.case-inner{border-radius:12px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
+<style id="fg">
+.fg-wrap{max-width:1400px;margin:0 auto}
+.fg-hero{border-radius:20px;overflow:hidden;background:#0D060A;border:1px solid var(--line)}
+.fg-title{font-family:var(--mono);font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:9vh 0 4vh;display:flex;align-items:center;gap:16px}
+.fg-title::before{content:"";width:48px;height:1px;background:var(--accent)}
+.fg-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 28px;align-items:start}
+.fg-item{margin:0}
+.fg-item .fg-img{border-radius:16px;overflow:hidden;background:#0D060A;border:1px solid var(--line)}
+.fg-item figcaption{margin-top:14px;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:var(--muted)}
+.fg-item figcaption b{color:var(--ink);font-weight:400;margin-right:10px}
+@media(max-width:700px){.fg-grid{grid-template-columns:1fr;gap:32px}.fg-hero,.fg-item .fg-img{border-radius:12px}}
+</style>
 </head>
 <body>
 <nav class="nav"><a class="logo" href="index.html">KIÊN.</a><a class="back" href="webapps.html">← Web App</a></nav>
@@ -62,10 +74,23 @@ footer a:hover{color:var(--accent)}
     <div><dt>Nội dung</dt><dd class="tags"><span>Web App</span><span>Dashboard</span><span>Lịch họp</span></dd></div>
   </dl>
 </header>
-<main class="case"><div class="case-inner">
-<img src="assets/projects/vime-1.webp" width="1400" height="1737" loading="eager" decoding="async" alt="VIME x TechPro — phần 1">
-<img src="assets/projects/vime-2.webp" width="1400" height="1737" loading="lazy" decoding="async" alt="VIME x TechPro — phần 2">
-</div></main>
+<main class="case"><div class="fg-wrap">
+<div class="fg-hero"><img src="assets/projects/vime-web.webp" width="1732" height="1155" loading="eager" decoding="async" alt="VIME x TechPro"></div>
+<h2 class="fg-title">Màn hình thiết kế</h2>
+<div class="fg-grid">
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vime-fg-01.webp" width="1024" height="577" loading="lazy" decoding="async" alt="VIME x TechPro — Đăng nhập"></div><figcaption><b>01</b>Đăng nhập</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vime-fg-02.webp" width="1024" height="577" loading="lazy" decoding="async" alt="VIME x TechPro — Quản l&#253; chung"></div><figcaption><b>02</b>Quản l&#253; chung</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vime-fg-03.webp" width="1024" height="577" loading="lazy" decoding="async" alt="VIME x TechPro — Danh s&#225;ch đăng k&#253; lịch họp"></div><figcaption><b>03</b>Danh s&#225;ch đăng k&#253; lịch họp</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vime-fg-04.webp" width="1024" height="577" loading="lazy" decoding="async" alt="VIME x TechPro — Phiếu đăng k&#253; lịch họp"></div><figcaption><b>04</b>Phiếu đăng k&#253; lịch họp</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vime-fg-05.webp" width="1024" height="577" loading="lazy" decoding="async" alt="VIME x TechPro — Kiểm tra phiếu theo từng bước"></div><figcaption><b>05</b>Kiểm tra phiếu theo từng bước</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vime-fg-06.webp" width="1024" height="577" loading="lazy" decoding="async" alt="VIME x TechPro — Lịch họp theo tuần"></div><figcaption><b>06</b>Lịch họp theo tuần</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vime-fg-07.webp" width="1024" height="577" loading="lazy" decoding="async" alt="VIME x TechPro — Chi tiết ph&#242;ng họp"></div><figcaption><b>07</b>Chi tiết ph&#242;ng họp</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vime-fg-08.webp" width="1024" height="577" loading="lazy" decoding="async" alt="VIME x TechPro — Cuộc họp trực tuyến &#183; Nội dung"></div><figcaption><b>08</b>Cuộc họp trực tuyến &#183; Nội dung</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vime-fg-09.webp" width="1024" height="577" loading="lazy" decoding="async" alt="VIME x TechPro — Cuộc họp trực tuyến &#183; Task c&#244;ng việc"></div><figcaption><b>09</b>Cuộc họp trực tuyến &#183; Task c&#244;ng việc</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vime-fg-10.webp" width="1024" height="577" loading="lazy" decoding="async" alt="VIME x TechPro — Th&#234;m ph&#242;ng họp mới"></div><figcaption><b>10</b>Th&#234;m ph&#242;ng họp mới</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vime-fg-11.webp" width="1024" height="577" loading="lazy" decoding="async" alt="VIME x TechPro — B&#225;o c&#225;o &#183; Khung giờ sử dụng"></div><figcaption><b>11</b>B&#225;o c&#225;o &#183; Khung giờ sử dụng</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/vime-fg-12.webp" width="1024" height="577" loading="lazy" decoding="async" alt="VIME x TechPro — B&#225;o c&#225;o &#183; Y&#234;u cầu hỗ trợ"></div><figcaption><b>12</b>B&#225;o c&#225;o &#183; Y&#234;u cầu hỗ trợ</figcaption></figure>
+</div></div></main>
 <nav class="pager" aria-label="Dự án khác">
   <a href="project-thinkiz.html"><small>← Dự án trước</small><strong>Thinkiz &#215; Effi AI</strong></a>
   <a href="project-vcb.html"><small>Dự án tiếp →</small><strong>Vietcombank TCHM</strong></a>

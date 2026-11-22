@@ -47,6 +47,18 @@ footer a:hover{color:var(--accent)}
 @media(max-width:700px){.nav .logo{font-size:.9rem}.pager{grid-template-columns:1fr}.pager a+a{border-left:0;border-top:1px solid var(--line);text-align:left;align-items:flex-start}.case-inner{border-radius:12px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
+<style id="fg">
+.fg-wrap{max-width:1400px;margin:0 auto}
+.fg-hero{border-radius:20px;overflow:hidden;background:#0D060A;border:1px solid var(--line)}
+.fg-title{font-family:var(--mono);font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:9vh 0 4vh;display:flex;align-items:center;gap:16px}
+.fg-title::before{content:"";width:48px;height:1px;background:var(--accent)}
+.fg-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 28px;align-items:start}
+.fg-item{margin:0}
+.fg-item .fg-img{border-radius:16px;overflow:hidden;background:#0D060A;border:1px solid var(--line)}
+.fg-item figcaption{margin-top:14px;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:var(--muted)}
+.fg-item figcaption b{color:var(--ink);font-weight:400;margin-right:10px}
+@media(max-width:700px){.fg-grid{grid-template-columns:1fr;gap:32px}.fg-hero,.fg-item .fg-img{border-radius:12px}}
+</style>
 </head>
 <body>
 <nav class="nav"><a class="logo" href="index.html">KIÊN.</a><a class="back" href="webapps.html">← Web App</a></nav>
@@ -62,10 +74,18 @@ footer a:hover{color:var(--accent)}
     <div><dt>Nội dung</dt><dd class="tags"><span>Web App</span><span>AI</span><span>Dark UI</span></dd></div>
   </dl>
 </header>
-<main class="case"><div class="case-inner">
-<img src="assets/projects/thinkiz-1.webp" width="1400" height="1466" loading="eager" decoding="async" alt="Thinkiz x Effi AI — phần 1">
-<img src="assets/projects/thinkiz-2.webp" width="1400" height="1465" loading="lazy" decoding="async" alt="Thinkiz x Effi AI — phần 2">
-</div></main>
+<main class="case"><div class="fg-wrap">
+<div class="fg-hero"><img src="assets/projects/thinkiz-web.webp" width="1732" height="1155" loading="eager" decoding="async" alt="Thinkiz x Effi AI"></div>
+<h2 class="fg-title">Màn hình thiết kế</h2>
+<div class="fg-grid">
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/thinkiz-fg-01.webp" width="974" height="548" loading="lazy" decoding="async" alt="Thinkiz x Effi AI — Trang chủ &#183; Kh&#225;m ph&#225;"></div><figcaption><b>01</b>Trang chủ &#183; Kh&#225;m ph&#225;</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/thinkiz-fg-02.webp" width="974" height="548" loading="lazy" decoding="async" alt="Thinkiz x Effi AI — Đăng nhập"></div><figcaption><b>02</b>Đăng nhập</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/thinkiz-fg-03.webp" width="974" height="548" loading="lazy" decoding="async" alt="Thinkiz x Effi AI — Trang lỗi 404"></div><figcaption><b>03</b>Trang lỗi 404</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/thinkiz-fg-04.webp" width="1024" height="807" loading="lazy" decoding="async" alt="Thinkiz x Effi AI — Canvas dự &#225;n &#183; Giao diện s&#225;ng"></div><figcaption><b>04</b>Canvas dự &#225;n &#183; Giao diện s&#225;ng</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/thinkiz-fg-05.webp" width="1024" height="803" loading="lazy" decoding="async" alt="Thinkiz x Effi AI — Canvas dự &#225;n &#183; Giao diện tối"></div><figcaption><b>05</b>Canvas dự &#225;n &#183; Giao diện tối</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/thinkiz-fg-06.webp" width="883" height="1024" loading="lazy" decoding="async" alt="Thinkiz x Effi AI — T&#224;i khoản &#183; G&#243;i dịch vụ v&#224; thanh to&#225;n"></div><figcaption><b>06</b>T&#224;i khoản &#183; G&#243;i dịch vụ v&#224; thanh to&#225;n</figcaption></figure>
+<figure class="fg-item"><div class="fg-img"><img src="assets/projects/thinkiz-fg-07.webp" width="707" height="1024" loading="lazy" decoding="async" alt="Thinkiz x Effi AI — T&#224;i khoản &#183; Tổng quan sử dụng"></div><figcaption><b>07</b>T&#224;i khoản &#183; Tổng quan sử dụng</figcaption></figure>
+</div></div></main>
 <nav class="pager" aria-label="Dự án khác">
   <a href="project-vbim.html"><small>← Dự án trước</small><strong>VBIM &#215; TDI Group</strong></a>
   <a href="project-vime.html"><small>Dự án tiếp →</small><strong>VIME &#215; TechPro</strong></a>
