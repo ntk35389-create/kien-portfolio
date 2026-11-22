@@ -71,9 +71,9 @@ body.has-cursor,body.has-cursor *{cursor:none!important}
 .apps{padding:20vh var(--gutter) 16vh}
 .app-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:28px}
 .app-card{position:relative;display:block;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:rgba(255,255,255,.02);transform-style:preserve-3d;will-change:transform}
-.app-card .ac-media{aspect-ratio:16/10;overflow:hidden;position:relative}
-.app-card .ac-media img{transition:transform 1s cubic-bezier(.2,1,.3,1);transform:scale(1.04)}
-.app-card:hover .ac-media img{transform:scale(1.12)}
+.app-card .ac-media{aspect-ratio:var(--ar,1.5);overflow:hidden;position:relative}
+.app-card .ac-media img{width:100%;height:100%;object-fit:contain;display:block}
+
 .app-card .ac-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(13,6,10,.55))}
 .app-card .ac-body{padding:26px 26px 30px;transform:translateZ(34px)}
 .ac-tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ca,#FF6B81);border:1px solid currentColor;border-radius:99px;padding:5px 13px;display:inline-block;margin-bottom:16px}
@@ -97,18 +97,18 @@ body.has-cursor,body.has-cursor *{cursor:none!important}
 .sys-row:hover .sys-num,.sys-row:hover .sys-desc{color:rgba(13,6,10,.72)}
 .sys-row:hover .sys-arrow{transform:translateX(10px) rotate(-45deg);color:#0D060A}
 .sys-thumb{display:none}
-.float-preview{position:fixed;top:0;left:0;width:min(420px,34vw);aspect-ratio:16/10;border-radius:14px;overflow:hidden;pointer-events:none;z-index:800;opacity:0;box-shadow:0 30px 80px rgba(0,0,0,.55);will-change:transform;transition:opacity .3s}
-.float-preview img{position:absolute;inset:0;opacity:0;transition:opacity .35s}
+.float-preview{position:fixed;top:0;left:0;width:min(420px,34vw);aspect-ratio:3/2;background:#0D060A;border-radius:14px;overflow:hidden;pointer-events:none;z-index:800;opacity:0;box-shadow:0 30px 80px rgba(0,0,0,.55);will-change:transform;transition:opacity .3s}
+.float-preview img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .35s}
 .float-preview img.active{opacity:1}
-@media(max-width:900px){.sys-row{grid-template-columns:1fr;gap:14px;padding:4.5vh 5vw}.sys-thumb{display:block;aspect-ratio:16/9;border-radius:12px;overflow:hidden;margin-bottom:6px}.sys-arrow{display:none}.float-preview{display:none}}
+@media(max-width:900px){.sys-row{grid-template-columns:1fr;gap:14px;padding:4.5vh 5vw}.sys-thumb{display:block;aspect-ratio:var(--ar,1.5);border-radius:12px;overflow:hidden;margin-bottom:6px}.sys-thumb img{width:100%;height:100%;object-fit:contain;display:block}.sys-arrow{display:none}.float-preview{display:none}}
 .webs{padding:8vh var(--gutter) 14vh}
 .web-item{display:grid;grid-template-columns:1.25fr 1fr;gap:5vw;align-items:center;padding:8vh 0;border-bottom:1px solid var(--line)}
 .web-item:last-child{border-bottom:none}
 .web-item:nth-child(even) .web-media{order:2}
 .web-media{display:block;border-radius:18px;overflow:hidden;aspect-ratio:3/2;position:relative}
-.web-media .wm-inner{position:absolute;inset:-12% 0;will-change:transform}
+.web-media .wm-inner{position:absolute;inset:0}
 .web-media img{transition:transform 1s cubic-bezier(.2,1,.3,1)}
-.web-media:hover img{transform:scale(1.07)}
+
 .web-tagrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;margin-bottom:2.4vh}
 .web-tagrow b{font-weight:400;color:var(--wa,#5EA8FF);border:1px solid currentColor;border-radius:99px;padding:5px 13px}
 .web-name{font-family:var(--display);font-weight:600;font-size:clamp(1.7rem,3.6vw,3.1rem);line-height:1.05;text-transform:uppercase;margin-bottom:2.6vh;display:inline-block;transition:color .35s}
@@ -158,7 +158,7 @@ body.has-cursor,body.has-cursor *{cursor:none!important}
 #webs.hz .web-item:nth-child(odd){width:30vw;margin-top:-12vh}
 #webs.hz .web-item:nth-child(even){margin-top:12vh}
 #webs.hz .web-media{position:absolute;inset:0;aspect-ratio:auto;order:0!important;border-radius:20px;border:1px solid var(--line)}
-#webs.hz .web-media .wm-inner{inset:0 -5%}
+#webs.hz .web-media .wm-inner{inset:0}
 #webs.hz .web-info{position:absolute;inset:0;z-index:2;padding:26px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(180deg,rgba(9,6,18,.35),rgba(9,6,18,.92) 80%);border-radius:20px;pointer-events:none;opacity:0;transform:translateY(14px);transition:opacity .45s ease,transform .45s cubic-bezier(.2,1,.3,1)}
 #webs.hz .web-item:hover .web-info,#webs.hz .web-item:focus-within .web-info{opacity:1;transform:none}
 #webs.hz .web-info a{pointer-events:auto}
@@ -173,9 +173,9 @@ body.has-cursor,body.has-cursor *{cursor:none!important}
 #webs .hz-bar i{display:block;height:100%;background:var(--accent);transform-origin:left;transform:scaleX(0)}
 }@media(min-width:861px){
 #apps .app-grid{display:block;position:relative;padding-bottom:8vh}
-#apps .app-card{position:sticky;top:19vh;display:grid;grid-template-columns:1fr 1.15fr;height:62vh;margin:0 0 26vh;border-radius:28px;background:color-mix(in srgb,var(--ca) 6%,#15101a);border:1px solid color-mix(in srgb,var(--ca) 22%,transparent);transform-style:flat;box-shadow:0 -18px 50px rgba(0,0,0,.35);transform-origin:50% 0}
+#apps .app-card{position:sticky;top:19vh;display:grid;grid-template-columns:1fr auto;height:auto;margin:0 0 26vh;border-radius:28px;background:color-mix(in srgb,var(--ca) 6%,#15101a);border:1px solid color-mix(in srgb,var(--ca) 22%,transparent);transform-style:flat;box-shadow:0 -18px 50px rgba(0,0,0,.35);transform-origin:50% 0}
 #apps .app-card:last-child{margin-bottom:0}
-#apps .app-card .ac-media{grid-column:2;grid-row:1;aspect-ratio:auto;height:100%;border-radius:0 28px 28px 0}
+#apps .app-card .ac-media{grid-column:2;grid-row:1;aspect-ratio:var(--ar,1.5);height:min(64vh,calc(54vw / var(--ar,1.5)));width:auto;border-radius:0 28px 28px 0}
 #apps .app-card .ac-body{grid-column:1;grid-row:1;padding:48px 52px;display:flex;flex-direction:column;justify-content:center;transform:none;align-items:flex-start;position:relative;z-index:2}
 #apps .app-card .ac-name{font-size:clamp(2rem,3.6vw,3.4rem);line-height:1.04}
 #apps .app-card .ac-desc{max-width:42ch;font-size:1rem}
@@ -283,51 +283,51 @@ body.menu-open .nav-menu a:nth-child(5){transition-delay:.2s}
   <a class="see-all" href="apps.html" data-cursor="view">Xem trang App →</a>
   <div class="app-grid">
     <a class="app-card" href="project-kimdong.html" style="--ca:#E8485E" data-cursor="view">
-      <div class="ac-media"><img loading="lazy" decoding="async" src="assets/projects/kimdong-thumb.webp" style="object-position:50% 50%" alt="KimDong Bookstore"></div>
+      <div class="ac-media" style="--ar:1"><img loading="lazy" decoding="async" src="assets/projects/kimdong-thumb.webp" style="object-position:50% 50%" alt="KimDong Bookstore"></div>
       <div class="ac-body"><span class="ac-tag">Redesign · 350+ màn hình</span><h3 class="ac-name">KimDong Bookstore</h3><p class="ac-desc">Thiết kế lại trải nghiệm ứng dụng nhà sách Kim Đồng: tối ưu luồng mua hàng, theo dõi đơn và hệ thống thành phần nhất quán.</p>
       <span class="ac-cta">Xem chi tiết →</span></div><div class="ac-shine"></div></a>
     <a class="app-card" href="project-fitapp.html" style="--ca:#9B6CFF" data-cursor="view">
-      <div class="ac-media"><img loading="lazy" decoding="async" src="assets/projects/fitapp-thumb.webp" style="object-position:50% 50%" alt="FitApp"></div>
+      <div class="ac-media" style="--ar:1"><img loading="lazy" decoding="async" src="assets/projects/fitapp-thumb.webp" style="object-position:50% 50%" alt="FitApp"></div>
       <div class="ac-body"><span class="ac-tag">Health &amp; Fitness · 250+ màn hình</span><h3 class="ac-name">FitApp</h3><p class="ac-desc">Ứng dụng tập luyện &amp; dinh dưỡng cá nhân hoá, giúp người dùng đạt mục tiêu sức khoẻ qua kế hoạch bài tập và thực đơn thông minh.</p>
       <span class="ac-cta">Xem chi tiết →</span></div><div class="ac-shine"></div></a>
     <a class="app-card" href="project-heartwise.html" style="--ca:#4CC76A" data-cursor="view">
-      <div class="ac-media"><img loading="lazy" decoding="async" src="assets/projects/heartwise-thumb.webp" style="object-position:50% 50%" alt="HeartWise"></div>
+      <div class="ac-media" style="--ar:1"><img loading="lazy" decoding="async" src="assets/projects/heartwise-thumb.webp" style="object-position:50% 50%" alt="HeartWise"></div>
       <div class="ac-body"><span class="ac-tag">Habit Building · Gamification</span><h3 class="ac-name">HeartWise</h3><p class="ac-desc">App xây dựng thói quen ăn uống &amp; vận động phòng bệnh tim, duy trì động lực mỗi ngày qua tương tác game hoá cùng mascot đáng yêu.</p>
       <span class="ac-cta">Xem chi tiết →</span></div><div class="ac-shine"></div></a>
       <a class="app-card" href="project-scancalo.html" style="--ca:#FF8A1F" data-cursor="view">
-      <div class="ac-media"><img loading="lazy" decoding="async" src="assets/projects/scancalo-thumb-v2.webp" style="object-position:50% 50%" alt="Flashcal"></div>
+      <div class="ac-media" style="--ar:1"><img loading="lazy" decoding="async" src="assets/projects/scancalo-thumb-v2.webp" style="object-position:50% 50%" alt="Flashcal"></div>
       <div class="ac-body"><span class="ac-tag">Health &amp; Nutrition &#183; Mobile App</span><h3 class="ac-name">Flashcal</h3><p class="ac-desc">Qu&#233;t m&#243;n ăn bằng camera, theo d&#245;i calo, check-in hằng ng&#224;y, c&#244;ng thức, tủ lạnh, streak v&#224; mục ti&#234;u uống nước.</p>
       <span class="ac-cta">Xem chi tiết →</span></div><div class="ac-shine"></div></a>
     <a class="app-card" href="project-kinhnguyet.html" style="--ca:#FF6B8B" data-cursor="view">
-      <div class="ac-media"><img loading="lazy" decoding="async" src="assets/projects/kinhnguyet-mock.webp" alt="Flovia"></div>
+      <div class="ac-media" style="--ar:1"><img loading="lazy" decoding="async" src="assets/projects/kinhnguyet-mock.webp" alt="Flovia"></div>
       <div class="ac-body"><span class="ac-tag">Women&#39;s Health &#183; Mobile App</span><h3 class="ac-name">Flovia</h3><p class="ac-desc">Theo d&#245;i chu kỳ dạng lịch, ph&#226;n t&#237;ch chu kỳ, ghi ch&#250; hằng ng&#224;y v&#224; tr&#242; chuyện với trợ l&#253; AI.</p>
       <span class="ac-cta">Xem chi tiết →</span></div><div class="ac-shine"></div></a>
     <a class="app-card" href="project-kinhthanh.html" style="--ca:#C9A66B" data-cursor="view">
-      <div class="ac-media"><img loading="lazy" decoding="async" src="assets/projects/kinhthanh-mock4.webp" alt="Holy Bible"></div>
+      <div class="ac-media" style="--ar:1"><img loading="lazy" decoding="async" src="assets/projects/kinhthanh-mock4.webp" alt="Holy Bible"></div>
       <div class="ac-body"><span class="ac-tag">Lifestyle &#183; Mobile App</span><h3 class="ac-name">Holy Bible</h3><p class="ac-desc">Ứng dụng đồng h&#224;nh đời sống t&#226;m linh: kế hoạch đọc, quiz, lời cầu nguyện c&#225; nh&#226;n h&#243;a.</p>
       <span class="ac-cta">Xem chi tiết →</span></div><div class="ac-shine"></div></a>
     <a class="app-card" href="project-wallpaper.html" style="--ca:#8B7CFF" data-cursor="view">
-      <div class="ac-media"><img loading="lazy" decoding="async" src="assets/projects/wallpaper-mock4.webp" alt="Depth Wallpaper"></div>
+      <div class="ac-media" style="--ar:1"><img loading="lazy" decoding="async" src="assets/projects/wallpaper-mock4.webp" alt="Depth Wallpaper"></div>
       <div class="ac-body"><span class="ac-tag">Personalization &#183; Mobile App</span><h3 class="ac-name">Depth Wallpaper</h3><p class="ac-desc">Duyệt kho h&#236;nh nền, bộ sưu tập, studio chỉnh sửa với hiệu ứng chiều s&#226;u v&#224; đổi font đồng hồ.</p>
       <span class="ac-cta">Xem chi tiết →</span></div><div class="ac-shine"></div></a>
     <a class="app-card" href="project-print.html" style="--ca:#3A7BFF" data-cursor="view">
-      <div class="ac-media"><img loading="lazy" decoding="async" src="assets/projects/print-mock4.webp" alt="Print Document"></div>
+      <div class="ac-media" style="--ar:1"><img loading="lazy" decoding="async" src="assets/projects/print-mock4.webp" alt="Print Document"></div>
       <div class="ac-body"><span class="ac-tag">Utility &#183; Mobile App</span><h3 class="ac-name">Print Document</h3><p class="ac-desc">In t&#224;i liệu, ảnh, trang web v&#224; email từ điện thoại, k&#232;m hướng dẫn kết nối m&#225;y in qua Wi-Fi v&#224; bộ c&#244;ng cụ PDF.</p>
       <span class="ac-cta">Xem chi tiết →</span></div><div class="ac-shine"></div></a>
     <a class="app-card" href="project-autogara.html" style="--ca:#E5484D" data-cursor="view">
-      <div class="ac-media"><img loading="lazy" decoding="async" src="assets/projects/autogara-mock4.webp" alt="AUTO GARA"></div>
+      <div class="ac-media" style="--ar:1.5"><img loading="lazy" decoding="async" src="assets/projects/autogara-mock4.webp" alt="AUTO GARA"></div>
       <div class="ac-body"><span class="ac-tag">Mobile App · Quản lý gara</span><h3 class="ac-name">AUTO GARA</h3><p class="ac-desc">Hệ thống quản lý quy trình gara ô tô: tiếp nhận xe, lệnh sửa chữa, báo giá, phát sinh, phiếu xuất kho, hoá đơn, thanh toán và hồ sơ khách hàng.</p>
       <span class="ac-cta">Xem chi tiết →</span></div><div class="ac-shine"></div></a>
     <a class="app-card" href="project-giapha.html" style="--ca:#C8963E" data-cursor="view">
-      <div class="ac-media"><img loading="lazy" decoding="async" src="assets/projects/giapha-mock4.webp" alt="Tâm Hương"></div>
+      <div class="ac-media" style="--ar:1"><img loading="lazy" decoding="async" src="assets/projects/giapha-mock4.webp" alt="Tâm Hương"></div>
       <div class="ac-body"><span class="ac-tag">Gia phả · Mobile App</span><h3 class="ac-name">Tâm Hương</h3><p class="ac-desc">Ứng dụng gia phả kết hợp dịch vụ mộ phần: cây phả hệ, kênh gia đình, lịch giỗ, bản đồ và thông tin mộ phần, gói dịch vụ.</p>
       <span class="ac-cta">Xem chi tiết →</span></div><div class="ac-shine"></div></a>
 <a class="app-card" href="project-game2.html" style="--ca:#4CC76A" data-cursor="view">
-      <div class="ac-media"><img loading="lazy" decoding="async" src="assets/projects/game2-mock5.webp" alt="Color Sort: Streak Puzzle"></div>
+      <div class="ac-media" style="--ar:1"><img loading="lazy" decoding="async" src="assets/projects/game2-mock5.webp" alt="Color Sort: Streak Puzzle"></div>
       <div class="ac-body"><span class="ac-tag">Mobile Game &#183; UI/UX</span><h3 class="ac-name">Color Sort: Streak Puzzle</h3><p class="ac-desc">Game xếp hoa thư giãn: kéo thả hoa trên dây leo, lấp đầy chậu v&#224; ho&#224;n th&#224;nh đơn đặt hoa.</p>
       <span class="ac-cta">Xem chi tiết →</span></div><div class="ac-shine"></div></a>
     <a class="app-card" href="project-game3.html" style="--ca:#FF7A59" data-cursor="view">
-      <div class="ac-media"><img loading="lazy" decoding="async" src="assets/projects/game3-mock5.webp" alt="Title Bloom"></div>
+      <div class="ac-media" style="--ar:1"><img loading="lazy" decoding="async" src="assets/projects/game3-mock5.webp" alt="Title Bloom"></div>
       <div class="ac-body"><span class="ac-tag">Mobile Game &#183; UI/UX</span><h3 class="ac-name">Tile Bloom</h3><p class="ac-desc">Game ghép 3 &#244; giống nhau thư giãn: dọn bảng, kiếm nước để l&#224;m khu vườn nở rộ.</p>
       <span class="ac-cta">Xem chi tiết →</span></div><div class="ac-shine"></div></a>
   </div>
@@ -343,23 +343,23 @@ body.menu-open .nav-menu a:nth-child(5){transition-delay:.2s}
   <div class="sys-list">
     <a class="sys-row" href="project-vime.html" style="--sa:#8B7CFF" data-img="pv-vime" data-cursor="view">
       <span class="sys-num">(01)</span>
-      <div><div class="sys-thumb"><img loading="lazy" decoding="async" src="assets/projects/vime-web.webp" style="object-position:50% 50%" alt="VIME × TechPro"></div><h3 class="sys-name">VIME × TechPro</h3></div>
+      <div><div class="sys-thumb" style="--ar:1.4996"><img loading="lazy" decoding="async" src="assets/projects/vime-web.webp" style="object-position:50% 50%" alt="VIME × TechPro"></div><h3 class="sys-name">VIME × TechPro</h3></div>
       <p class="sys-desc">Nền tảng quản lý phòng họp &amp; lịch họp cho doanh nghiệp: đặt phòng, phê duyệt, check-in và báo cáo hiệu suất sử dụng.</p><span class="sys-arrow">→</span></a>
     <a class="sys-row" href="project-vcb.html" style="--sa:#3DBC8D" data-img="pv-vcb" data-cursor="view">
       <span class="sys-num">(02)</span>
-      <div><div class="sys-thumb"><img loading="lazy" decoding="async" src="assets/projects/vcb-web.webp" style="object-position:50% 50%" alt="Vietcombank TCHM"></div><h3 class="sys-name">Vietcombank TCHM</h3></div>
+      <div><div class="sys-thumb" style="--ar:1.5"><img loading="lazy" decoding="async" src="assets/projects/vcb-web.webp" style="object-position:50% 50%" alt="Vietcombank TCHM"></div><h3 class="sys-name">Vietcombank TCHM</h3></div>
       <p class="sys-desc">Hệ thống quản lý lưu trú cho cán bộ nhân viên Vietcombank: check-in CCCD, sơ đồ phòng, kế hoạch theo quý và đánh giá dịch vụ.</p><span class="sys-arrow">→</span></a>
     <a class="sys-row" href="project-pcu.html" style="--sa:#FF5C5C" data-img="pv-pcu" data-cursor="view">
       <span class="sys-num">(03)</span>
-      <div><div class="sys-thumb"><img loading="lazy" decoding="async" src="assets/projects/pcu-web.webp" style="object-position:50% 50%" alt="PCU × TDI Group"></div><h3 class="sys-name">PCU × TDI Group</h3></div>
+      <div><div class="sys-thumb" style="--ar:1.4996"><img loading="lazy" decoding="async" src="assets/projects/pcu-web.webp" style="object-position:50% 50%" alt="PCU × TDI Group"></div><h3 class="sys-name">PCU × TDI Group</h3></div>
       <p class="sys-desc">Số hoá quy trình khối cung ứng: yêu cầu mua sắm, so sánh báo giá, phê duyệt vật tư, quản lý nhà cung cấp và tồn kho.</p><span class="sys-arrow">→</span></a>
     <a class="sys-row" href="project-vbim.html" style="--sa:#2F6BFF" data-img="pv-vbim" data-cursor="view">
       <span class="sys-num">(04)</span>
-      <div><div class="sys-thumb"><img loading="lazy" decoding="async" src="assets/projects/vbim-web.webp" alt="VBIM × TDI Group"></div><h3 class="sys-name">VBIM × TDI Group</h3></div>
+      <div><div class="sys-thumb" style="--ar:1.7768"><img loading="lazy" decoding="async" src="assets/projects/vbim-web.webp" alt="VBIM × TDI Group"></div><h3 class="sys-name">VBIM × TDI Group</h3></div>
       <p class="sys-desc">Nền tảng học tập trực tuyến: trợ lý trò chuyện, danh sách và chi tiết khoá học, bài kiểm tra cuối khoá, kho cá nhân và thư viện tài liệu.</p><span class="sys-arrow">→</span></a>
 <a class="sys-row" href="project-thinkiz.html" style="--sa:#5EA8FF" data-img="pv-thinkiz" data-cursor="view">
       <span class="sys-num">(05)</span>
-      <div><div class="sys-thumb"><img loading="lazy" decoding="async" src="assets/projects/thinkiz-web.webp" style="object-position:50% 50%" alt="Thinkiz × Effi AI"></div><h3 class="sys-name">Thinkiz × Effi AI</h3></div>
+      <div><div class="sys-thumb" style="--ar:1.4996"><img loading="lazy" decoding="async" src="assets/projects/thinkiz-web.webp" style="object-position:50% 50%" alt="Thinkiz × Effi AI"></div><h3 class="sys-name">Thinkiz × Effi AI</h3></div>
       <p class="sys-desc">Agentic workspace cho cộng tác người – AI: canvas dự án nơi các AI-agent tự phân rã tác vụ, nghiên cứu và tạo nội dung.</p><span class="sys-arrow">→</span></a>
   </div>
   <div class="float-preview" id="floatPreview">
@@ -565,9 +565,7 @@ body.menu-open .nav-menu a:nth-child(5){transition-delay:.2s}
     });
     ScrollTrigger.create({trigger:'.about',start:'top 55%',end:'bottom 45%',
       onEnter:function(){morph('#150A0F','#FF6B81');},onEnterBack:function(){morph('#150A0F','#FF6B81');}});
-    if(innerWidth<=860)document.querySelectorAll('.web-media .wm-inner').forEach(function(inner){
-      gsap.fromTo(inner,{yPercent:-7},{yPercent:7,ease:'none',scrollTrigger:{trigger:inner.closest('.web-media'),start:'top bottom',end:'bottom top',scrub:true}});
-    });
+    /* thumb luôn hiển thị đủ ảnh: không parallax/zoom làm cắt cạnh */
     gsap.utils.toArray('.sec-head:not(#apps .sec-head):not(#webs .sec-head),.sys-row,.exp-row,.chips').forEach(function(el){
       gsap.from(el,{y:70,opacity:0,duration:1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}});
     });
@@ -638,7 +636,7 @@ body.menu-open .nav-menu a:nth-child(5){transition-delay:.2s}
         var body=card.querySelectorAll('.ac-tag,.ac-name,.ac-desc,.ac-cta'),img=card.querySelector('.ac-media img');
         /* nội dung nổi lên khi thẻ tới vị trí */
         gsap.from(body,{y:38,opacity:0,stagger:.09,duration:.8,ease:'power3.out',scrollTrigger:{trigger:card,start:'top 72%',toggleActions:'play none none reverse'}});
-        if(img){gsap.fromTo(img,{scale:1.3},{scale:1.02,ease:'none',scrollTrigger:{trigger:card,start:'top bottom',end:'top 15%',scrub:true}});}
+
         /* thẻ phía dưới đè lên: thẻ này thu nhỏ và tối dần */
         var next=list[i+1];
         if(next){
@@ -718,8 +716,8 @@ gsap.utils.toArray('#webs .web-item').forEach(function(item,i){
         /* thẻ lớn dần, thẳng dần khi vào giữa màn hình */
         /* độ rõ và kích thước do hzFocus() điều khiển: thẻ giữa nổi bật, hai bên mờ */
         /* ảnh trôi ngược chiều cuộn (parallax ngang) */
-        if(inner)gsap.fromTo(inner,{xPercent:-4},{xPercent:4,ease:'none',scrollTrigger:{trigger:item,containerAnimation:tween,start:'left right',end:'right left',scrub:true}});
-        if(img)gsap.fromTo(img,{scale:1.12},{scale:1,ease:'none',scrollTrigger:{trigger:item,containerAnimation:tween,start:'left 100%',end:'left 40%',scrub:true}});
+
+
         /* chữ nổi lên khi thẻ tới gần giữa */
         gsap.from(parts,{y:36,opacity:0,stagger:.08,ease:'power3.out',duration:.7,scrollTrigger:{trigger:item,containerAnimation:tween,start:'left 78%',toggleActions:'play none none reverse'}});
       });
