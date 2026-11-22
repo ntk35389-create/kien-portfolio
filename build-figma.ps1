@@ -13,7 +13,7 @@ function Add-P($slug, $h) { $h.slug = $slug; $PRJ[$slug] = $h }
 # --- App ---
 Add-P 'kimdong'   @{ source='behance'; cat='apps'; title='Kim Đồng Bookstore'; tag='Redesign · Mobile App'; color='#E8485E'; desc='Thiết kế lại trải nghiệm ứng dụng nhà sách Kim Đồng: điều hướng, gợi ý cá nhân hóa và hệ thống giao diện mới cho phụ huynh và bạn đọc nhỏ tuổi.' }
 Add-P 'heartwise' @{ source='behance'; cat='apps'; title='HeartWise'; tag='Habit Building · Gamification'; color='#4CC76A'; desc='Ứng dụng xây dựng thói quen ăn uống và vận động để phòng ngừa bệnh tim, giữ động lực mỗi ngày qua tương tác dạng trò chơi.' }
-Add-P 'scancalo'  @{ source='figma'; cover='scancalo-thumb.webp'; cat='apps'; title='Scan Calo'; tag='Health & Nutrition · Mobile App'; color='#FF8A1F'; platform='Mobile App (iOS / Android)'; kind='Ứng dụng quét món ăn và theo dõi calo';
+Add-P 'scancalo'  @{ source='figma'; cover='scancalo-thumb-v2.webp'; cat='apps'; title='Scan Calo'; tag='Health & Nutrition · Mobile App'; color='#FF8A1F'; platform='Mobile App (iOS / Android)'; kind='Ứng dụng quét món ăn và theo dõi calo';
   desc='Ứng dụng theo dõi dinh dưỡng và calo: quét món ăn bằng camera, thêm hoạt động, check-in hằng ngày, công thức nấu ăn, tủ lạnh, chuỗi streak, mục tiêu uống nước và gói trả phí trong ứng dụng.'; tags=@('Mobile App','User flow','Health') }
 Add-P 'kinhnguyet' @{ source='figma'; cat='apps'; title='Kinh nguyệt'; tag='Women''s Health · Mobile App'; color='#FF6B8B'; platform='Mobile App'; kind='Ứng dụng theo dõi chu kỳ';
   desc='Ứng dụng theo dõi chu kỳ kinh nguyệt: onboarding, trang chủ dạng lịch, phân tích chu kỳ, ghi chú hằng ngày, trò chuyện với trợ lý AI và các thiết lập cá nhân.'; tags=@('Mobile App','Lịch','AI chat') }
