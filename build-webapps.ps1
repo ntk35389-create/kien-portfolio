@@ -242,7 +242,12 @@ foreach ($slug in $apps.Keys) {
   $t = $t.Replace('</head>', $css + "`n</head>")
   $t = [regex]::Replace($t, '(?s)<!--lb-->.*?<!--/lb-->\s*', '')
   $t = [regex]::Replace($t, '(?s)<script id="fgjs">.*?</script>\s*', '')
-  $t = $t.Replace('</body>', "<!--lb-->`n" + $modal + "`n<!--/lb-->`n" + $js + "`n</body>")
+  if ($a.mobile) {
+    # Mobile app: không có khung xem to, ảnh chỉ để xem trong lưới
+    $t = $t.Replace('</head>', '<style id="fg">.fg-item .fg-img{cursor:default;transition:none}.fg-item:hover .fg-img{transform:none;border-color:var(--line)}</style>' + "`n</head>")
+  } else {
+    $t = $t.Replace('</body>', "<!--lb-->`n" + $modal + "`n<!--/lb-->`n" + $js + "`n</body>")
+  }
   [IO.File]::WriteAllText("$PWD\$file", $t, $utf8)
   "patched $file ($($a.caps.Count) screens)"
 }
