@@ -17,13 +17,13 @@ Add-P 'scancalo'  @{ source='figma'; cover='scancalo-thumb-v2.webp'; cat='apps';
   desc='Ứng dụng theo dõi dinh dưỡng và calo: quét món ăn bằng camera, thêm hoạt động, check-in hằng ngày, công thức nấu ăn, tủ lạnh, chuỗi streak, mục tiêu uống nước và gói trả phí trong ứng dụng.'; tags=@('Mobile App','User flow','Health') }
 Add-P 'kinhnguyet' @{ source='figma'; cover='kinhnguyet-mock.webp'; cat='apps'; title='Kinh nguyệt'; tag='Women''s Health · Mobile App'; color='#FF6B8B'; platform='Mobile App'; kind='Ứng dụng theo dõi chu kỳ';
   desc='Ứng dụng theo dõi chu kỳ kinh nguyệt: onboarding, trang chủ dạng lịch, phân tích chu kỳ, ghi chú hằng ngày, trò chuyện với trợ lý AI và các thiết lập cá nhân.'; tags=@('Mobile App','Lịch','AI chat') }
-Add-P 'kinhthanh' @{ source='figma'; cover='kinhthanh-mock2.webp'; cat='apps'; title='Kinh Thánh'; tag='Lifestyle · Mobile App'; color='#C9A66B'; platform='Mobile App'; kind='Ứng dụng đọc và cầu nguyện';
+Add-P 'kinhthanh' @{ source='figma'; cover='kinhthanh-mock4.webp'; cat='apps'; title='Kinh Thánh'; tag='Lifestyle · Mobile App'; color='#C9A66B'; platform='Mobile App'; kind='Ứng dụng đọc và cầu nguyện';
   desc='Ứng dụng đồng hành đời sống tâm linh: onboarding, trang chủ, kế hoạch đọc, bài quiz, lời cầu nguyện cá nhân hóa và trang hồ sơ.'; tags=@('Mobile App','Onboarding','Cá nhân hóa') }
-Add-P 'wallpaper' @{ source='figma'; cover='wallpaper-mock2.webp'; cat='apps'; title='Wallpaper'; tag='Personalization · Mobile App'; color='#8B7CFF'; platform='Mobile App'; kind='Ứng dụng hình nền';
+Add-P 'wallpaper' @{ source='figma'; cover='wallpaper-mock4.webp'; cat='apps'; title='Wallpaper'; tag='Personalization · Mobile App'; color='#8B7CFF'; platform='Mobile App'; kind='Ứng dụng hình nền';
   desc='Ứng dụng hình nền: duyệt kho hình, bộ sưu tập, studio chỉnh sửa với hiệu ứng chiều sâu, đổi font đồng hồ và các thiết lập.'; tags=@('Mobile App','Studio','Personalization') }
-Add-P 'print'     @{ source='figma'; cover='print-mock3.webp'; cat='apps'; title='Print Document'; tag='Utility · Mobile App'; color='#3A7BFF'; platform='Mobile App'; kind='Ứng dụng in tài liệu';
+Add-P 'print'     @{ source='figma'; cover='print-mock4.webp'; cat='apps'; title='Print Document'; tag='Utility · Mobile App'; color='#3A7BFF'; platform='Mobile App'; kind='Ứng dụng in tài liệu';
   desc='Ứng dụng in tài liệu từ điện thoại: hướng dẫn kết nối máy in qua Wi-Fi, in tài liệu, ảnh, trang web và email, bộ công cụ PDF và Print Studio.'; tags=@('Mobile App','Utility','PDF') }
-Add-P 'autogara'  @{ source='figma'; cover='autogara-mock3.webp'; cat='apps'; title='AUTO GARA'; tag='Mobile App · Quản lý gara'; color='#E5484D'; platform='Mobile App (hệ thống quản lý gara)'; kind='Hệ thống quản lý quy trình gara';
+Add-P 'autogara'  @{ source='figma'; cover='autogara-mock4.webp'; cat='apps'; title='AUTO GARA'; tag='Mobile App · Quản lý gara'; color='#E5484D'; platform='Mobile App (hệ thống quản lý gara)'; kind='Hệ thống quản lý quy trình gara';
   desc='Hệ thống quản lý quy trình gara ô tô: tiếp nhận xe, lệnh sửa chữa, báo giá, phát sinh, phiếu xuất kho, hóa đơn, thanh toán và hồ sơ khách hàng.'; tags=@('Hệ thống','Quy trình','Mobile') }
 Add-P 'game2'     @{ source='figma'; cover='game2-mock.webp'; cat='apps'; title='Game 2'; tag='Mobile Game · UI/UX'; color='#4CC76A'; platform='Mobile Game'; kind='Thiết kế UI/UX game';
   desc='Thiết kế giao diện game di động: đặt hàng, level khó, hướng dẫn vật phẩm ẩn, hiệu ứng nhận thưởng, kho đồ và bộ phần tử giao diện.'; tags=@('Game','Mobile','UI kit') }
