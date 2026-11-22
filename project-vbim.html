@@ -83,6 +83,11 @@ footer a:hover{color:var(--accent)}
 .fg-item figcaption{margin-top:14px;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:var(--muted)}
 .fg-item figcaption b{color:var(--ink);font-weight:400;margin-right:10px}
 .fg-grid.cols3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.fg-grid.cols4{grid-template-columns:repeat(4,minmax(0,1fr));gap:40px 22px}
+.fg-item .fg-img.ph{aspect-ratio:9/19.5;background:#0D060A}
+.fg-item .fg-img.ph img{height:100%;object-fit:cover;object-position:top}
+@media(max-width:1100px){.fg-grid.cols4{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:800px){.fg-grid.cols4{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 14px}}
 .fg-item .fg-img.win{aspect-ratio:4/5}
 .fg-item .fg-img.win img{height:100%;object-fit:cover;object-position:top}
 @media(max-width:1000px){.fg-grid.cols3{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -174,17 +179,18 @@ footer a:hover{color:var(--accent)}
   var lb=document.getElementById('lb'),st=document.getElementById('lbStage'),im=document.getElementById('lbImg');
   var nm=document.getElementById('lbName'),sb=document.getElementById('lbSub'),zl=document.getElementById('lbZoom');
   var proj=(document.querySelector('h1')||{}).textContent||'';
-  var cur=0,z=1,MAX=4,MIN=1,lastFocus=null;
+  var cur=0,z=1,MAX=4,MIN=1,lastFocus=null,base=0;
   function setZ(nz,cx,cy){
     nz=Math.max(MIN,Math.min(MAX,nz)); if(nz===z)return;
     var r=st.getBoundingClientRect(); cx=cx==null?r.width/2:cx; cy=cy==null?r.height/2:cy;
     var px=(st.scrollLeft+cx)/(im.offsetWidth||1), py=(st.scrollTop+cy)/(im.offsetHeight||1);
-    z=nz; im.style.width=(z*100)+'%'; st.classList.toggle('z',z>1); zl.textContent=Math.round(z*100)+'%';
+    if(!base)base=st.clientWidth-2; z=nz; im.style.width=(base*z)+'px'; st.classList.toggle('z',z>1); zl.textContent=Math.round(z*100)+'%';
     st.scrollLeft=px*im.offsetWidth-cx; st.scrollTop=py*im.offsetHeight-cy;
   }
   function show(i){
     cur=(i+items.length)%items.length; var it=items[cur], src=it.querySelector('img');
-    im.src=src.getAttribute('data-full')||src.currentSrc||src.src; im.alt=src.alt; im.style.width='100%'; z=1; st.classList.remove('z'); zl.textContent='100%';
+    z=1; base=0; im.style.width='100%'; im.onload=function(){base=(im.naturalWidth<800)?Math.min(st.clientWidth-2,im.naturalWidth*1.4):st.clientWidth-2; im.style.width=(base*z)+'px';};
+    im.src=src.getAttribute('data-full')||src.currentSrc||src.src; im.alt=src.alt; st.classList.remove('z'); zl.textContent='100%';
     st.scrollTop=0; st.scrollLeft=0;
     nm.textContent=(it.querySelector('figcaption')||{}).textContent.replace(/^\d+/,'');
     sb.textContent=proj+' · '+(cur+1)+' / '+items.length;

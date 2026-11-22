@@ -72,6 +72,48 @@ footer a:hover{color:var(--accent)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.card .media img{transition:none}}
 :root{--accent:#FF8A1F}
 </style>
+<style id="fg">
+.fg-wrap{max-width:1400px;margin:0 auto}
+.fg-hero{border-radius:20px;overflow:hidden;background:#0D060A;border:1px solid var(--line)}
+.fg-title{font-family:var(--mono);font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:9vh 0 4vh;display:flex;align-items:center;gap:16px}
+.fg-title::before{content:"";width:48px;height:1px;background:var(--accent)}
+.fg-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 28px;align-items:start}
+.fg-item{margin:0}
+.fg-item .fg-img{border-radius:16px;overflow:hidden;background:#0D060A;border:1px solid var(--line)}
+.fg-item figcaption{margin-top:14px;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:var(--muted)}
+.fg-item figcaption b{color:var(--ink);font-weight:400;margin-right:10px}
+.fg-grid.cols3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.fg-grid.cols4{grid-template-columns:repeat(4,minmax(0,1fr));gap:40px 22px}
+.fg-item .fg-img.ph{aspect-ratio:9/19.5;background:#0D060A}
+.fg-item .fg-img.ph img{height:100%;object-fit:cover;object-position:top}
+@media(max-width:1100px){.fg-grid.cols4{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:800px){.fg-grid.cols4{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 14px}}
+.fg-item .fg-img.win{aspect-ratio:4/5}
+.fg-item .fg-img.win img{height:100%;object-fit:cover;object-position:top}
+@media(max-width:1000px){.fg-grid.cols3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.fg-grid.cols3{grid-template-columns:1fr}}
+.fg-item .fg-img{cursor:zoom-in;transition:transform .35s,border-color .35s}
+.fg-item:hover .fg-img{transform:translateY(-4px);border-color:var(--accent)}
+.fg-item .fg-img:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.lb{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:3vh 3vw;background:rgba(8,4,6,.82);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.lb.open{display:flex}
+.lb-box{width:min(1180px,100%);max-height:100%;display:flex;flex-direction:column;background:#150A0F;border:1px solid var(--line);border-radius:18px;padding:18px 18px 16px;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.lb-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:14px}
+.lb-name{font-weight:600;font-size:1rem}
+.lb-sub{font-family:var(--mono);font-size:.74rem;letter-spacing:.05em;color:var(--muted);margin-top:4px}
+.lb-tools{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.lb-btn{font-family:var(--mono);font-size:.78rem;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:10px;padding:8px 13px;cursor:pointer;line-height:1;transition:border-color .25s,color .25s}
+.lb-btn:hover{border-color:var(--accent);color:var(--accent)}
+.lb-btn:disabled{opacity:.35;cursor:default}
+.lb-zoom{min-width:3.4em;text-align:center;font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+.lb-stage{flex:1;min-height:0;overflow:auto;border-radius:12px;background:#0D060A;border:1px solid var(--line);cursor:zoom-in;touch-action:pan-x pan-y;overscroll-behavior:contain}
+.lb-stage.z{cursor:grab}
+.lb-stage.drag{cursor:grabbing;user-select:none}
+.lb-stage img{display:block;max-width:none;height:auto;margin:0 auto;-webkit-user-drag:none;user-select:none}
+.lb-foot{display:flex;justify-content:space-between;margin-top:14px}
+@media(max-width:700px){.lb{padding:0}.lb-box{width:100%;height:100%;border-radius:0;padding:12px}.lb-tools .lb-btn{padding:8px 10px}}
+@media(max-width:700px){.fg-grid{grid-template-columns:1fr;gap:32px}.fg-hero,.fg-item .fg-img{border-radius:12px}}
+</style>
 </head><body>
 <nav class="nav"><a class="logo" href="index.html">KIÊN.</a><a class="back" href="apps.html">← Mobile App/Game</a></nav>
 <header class="hero">
@@ -86,26 +128,47 @@ footer a:hover{color:var(--accent)}
     <div><dt>Nội dung</dt><dd class="tags"><span>Mobile App</span><span>User flow</span><span>Health</span></dd></div>
   </dl>
 </header>
-<main class="case">
-<figure class="shot"><figcaption>Intro (1/4)</figcaption><a class="frame" href="assets/projects/scancalo-1.webp" target="_blank" rel="noopener"><img src="assets/projects/scancalo-1.webp" width="3000" height="1980" loading="eager" decoding="async" alt="Intro (1/4)"></a></figure>
-<figure class="shot"><figcaption>Intro (2/4)</figcaption><a class="frame" href="assets/projects/scancalo-2.webp" target="_blank" rel="noopener"><img src="assets/projects/scancalo-2.webp" width="3000" height="1980" loading="lazy" decoding="async" alt="Intro (2/4)"></a></figure>
-<figure class="shot"><figcaption>Intro (3/4)</figcaption><a class="frame" href="assets/projects/scancalo-3.webp" target="_blank" rel="noopener"><img src="assets/projects/scancalo-3.webp" width="3000" height="1980" loading="lazy" decoding="async" alt="Intro (3/4)"></a></figure>
-<figure class="shot"><figcaption>Intro (4/4)</figcaption><a class="frame" href="assets/projects/scancalo-4.webp" target="_blank" rel="noopener"><img src="assets/projects/scancalo-4.webp" width="3000" height="1980" loading="lazy" decoding="async" alt="Intro (4/4)"></a></figure>
-<figure class="shot"><figcaption>Process</figcaption><a class="frame" href="assets/projects/scancalo-5.webp" target="_blank" rel="noopener"><img src="assets/projects/scancalo-5.webp" width="2200" height="1911" loading="lazy" decoding="async" alt="Process"></a></figure>
-<figure class="shot"><figcaption>Food Scan</figcaption><a class="frame" href="assets/projects/scancalo-6.webp" target="_blank" rel="noopener"><img src="assets/projects/scancalo-6.webp" width="2200" height="1507" loading="lazy" decoding="async" alt="Food Scan"></a></figure>
-<figure class="shot"><figcaption>Add Activity</figcaption><a class="frame" href="assets/projects/scancalo-7.webp" target="_blank" rel="noopener"><img src="assets/projects/scancalo-7.webp" width="2200" height="1515" loading="lazy" decoding="async" alt="Add Activity"></a></figure>
-<figure class="shot"><figcaption>Daily check-in</figcaption><a class="frame" href="assets/projects/scancalo-8.webp" target="_blank" rel="noopener"><img src="assets/projects/scancalo-8.webp" width="1800" height="1114" loading="lazy" decoding="async" alt="Daily check-in"></a></figure>
-<figure class="shot"><figcaption>Recipes</figcaption><a class="frame" href="assets/projects/scancalo-9.webp" target="_blank" rel="noopener"><img src="assets/projects/scancalo-9.webp" width="2200" height="1100" loading="lazy" decoding="async" alt="Recipes"></a></figure>
-<figure class="shot"><figcaption>Tủ lạnh</figcaption><a class="frame" href="assets/projects/scancalo-10.webp" target="_blank" rel="noopener"><img src="assets/projects/scancalo-10.webp" width="2200" height="786" loading="lazy" decoding="async" alt="Tủ lạnh"></a></figure>
-<figure class="shot"><figcaption>Streak</figcaption><a class="frame" href="assets/projects/scancalo-11.webp" target="_blank" rel="noopener"><img src="assets/projects/scancalo-11.webp" width="2200" height="1218" loading="lazy" decoding="async" alt="Streak"></a></figure>
-<figure class="shot"><figcaption>Setting</figcaption><a class="frame" href="assets/projects/scancalo-12.webp" target="_blank" rel="noopener"><img src="assets/projects/scancalo-12.webp" width="2032" height="2600" loading="lazy" decoding="async" alt="Setting"></a></figure>
-<figure class="shot"><figcaption>Water Goal</figcaption><a class="frame" href="assets/projects/scancalo-13.webp" target="_blank" rel="noopener"><img src="assets/projects/scancalo-13.webp" width="1272" height="1617" loading="lazy" decoding="async" alt="Water Goal"></a></figure>
-<figure class="shot"><figcaption>IAP</figcaption><a class="frame" href="assets/projects/scancalo-14.webp" target="_blank" rel="noopener"><img src="assets/projects/scancalo-14.webp" width="1014" height="1282" loading="lazy" decoding="async" alt="IAP"></a></figure>
-<figure class="shot"><figcaption>Update 13/8/2026</figcaption><a class="frame" href="assets/projects/scancalo-15.webp" target="_blank" rel="noopener"><img src="assets/projects/scancalo-15.webp" width="1176" height="1073" loading="lazy" decoding="async" alt="Update 13/8/2026"></a></figure>
-
-</main>
+<main class="case"><div class="fg-wrap">
+<div class="fg-hero"><img src="assets/projects/scancalo-thumb-v2.webp" width="1254" height="1254" loading="eager" decoding="async" alt="Flashcal"></div>
+<h2 class="fg-title">Màn hình thiết kế</h2>
+<div class="fg-grid cols4">
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-01.webp" width="360" height="796" loading="lazy" decoding="async" alt="Flashcal — Giới thiệu &#183; Theo d&#245;i dinh dưỡng"></div><figcaption><b>01</b>Giới thiệu &#183; Theo d&#245;i dinh dưỡng</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-02.webp" width="360" height="796" loading="lazy" decoding="async" alt="Flashcal — Giới thiệu &#183; Chụp ảnh m&#243;n ăn"></div><figcaption><b>02</b>Giới thiệu &#183; Chụp ảnh m&#243;n ăn</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-03.webp" width="360" height="796" loading="lazy" decoding="async" alt="Flashcal — Giới thiệu &#183; Lối sống l&#224;nh mạnh"></div><figcaption><b>03</b>Giới thiệu &#183; Lối sống l&#224;nh mạnh</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-04.webp" width="360" height="796" loading="lazy" decoding="async" alt="Flashcal — Mức độ vận động"></div><figcaption><b>04</b>Mức độ vận động</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-05.webp" width="360" height="793" loading="lazy" decoding="async" alt="Flashcal — Tốc độ đạt mục ti&#234;u &#183; Chậm v&#224; đều"></div><figcaption><b>05</b>Tốc độ đạt mục ti&#234;u &#183; Chậm v&#224; đều</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-06.webp" width="360" height="793" loading="lazy" decoding="async" alt="Flashcal — Tốc độ đạt mục ti&#234;u &#183; Vừa phải"></div><figcaption><b>06</b>Tốc độ đạt mục ti&#234;u &#183; Vừa phải</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-07.webp" width="360" height="793" loading="lazy" decoding="async" alt="Flashcal — Tốc độ đạt mục ti&#234;u &#183; Nhanh"></div><figcaption><b>07</b>Tốc độ đạt mục ti&#234;u &#183; Nhanh</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-08.webp" width="360" height="793" loading="lazy" decoding="async" alt="Flashcal — Tốc độ đạt mục ti&#234;u &#183; Tăng cơ"></div><figcaption><b>08</b>Tốc độ đạt mục ti&#234;u &#183; Tăng cơ</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-09.webp" width="360" height="796" loading="lazy" decoding="async" alt="Flashcal — C&#226;n nặng mục ti&#234;u"></div><figcaption><b>09</b>C&#226;n nặng mục ti&#234;u</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-10.webp" width="360" height="793" loading="lazy" decoding="async" alt="Flashcal — Bật nhắc nhở"></div><figcaption><b>10</b>Bật nhắc nhở</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-11.webp" width="360" height="1682" loading="lazy" decoding="async" alt="Flashcal — Trang chủ"></div><figcaption><b>11</b>Trang chủ</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-12.webp" width="360" height="2328" loading="lazy" decoding="async" alt="Flashcal — Ph&#226;n t&#237;ch theo ng&#224;y"></div><figcaption><b>12</b>Ph&#226;n t&#237;ch theo ng&#224;y</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-13.webp" width="360" height="793" loading="lazy" decoding="async" alt="Flashcal — Chỉnh sửa hoạt động"></div><figcaption><b>13</b>Chỉnh sửa hoạt động</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-14.webp" width="360" height="1081" loading="lazy" decoding="async" alt="Flashcal — Th&#234;m hoạt động"></div><figcaption><b>14</b>Th&#234;m hoạt động</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-15.webp" width="360" height="793" loading="lazy" decoding="async" alt="Flashcal — Kết quả m&#243;n ăn"></div><figcaption><b>15</b>Kết quả m&#243;n ăn</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-16.webp" width="360" height="793" loading="lazy" decoding="async" alt="Flashcal — Chỉnh dinh dưỡng m&#243;n ăn"></div><figcaption><b>16</b>Chỉnh dinh dưỡng m&#243;n ăn</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-17.webp" width="360" height="796" loading="lazy" decoding="async" alt="Flashcal — Qu&#233;t thất bại"></div><figcaption><b>17</b>Qu&#233;t thất bại</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-18.webp" width="360" height="796" loading="lazy" decoding="async" alt="Flashcal — Đang ph&#226;n t&#237;ch m&#243;n ăn"></div><figcaption><b>18</b>Đang ph&#226;n t&#237;ch m&#243;n ăn</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-19.webp" width="360" height="796" loading="lazy" decoding="async" alt="Flashcal — Chụp m&#243;n ăn"></div><figcaption><b>19</b>Chụp m&#243;n ăn</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-20.webp" width="360" height="793" loading="lazy" decoding="async" alt="Flashcal — Điểm danh hằng ng&#224;y"></div><figcaption><b>20</b>Điểm danh hằng ng&#224;y</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-21.webp" width="360" height="1724" loading="lazy" decoding="async" alt="Flashcal — Chi tiết c&#244;ng thức"></div><figcaption><b>21</b>Chi tiết c&#244;ng thức</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-22.webp" width="360" height="1676" loading="lazy" decoding="async" alt="Flashcal — C&#244;ng thức"></div><figcaption><b>22</b>C&#244;ng thức</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-23.webp" width="360" height="796" loading="lazy" decoding="async" alt="Flashcal — Qu&#233;t tủ lạnh &#183; Hướng dẫn"></div><figcaption><b>23</b>Qu&#233;t tủ lạnh &#183; Hướng dẫn</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-24.webp" width="360" height="796" loading="lazy" decoding="async" alt="Flashcal — Qu&#233;t tủ lạnh &#183; Đang ph&#226;n t&#237;ch"></div><figcaption><b>24</b>Qu&#233;t tủ lạnh &#183; Đang ph&#226;n t&#237;ch</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-25.webp" width="360" height="1435" loading="lazy" decoding="async" alt="Flashcal — Tủ lạnh AI &#183; Gợi &#253; c&#244;ng thức"></div><figcaption><b>25</b>Tủ lạnh AI &#183; Gợi &#253; c&#244;ng thức</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-26.webp" width="360" height="793" loading="lazy" decoding="async" alt="Flashcal — Tủ lạnh AI &#183; C&#225;ch hoạt động"></div><figcaption><b>26</b>Tủ lạnh AI &#183; C&#225;ch hoạt động</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-27.webp" width="360" height="793" loading="lazy" decoding="async" alt="Flashcal — Ưu đ&#227;i giảm 50%"></div><figcaption><b>27</b>Ưu đ&#227;i giảm 50%</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-28.webp" width="360" height="793" loading="lazy" decoding="async" alt="Flashcal — Gỡ quảng c&#225;o"></div><figcaption><b>28</b>Gỡ quảng c&#225;o</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-29.webp" width="360" height="796" loading="lazy" decoding="async" alt="Flashcal — Mục ti&#234;u nước uống"></div><figcaption><b>29</b>Mục ti&#234;u nước uống</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-30.webp" width="360" height="860" loading="lazy" decoding="async" alt="Flashcal — Dung t&#237;ch cốc"></div><figcaption><b>30</b>Dung t&#237;ch cốc</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-31.webp" width="360" height="1281" loading="lazy" decoding="async" alt="Flashcal — Chuỗi ng&#224;y li&#234;n tiếp"></div><figcaption><b>31</b>Chuỗi ng&#224;y li&#234;n tiếp</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-32.webp" width="360" height="1002" loading="lazy" decoding="async" alt="Flashcal — N&#226;ng cấp Premium"></div><figcaption><b>32</b>N&#226;ng cấp Premium</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-33.webp" width="360" height="1046" loading="lazy" decoding="async" alt="Flashcal — C&#224;i đặt"></div><figcaption><b>33</b>C&#224;i đặt</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-34.webp" width="360" height="796" loading="lazy" decoding="async" alt="Flashcal — C&#224;i đặt th&#244;ng b&#225;o"></div><figcaption><b>34</b>C&#224;i đặt th&#244;ng b&#225;o</figcaption></figure>
+</div></div></main>
 <nav class="pager" aria-label="Dự án khác">
-  <a href="project-heartwise.html"><small>← Dự án trước</small><strong>HeartWise</strong></a>
+  <a href="project-fitapp.html"><small>← Dự án trước</small><strong>FitApp</strong></a>
   <a href="project-kinhnguyet.html"><small>Dự án tiếp →</small><strong>Flovia</strong></a>
 </nav>
 <footer>
@@ -113,5 +176,87 @@ footer a:hover{color:var(--accent)}
   <a href="https://www.facebook.com/ntrugkien1510/" target="_blank" rel="noopener">Facebook</a>
   <a href="https://www.behance.net/croster1510" target="_blank" rel="noopener">Behance</a>
 </footer>
+<!--lb-->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Xem màn hình">
+  <div class="lb-box">
+    <div class="lb-head">
+      <div><div class="lb-name" id="lbName"></div><div class="lb-sub" id="lbSub"></div></div>
+      <div class="lb-tools">
+        <button class="lb-btn" id="lbOut" aria-label="Thu nhỏ">−</button>
+        <span class="lb-zoom" id="lbZoom">100%</span>
+        <button class="lb-btn" id="lbIn" aria-label="Phóng to">+</button>
+        <button class="lb-btn" id="lbFit" aria-label="Vừa khung">Vừa khung</button>
+        <button class="lb-btn" id="lbClose" aria-label="Đóng">✕</button>
+      </div>
+    </div>
+    <div class="lb-stage" id="lbStage"><img id="lbImg" alt=""></div>
+    <div class="lb-foot">
+      <button class="lb-btn" id="lbPrev">← Trước</button>
+      <button class="lb-btn" id="lbNext">Sau →</button>
+    </div>
+  </div>
+</div>
+<!--/lb-->
+<script id="fgjs">
+(function(){
+  var items=[].slice.call(document.querySelectorAll('.fg-item')); if(!items.length)return;
+  var lb=document.getElementById('lb'),st=document.getElementById('lbStage'),im=document.getElementById('lbImg');
+  var nm=document.getElementById('lbName'),sb=document.getElementById('lbSub'),zl=document.getElementById('lbZoom');
+  var proj=(document.querySelector('h1')||{}).textContent||'';
+  var cur=0,z=1,MAX=4,MIN=1,lastFocus=null,base=0;
+  function setZ(nz,cx,cy){
+    nz=Math.max(MIN,Math.min(MAX,nz)); if(nz===z)return;
+    var r=st.getBoundingClientRect(); cx=cx==null?r.width/2:cx; cy=cy==null?r.height/2:cy;
+    var px=(st.scrollLeft+cx)/(im.offsetWidth||1), py=(st.scrollTop+cy)/(im.offsetHeight||1);
+    if(!base)base=st.clientWidth-2; z=nz; im.style.width=(base*z)+'px'; st.classList.toggle('z',z>1); zl.textContent=Math.round(z*100)+'%';
+    st.scrollLeft=px*im.offsetWidth-cx; st.scrollTop=py*im.offsetHeight-cy;
+  }
+  function show(i){
+    cur=(i+items.length)%items.length; var it=items[cur], src=it.querySelector('img');
+    z=1; base=0; im.style.width='100%'; im.onload=function(){base=(im.naturalWidth<800)?Math.min(st.clientWidth-2,im.naturalWidth*1.4):st.clientWidth-2; im.style.width=(base*z)+'px';};
+    im.src=src.getAttribute('data-full')||src.currentSrc||src.src; im.alt=src.alt; st.classList.remove('z'); zl.textContent='100%';
+    st.scrollTop=0; st.scrollLeft=0;
+    nm.textContent=(it.querySelector('figcaption')||{}).textContent.replace(/^\d+/,'');
+    sb.textContent=proj+' · '+(cur+1)+' / '+items.length;
+  }
+  function open(i){ lastFocus=document.activeElement; show(i); lb.classList.add('open'); document.body.style.overflow='hidden'; document.getElementById('lbClose').focus(); }
+  function close(){ lb.classList.remove('open'); document.body.style.overflow=''; if(lastFocus&&lastFocus.focus)lastFocus.focus(); }
+  items.forEach(function(it,i){
+    var box=it.querySelector('.fg-img'); box.setAttribute('role','button'); box.setAttribute('tabindex','0'); box.setAttribute('aria-label','Xem lớn: '+it.querySelector('figcaption').textContent);
+    box.addEventListener('click',function(){open(i)});
+    box.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(i)}});
+  });
+  document.getElementById('lbClose').onclick=close;
+  document.getElementById('lbPrev').onclick=function(){show(cur-1)};
+  document.getElementById('lbNext').onclick=function(){show(cur+1)};
+  document.getElementById('lbIn').onclick=function(){setZ(z*1.5)};
+  document.getElementById('lbOut').onclick=function(){setZ(z/1.5)};
+  document.getElementById('lbFit').onclick=function(){setZ(1)};
+  lb.addEventListener('click',function(e){if(e.target===lb)close()});
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open'))return;
+    if(e.key==='Escape')close(); else if(e.key==='ArrowLeft')show(cur-1); else if(e.key==='ArrowRight')show(cur+1);
+    else if(e.key==='+'||e.key==='=')setZ(z*1.5); else if(e.key==='-')setZ(z/1.5); else if(e.key==='0')setZ(1);
+  });
+  st.addEventListener('wheel',function(e){
+    if(!(e.ctrlKey||e.metaKey))return; e.preventDefault();
+    var r=st.getBoundingClientRect(); setZ(z*(e.deltaY<0?1.15:1/1.15),e.clientX-r.left,e.clientY-r.top);
+  },{passive:false});
+  st.addEventListener('dblclick',function(e){var r=st.getBoundingClientRect(); setZ(z>1?1:2.2,e.clientX-r.left,e.clientY-r.top)});
+  var pts={},d0=0,z0=1,drag=null;
+  st.addEventListener('pointerdown',function(e){
+    pts[e.pointerId]=e; var k=Object.keys(pts);
+    if(k.length===2){var a=pts[k[0]],b=pts[k[1]]; d0=Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY); z0=z; drag=null;}
+    else if(e.pointerType==='mouse'&&z>1){drag={x:e.clientX,y:e.clientY,l:st.scrollLeft,t:st.scrollTop}; st.classList.add('drag'); st.setPointerCapture(e.pointerId);}
+  });
+  st.addEventListener('pointermove',function(e){
+    if(pts[e.pointerId])pts[e.pointerId]=e; var k=Object.keys(pts);
+    if(k.length===2&&d0){var a=pts[k[0]],b=pts[k[1]],r=st.getBoundingClientRect(); setZ(z0*Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY)/d0,(a.clientX+b.clientX)/2-r.left,(a.clientY+b.clientY)/2-r.top);}
+    else if(drag){st.scrollLeft=drag.l-(e.clientX-drag.x); st.scrollTop=drag.t-(e.clientY-drag.y);}
+  });
+  function up(e){delete pts[e.pointerId]; if(Object.keys(pts).length<2)d0=0; if(drag){drag=null; st.classList.remove('drag');}}
+  st.addEventListener('pointerup',up); st.addEventListener('pointercancel',up);
+})();
+</script>
 </body>
 </html>

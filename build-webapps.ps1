@@ -45,6 +45,23 @@ $apps = [ordered]@{
     caps=@('Trang chủ','Dự án','Thông tin chuyên ngành','Hồ sơ năng lực','Tin tức','Chi tiết tin tức') }
 }
 $landMan = Get-Content "$PSScriptRoot\assets\projects\manifest_landing.json" -Raw -Encoding UTF8 | ConvertFrom-Json
+$mobMan = Get-Content "$PSScriptRoot\assets\projects\manifest_mobile.json" -Raw -Encoding UTF8 | ConvertFrom-Json
+
+# Mobile app / game: lưới 4 cột screen điện thoại (phone=$true), ảnh gốc từ manifest_mobile.json
+$mobile = [ordered]@{
+  'scancalo' = @{ title='Flashcal'; caps=@('Giới thiệu · Theo dõi dinh dưỡng','Giới thiệu · Chụp ảnh món ăn','Giới thiệu · Lối sống lành mạnh','Mức độ vận động','Tốc độ đạt mục tiêu · Chậm và đều','Tốc độ đạt mục tiêu · Vừa phải','Tốc độ đạt mục tiêu · Nhanh','Tốc độ đạt mục tiêu · Tăng cơ','Cân nặng mục tiêu','Bật nhắc nhở','Trang chủ','Phân tích theo ngày','Chỉnh sửa hoạt động','Thêm hoạt động','Kết quả món ăn','Chỉnh dinh dưỡng món ăn','Quét thất bại','Đang phân tích món ăn','Chụp món ăn','Điểm danh hằng ngày','Chi tiết công thức','Công thức','Quét tủ lạnh · Hướng dẫn','Quét tủ lạnh · Đang phân tích','Tủ lạnh AI · Gợi ý công thức','Tủ lạnh AI · Cách hoạt động','Ưu đãi giảm 50%','Gỡ quảng cáo','Mục tiêu nước uống','Dung tích cốc','Chuỗi ngày liên tiếp','Nâng cấp Premium','Cài đặt','Cài đặt thông báo') }
+  'kinhnguyet' = @{ title='Flovia'; caps=@('Khởi động','Chọn ngôn ngữ','Giới thiệu · Hiểu cơ thể','Giới thiệu · Theo dõi dễ dàng','Giới thiệu · Sống khỏe mỗi ngày','Hồ sơ','Chỉnh sửa hồ sơ','Trợ lý sức khỏe','Chat với trợ lý AI','Thống kê chu kỳ · Chưa có dữ liệu','Thống kê chu kỳ','Thống kê chu kỳ · Xu hướng','Lịch sử chu kỳ','Chi tiết chu kỳ','Chi tiết chu kỳ · Dự đoán','Phân tích · Chu kỳ dài','Phân tích · Chu kỳ bình thường','Bài viết kiến thức','Danh sách bài viết','Kiến thức sức khỏe','Chi tiết bài viết','Lịch theo tháng','Ghi chú hằng ngày','Trang chủ · Ngày kinh nguyệt','Trang chủ · Ngày thường','Trang chủ · Ngày rụng trứng','Câu hỏi · Tên gọi','Câu hỏi · Tên gọi (đã nhập)','Câu hỏi · Năm sinh','Câu hỏi · Độ dài chu kỳ','Câu hỏi · Số ngày hành kinh','Câu hỏi · Ngày bắt đầu kỳ gần nhất','Bật thông báo') }
+  'kinhthanh' = @{ title='Holy Bible'; caps=@('Chọn sách và chương','Kế hoạch đọc','Tiếp tục đọc','Trang chủ','Tốc độ phát','Chi tiết kế hoạch','Chọn câu · Đánh dấu','Chọn câu · Menu thao tác','Chia sẻ câu Kinh Thánh','Thêm ghi chú','Trình phát âm thanh','Đọc Kinh Thánh','Hẹn giờ tắt','Cầu nguyện · Chọn người','Đã lưu dấu trang','Dấu trang · Thông báo','Cầu nguyện · Chọn chủ đề','Sao chép câu','Đọc · Chuyển đến câu','Đọc · Mặc định','Cầu nguyện · Chi tiết','Tìm kiếm','Thư viện · Highlight','Thư viện · Ghi chú','Thư viện · Dấu trang','Thư viện · Vuốt để xóa','Suy niệm hằng ngày','Kết quả tìm kiếm','Nhắc nhở kế hoạch','Sửa ghi chú','Chưa có highlight','Giới thiệu · Lời Chúa mọi nơi','Giới thiệu · Bình an trong cầu nguyện') }
+  'wallpaper' = @{ title='Depth Wallpaper'; caps=@('Bộ sưu tập','Danh sách hình nền','Xem trước','Hình nền · Yêu thích','Hình nền · Tất cả','Hình nền · Chưa có yêu thích','Cài đặt','Chọn ngôn ngữ','Giới thiệu 1','Giới thiệu 2','Giới thiệu 3','Studio chỉnh sửa') }
+  'print' = @{ title='Print Document'; caps=@('Giới thiệu · In tài liệu dễ dàng','Giới thiệu · In từ mọi nguồn','Xem trước','Trang chủ','Trang chủ · Mẫu có sẵn','Trình quét · Chưa có tài liệu','Trình quét · Chọn nguồn quét','Chỉnh ảnh quét','Quét thẻ ID','Cắt ảnh','Xem trước và chỉnh sửa','Công cụ PDF','Sắp xếp trang','Trích xuất văn bản · Gộp','Trích xuất văn bản · Theo trang','Tách và trích xuất trang','Sắp xếp trang · 10 trang','Tuỳ chọn in','Bố cục ảnh · Mỗi tờ','Bố cục ảnh · Bộ lọc','Thêm chữ vào ảnh','Chữ ký · Thêm chữ ký','Vẽ chữ ký','Kết nối máy in','Hướng dẫn kết nối máy in','Hướng dẫn gửi qua email','Lịch sử in','Chi tiết lần in','Danh bạ in · Danh sách','Danh bạ in · Thẻ','Mẫu · Kế hoạch ngày','In ảnh thẻ','Tách trang · Hoàn tất','Tách PDF · 7 tệp','Ảnh thành PDF') }
+  'autogara' = @{ title='AUTO GARA'; caps=@('Giới thiệu · Chào mừng','Giới thiệu · Chẩn đoán OBD','Đăng nhập','Đăng nhập · Đã nhập','Tổng quan','Tổng quan · Báo cáo doanh thu','Chọn khách hàng','Kết quả chẩn đoán','Phân công thợ sửa chữa','Nghiệm thu hạng mục','Chi tiết báo giá','Danh sách báo giá','Chi tiết phát sinh','Phát sinh · Thông tin khách','Phát sinh · Phương án sửa','Duyệt phương án thành công','Phụ tùng được cấp','Đang xác minh vật tư','Chi tiết phiếu xuất kho','Danh sách phiếu xuất kho','Chi tiết hóa đơn','Biên bản bàn giao','Thanh toán','Mã QR thanh toán','Chi tiết khách hàng','Nhắc lịch bảo dưỡng','Tạo hồ sơ gara','Tạo gara thành công','Hàng hóa','Tin nhắn','Tin nhắn · Duyệt phương án','Thông báo đẩy') }
+  'giapha' = @{ title='Tâm Hương'; caps=@('Giới thiệu · Chào mừng','Đăng nhập','Xác minh OTP','Điền thông tin cá nhân','Trang chủ','Trang chủ · Dịch vụ chăm sóc mộ phần','Danh sách gia phả','Tạo gia phả mới','Chọn sơ đồ phả hệ','Cây phả hệ','Thêm thành viên','Thông tin thành viên · Chọn ngày','Thông tin thành viên · Mã mời','Kênh gia đình','Kênh gia đình · Tạo lịch hẹn','Chọn người phụ trách','Lịch giỗ','Chi tiết nghi lễ','Danh sách nghi lễ','Mộ phần · Sơ đồ','Danh sách mộ phần','Thông tin mộ phần','Mộ phần · Gói dịch vụ','Mộ phần · Thân nhân','Đánh giá dịch vụ','Chi tiết dịch vụ · Thắp hương','Dịch vụ chăm sóc mộ','Thanh toán · Chọn ngày','Chi tiết công việc','Công việc · Thắp hương online','Bản đồ','Chi tiết khu vực','Bộ lọc','Thông báo','Hoàn thành công việc') }
+  'game2' = @{ title='Color Sort: Streak Puzzle'; caps=@('Màn hình khởi động','Trang chủ','Màn chơi','Hướng dẫn vật phẩm ẩn','Hoàn thành màn','Kho hoa','Đơn đặt hoa') }
+  'game3' = @{ title='Tile Bloom'; caps=@('Sưu tập · Hướng dương','Sưu tập · Cúc','Sưu tập · Cẩm tú cầu','Sưu tập · Hoa hồng','Sưu tập · Mẫu đơn','Bộ sưu tập · Trang 1','Bộ sưu tập · Trang 2','Màn chơi','Màn chơi · Siêu khó','Cửa hàng','Cửa hàng · Mua chậu','Cửa hàng · Không đủ xu','Lên cấp','Chi tiết hoa · Tưới nước','Mua thêm ô trồng','Khu vườn · Ô trống','Xác nhận bỏ chậu','Xác nhận bỏ cây','Khu vườn · Trang chủ','Khu vườn · Chọn ô trồng','Hướng dẫn nhân vật Grook','Màn hình khởi động','Mở khóa hoa mới','Thua màn · Khay đầy','Rương thưởng','Chiến thắng','Cây lớn lên') }
+}
+foreach ($k in $mobile.Keys) { $e = $mobile[$k]; $e.mobile = $true; $e.cols = 4; $apps[$k] = $e }
+# 3 dự án showcase: dùng nguyên frame Figma (xếp dọc, cắt đoạn)
+$showcase = [ordered]@{ 'kimdong' = 'Kim Đồng Bookstore'; 'heartwise' = 'HeartWise'; 'fitapp' = 'FitApp' }
 
 $css = @'
 <style id="fg">
@@ -58,6 +75,11 @@ $css = @'
 .fg-item figcaption{margin-top:14px;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:var(--muted)}
 .fg-item figcaption b{color:var(--ink);font-weight:400;margin-right:10px}
 .fg-grid.cols3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.fg-grid.cols4{grid-template-columns:repeat(4,minmax(0,1fr));gap:40px 22px}
+.fg-item .fg-img.ph{aspect-ratio:9/19.5;background:#0D060A}
+.fg-item .fg-img.ph img{height:100%;object-fit:cover;object-position:top}
+@media(max-width:1100px){.fg-grid.cols4{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:800px){.fg-grid.cols4{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 14px}}
 .fg-item .fg-img.win{aspect-ratio:4/5}
 .fg-item .fg-img.win img{height:100%;object-fit:cover;object-position:top}
 @media(max-width:1000px){.fg-grid.cols3{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -115,17 +137,18 @@ $js = @'
   var lb=document.getElementById('lb'),st=document.getElementById('lbStage'),im=document.getElementById('lbImg');
   var nm=document.getElementById('lbName'),sb=document.getElementById('lbSub'),zl=document.getElementById('lbZoom');
   var proj=(document.querySelector('h1')||{}).textContent||'';
-  var cur=0,z=1,MAX=4,MIN=1,lastFocus=null;
+  var cur=0,z=1,MAX=4,MIN=1,lastFocus=null,base=0;
   function setZ(nz,cx,cy){
     nz=Math.max(MIN,Math.min(MAX,nz)); if(nz===z)return;
     var r=st.getBoundingClientRect(); cx=cx==null?r.width/2:cx; cy=cy==null?r.height/2:cy;
     var px=(st.scrollLeft+cx)/(im.offsetWidth||1), py=(st.scrollTop+cy)/(im.offsetHeight||1);
-    z=nz; im.style.width=(z*100)+'%'; st.classList.toggle('z',z>1); zl.textContent=Math.round(z*100)+'%';
+    if(!base)base=st.clientWidth-2; z=nz; im.style.width=(base*z)+'px'; st.classList.toggle('z',z>1); zl.textContent=Math.round(z*100)+'%';
     st.scrollLeft=px*im.offsetWidth-cx; st.scrollTop=py*im.offsetHeight-cy;
   }
   function show(i){
     cur=(i+items.length)%items.length; var it=items[cur], src=it.querySelector('img');
-    im.src=src.getAttribute('data-full')||src.currentSrc||src.src; im.alt=src.alt; im.style.width='100%'; z=1; st.classList.remove('z'); zl.textContent='100%';
+    z=1; base=0; im.style.width='100%'; im.onload=function(){base=(im.naturalWidth<800)?Math.min(st.clientWidth-2,im.naturalWidth*1.4):st.clientWidth-2; im.style.width=(base*z)+'px';};
+    im.src=src.getAttribute('data-full')||src.currentSrc||src.src; im.alt=src.alt; st.classList.remove('z'); zl.textContent='100%';
     st.scrollTop=0; st.scrollLeft=0;
     nm.textContent=(it.querySelector('figcaption')||{}).textContent.replace(/^\d+/,'');
     sb.textContent=proj+' · '+(cur+1)+' / '+items.length;
@@ -173,17 +196,21 @@ $js = @'
 
 foreach ($slug in $apps.Keys) {
   $a = $apps[$slug]; $file = "project-$slug.html"
-  if ($a.manifest) { $lm = $landMan.$slug; $hw = @([string]$lm.hero[0], [string]$lm.hero[1]) } else { $hw = $a.hero.Split('x') }
+  if ($a.mobile) { $mh = $mobMan.$slug.hero; $hw = @([string]$mh.w, [string]$mh.h) } elseif ($a.manifest) { $lm = $landMan.$slug; $hw = @([string]$lm.hero[0], [string]$lm.hero[1]) } else { $hw = $a.hero.Split('x') }
   $sb = New-Object System.Text.StringBuilder
   [void]$sb.AppendLine('<main class="case"><div class="fg-wrap">')
-  [void]$sb.AppendLine(('<div class="fg-hero"><img src="assets/projects/{0}-web{4}.webp" width="{1}" height="{2}" loading="eager" decoding="async" alt="{3}"></div>' -f $slug, $hw[0], $hw[1], $a.title, $(if ($a.cols -eq 3) { '2' } else { '' })))
+  $heroSrc = if ($a.mobile) { "assets/projects/$($mobMan.$slug.hero.f)" } elseif ($a.cols -eq 3) { "assets/projects/$slug-web2.webp" } else { "assets/projects/$slug-web.webp" }
+  [void]$sb.AppendLine(('<div class="fg-hero"><img src="{0}" width="{1}" height="{2}" loading="eager" decoding="async" alt="{3}"></div>' -f $heroSrc, $hw[0], $hw[1], $a.title))
   [void]$sb.AppendLine('<h2 class="fg-title">Màn hình thiết kế</h2>')
-  $gcls = if ($a.cols -eq 3) { 'fg-grid cols3' } else { 'fg-grid' }
+  $gcls = if ($a.mobile) { 'fg-grid cols4' } elseif ($a.cols -eq 3) { 'fg-grid cols3' } else { 'fg-grid' }
   [void]$sb.AppendLine("<div class=`"$gcls`">")
   for ($i = 0; $i -lt $a.caps.Count; $i++) {
     $cap = [System.Net.WebUtility]::HtmlEncode($a.caps[$i])
-    $wcls = if ($a.win -and $a.win[$i]) { 'fg-img win' } else { 'fg-img' }
-    if ($a.manifest) {
+    $wcls = if ($a.mobile) { 'fg-img ph' } elseif ($a.win -and $a.win[$i]) { 'fg-img win' } else { 'fg-img' }
+    if ($a.mobile) {
+      $s = $mobMan.$slug.shots[$i]
+      [void]$sb.AppendLine(('<figure class="fg-item"><div class="' + $wcls + '"><img src="assets/projects/{0}" width="{1}" height="{2}" loading="lazy" decoding="async" alt="{3} — {4}"></div><figcaption><b>{5:00}</b>{4}</figcaption></figure>' -f $s.f, $s.w, $s.h, $a.title, $cap, ($i + 1)))
+    } elseif ($a.manifest) {
       $s = $lm.shots[$i]
       [void]$sb.AppendLine(('<figure class="fg-item"><div class="' + $wcls + '"><img src="assets/projects/{0}" data-full="assets/projects/{1}" width="{2}" height="{3}" loading="lazy" decoding="async" alt="{4} — {5}"></div><figcaption><b>{6:00}</b>{5}</figcaption></figure>' -f $s.t, $s.f, $s.tw, $s.th, $a.title, $cap, ($i + 1)))
     } else {
@@ -202,4 +229,21 @@ foreach ($slug in $apps.Keys) {
   $t = $t.Replace('</body>', "<!--lb-->`n" + $modal + "`n<!--/lb-->`n" + $js + "`n</body>")
   [IO.File]::WriteAllText("$PWD\$file", $t, $utf8)
   "patched $file ($($a.caps.Count) screens)"
+}
+
+# ---- 3 dự án showcase (Kim Đồng, HeartWise, FitApp): nguyên frame Figma, xếp dọc theo từng đoạn ----
+foreach ($slug in $showcase.Keys) {
+  $file = "project-$slug.html"; $chunks = $mobMan.$slug.chunks
+  $sb = New-Object System.Text.StringBuilder
+  [void]$sb.AppendLine('<main class="case"><div class="case-inner">')
+  for ($i = 0; $i -lt $chunks.Count; $i++) {
+    $c = $chunks[$i]; $ld = if ($i -eq 0) { 'eager' } else { 'lazy' }
+    [void]$sb.AppendLine(('<img src="assets/projects/{0}" width="{1}" height="{2}" loading="{3}" decoding="async" alt="{4} — phần {5}">' -f $c.f, $c.w, $c.h, $ld, $showcase[$slug], ($i + 1)))
+  }
+  [void]$sb.AppendLine('</div></main>')
+  $body = $sb.ToString().TrimEnd()
+  $t = [IO.File]::ReadAllText("$PWD\$file", [Text.Encoding]::UTF8)
+  $t = [regex]::Replace($t, '(?s)<main class="case">.*?</main>', { param($m) $body })
+  [IO.File]::WriteAllText("$PWD\$file", $t, $utf8)
+  "patched $file ($($chunks.Count) frame parts)"
 }

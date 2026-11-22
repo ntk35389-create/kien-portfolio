@@ -72,6 +72,48 @@ footer a:hover{color:var(--accent)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.card .media img{transition:none}}
 :root{--accent:#FF7A59}
 </style>
+<style id="fg">
+.fg-wrap{max-width:1400px;margin:0 auto}
+.fg-hero{border-radius:20px;overflow:hidden;background:#0D060A;border:1px solid var(--line)}
+.fg-title{font-family:var(--mono);font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:9vh 0 4vh;display:flex;align-items:center;gap:16px}
+.fg-title::before{content:"";width:48px;height:1px;background:var(--accent)}
+.fg-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 28px;align-items:start}
+.fg-item{margin:0}
+.fg-item .fg-img{border-radius:16px;overflow:hidden;background:#0D060A;border:1px solid var(--line)}
+.fg-item figcaption{margin-top:14px;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:var(--muted)}
+.fg-item figcaption b{color:var(--ink);font-weight:400;margin-right:10px}
+.fg-grid.cols3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.fg-grid.cols4{grid-template-columns:repeat(4,minmax(0,1fr));gap:40px 22px}
+.fg-item .fg-img.ph{aspect-ratio:9/19.5;background:#0D060A}
+.fg-item .fg-img.ph img{height:100%;object-fit:cover;object-position:top}
+@media(max-width:1100px){.fg-grid.cols4{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:800px){.fg-grid.cols4{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 14px}}
+.fg-item .fg-img.win{aspect-ratio:4/5}
+.fg-item .fg-img.win img{height:100%;object-fit:cover;object-position:top}
+@media(max-width:1000px){.fg-grid.cols3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.fg-grid.cols3{grid-template-columns:1fr}}
+.fg-item .fg-img{cursor:zoom-in;transition:transform .35s,border-color .35s}
+.fg-item:hover .fg-img{transform:translateY(-4px);border-color:var(--accent)}
+.fg-item .fg-img:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.lb{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:3vh 3vw;background:rgba(8,4,6,.82);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.lb.open{display:flex}
+.lb-box{width:min(1180px,100%);max-height:100%;display:flex;flex-direction:column;background:#150A0F;border:1px solid var(--line);border-radius:18px;padding:18px 18px 16px;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.lb-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:14px}
+.lb-name{font-weight:600;font-size:1rem}
+.lb-sub{font-family:var(--mono);font-size:.74rem;letter-spacing:.05em;color:var(--muted);margin-top:4px}
+.lb-tools{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.lb-btn{font-family:var(--mono);font-size:.78rem;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:10px;padding:8px 13px;cursor:pointer;line-height:1;transition:border-color .25s,color .25s}
+.lb-btn:hover{border-color:var(--accent);color:var(--accent)}
+.lb-btn:disabled{opacity:.35;cursor:default}
+.lb-zoom{min-width:3.4em;text-align:center;font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+.lb-stage{flex:1;min-height:0;overflow:auto;border-radius:12px;background:#0D060A;border:1px solid var(--line);cursor:zoom-in;touch-action:pan-x pan-y;overscroll-behavior:contain}
+.lb-stage.z{cursor:grab}
+.lb-stage.drag{cursor:grabbing;user-select:none}
+.lb-stage img{display:block;max-width:none;height:auto;margin:0 auto;-webkit-user-drag:none;user-select:none}
+.lb-foot{display:flex;justify-content:space-between;margin-top:14px}
+@media(max-width:700px){.lb{padding:0}.lb-box{width:100%;height:100%;border-radius:0;padding:12px}.lb-tools .lb-btn{padding:8px 10px}}
+@media(max-width:700px){.fg-grid{grid-template-columns:1fr;gap:32px}.fg-hero,.fg-item .fg-img{border-radius:12px}}
+</style>
 </head><body>
 <nav class="nav"><a class="logo" href="index.html">KIÊN.</a><a class="back" href="apps.html">← Mobile App/Game</a></nav>
 <header class="hero">
@@ -86,20 +128,38 @@ footer a:hover{color:var(--accent)}
     <div><dt>Nội dung</dt><dd class="tags"><span>Game</span><span>Mobile</span><span>Tutorial</span></dd></div>
   </dl>
 </header>
-<main class="case">
-<figure class="shot"><figcaption>Trạng th&#225;i tương t&#225;c ở m&#224;n home</figcaption><a class="frame" href="assets/projects/game3-1.webp" target="_blank" rel="noopener"><img src="assets/projects/game3-1.webp" width="2200" height="2092" loading="eager" decoding="async" alt="Trạng th&#225;i tương t&#225;c ở m&#224;n home"></a></figure>
-<figure class="shot"><figcaption>Gameplay Level 1</figcaption><a class="frame" href="assets/projects/game3-2.webp" target="_blank" rel="noopener"><img src="assets/projects/game3-2.webp" width="2200" height="946" loading="lazy" decoding="async" alt="Gameplay Level 1"></a></figure>
-<figure class="shot"><figcaption>Collection</figcaption><a class="frame" href="assets/projects/game3-3.webp" target="_blank" rel="noopener"><img src="assets/projects/game3-3.webp" width="2200" height="1180" loading="lazy" decoding="async" alt="Collection"></a></figure>
-<figure class="shot"><figcaption>Store</figcaption><a class="frame" href="assets/projects/game3-4.webp" target="_blank" rel="noopener"><img src="assets/projects/game3-4.webp" width="1526" height="1124" loading="lazy" decoding="async" alt="Store"></a></figure>
-<figure class="shot"><figcaption>Kết th&#250;c m&#224;n</figcaption><a class="frame" href="assets/projects/game3-5.webp" target="_blank" rel="noopener"><img src="assets/projects/game3-5.webp" width="2200" height="1462" loading="lazy" decoding="async" alt="Kết th&#250;c m&#224;n"></a></figure>
-<figure class="shot"><figcaption>Tutorial bắt đầu game (1/4)</figcaption><a class="frame" href="assets/projects/game3-6.webp" target="_blank" rel="noopener"><img src="assets/projects/game3-6.webp" width="800" height="594" loading="lazy" decoding="async" alt="Tutorial bắt đầu game (1/4)"></a></figure>
-<figure class="shot"><figcaption>Tutorial bắt đầu game (2/4)</figcaption><a class="frame" href="assets/projects/game3-7.webp" target="_blank" rel="noopener"><img src="assets/projects/game3-7.webp" width="800" height="594" loading="lazy" decoding="async" alt="Tutorial bắt đầu game (2/4)"></a></figure>
-<figure class="shot"><figcaption>Tutorial bắt đầu game (3/4)</figcaption><a class="frame" href="assets/projects/game3-8.webp" target="_blank" rel="noopener"><img src="assets/projects/game3-8.webp" width="800" height="594" loading="lazy" decoding="async" alt="Tutorial bắt đầu game (3/4)"></a></figure>
-<figure class="shot"><figcaption>Tutorial bắt đầu game (4/4)</figcaption><a class="frame" href="assets/projects/game3-9.webp" target="_blank" rel="noopener"><img src="assets/projects/game3-9.webp" width="800" height="594" loading="lazy" decoding="async" alt="Tutorial bắt đầu game (4/4)"></a></figure>
-<figure class="shot"><figcaption>Ipad</figcaption><a class="frame" href="assets/projects/game3-10.webp" target="_blank" rel="noopener"><img src="assets/projects/game3-10.webp" width="2200" height="649" loading="lazy" decoding="async" alt="Ipad"></a></figure>
-<figure class="shot"><figcaption>Element UI</figcaption><a class="frame" href="assets/projects/game3-11.webp" target="_blank" rel="noopener"><img src="assets/projects/game3-11.webp" width="1009" height="1800" loading="lazy" decoding="async" alt="Element UI"></a></figure>
-
-</main>
+<main class="case"><div class="fg-wrap">
+<div class="fg-hero"><img src="assets/projects/game3-mock5.webp" width="1254" height="1254" loading="eager" decoding="async" alt="Tile Bloom"></div>
+<h2 class="fg-title">Màn hình thiết kế</h2>
+<div class="fg-grid cols4">
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-01.webp" width="390" height="844" loading="lazy" decoding="async" alt="Tile Bloom — Sưu tập &#183; Hướng dương"></div><figcaption><b>01</b>Sưu tập &#183; Hướng dương</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-02.webp" width="390" height="844" loading="lazy" decoding="async" alt="Tile Bloom — Sưu tập &#183; C&#250;c"></div><figcaption><b>02</b>Sưu tập &#183; C&#250;c</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-03.webp" width="390" height="844" loading="lazy" decoding="async" alt="Tile Bloom — Sưu tập &#183; Cẩm t&#250; cầu"></div><figcaption><b>03</b>Sưu tập &#183; Cẩm t&#250; cầu</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-04.webp" width="390" height="844" loading="lazy" decoding="async" alt="Tile Bloom — Sưu tập &#183; Hoa hồng"></div><figcaption><b>04</b>Sưu tập &#183; Hoa hồng</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-05.webp" width="390" height="844" loading="lazy" decoding="async" alt="Tile Bloom — Sưu tập &#183; Mẫu đơn"></div><figcaption><b>05</b>Sưu tập &#183; Mẫu đơn</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-06.webp" width="390" height="844" loading="lazy" decoding="async" alt="Tile Bloom — Bộ sưu tập &#183; Trang 1"></div><figcaption><b>06</b>Bộ sưu tập &#183; Trang 1</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-07.webp" width="390" height="844" loading="lazy" decoding="async" alt="Tile Bloom — Bộ sưu tập &#183; Trang 2"></div><figcaption><b>07</b>Bộ sưu tập &#183; Trang 2</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-08.webp" width="390" height="844" loading="lazy" decoding="async" alt="Tile Bloom — M&#224;n chơi"></div><figcaption><b>08</b>M&#224;n chơi</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-09.webp" width="390" height="844" loading="lazy" decoding="async" alt="Tile Bloom — M&#224;n chơi &#183; Si&#234;u kh&#243;"></div><figcaption><b>09</b>M&#224;n chơi &#183; Si&#234;u kh&#243;</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-10.webp" width="390" height="844" loading="lazy" decoding="async" alt="Tile Bloom — Cửa h&#224;ng"></div><figcaption><b>10</b>Cửa h&#224;ng</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-11.webp" width="390" height="844" loading="lazy" decoding="async" alt="Tile Bloom — Cửa h&#224;ng &#183; Mua chậu"></div><figcaption><b>11</b>Cửa h&#224;ng &#183; Mua chậu</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-12.webp" width="390" height="844" loading="lazy" decoding="async" alt="Tile Bloom — Cửa h&#224;ng &#183; Kh&#244;ng đủ xu"></div><figcaption><b>12</b>Cửa h&#224;ng &#183; Kh&#244;ng đủ xu</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-13.webp" width="390" height="844" loading="lazy" decoding="async" alt="Tile Bloom — L&#234;n cấp"></div><figcaption><b>13</b>L&#234;n cấp</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-14.webp" width="390" height="844" loading="lazy" decoding="async" alt="Tile Bloom — Chi tiết hoa &#183; Tưới nước"></div><figcaption><b>14</b>Chi tiết hoa &#183; Tưới nước</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-15.webp" width="390" height="844" loading="lazy" decoding="async" alt="Tile Bloom — Mua th&#234;m &#244; trồng"></div><figcaption><b>15</b>Mua th&#234;m &#244; trồng</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-16.webp" width="391" height="844" loading="lazy" decoding="async" alt="Tile Bloom — Khu vườn &#183; &#212; trống"></div><figcaption><b>16</b>Khu vườn &#183; &#212; trống</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-17.webp" width="390" height="844" loading="lazy" decoding="async" alt="Tile Bloom — X&#225;c nhận bỏ chậu"></div><figcaption><b>17</b>X&#225;c nhận bỏ chậu</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-18.webp" width="390" height="844" loading="lazy" decoding="async" alt="Tile Bloom — X&#225;c nhận bỏ c&#226;y"></div><figcaption><b>18</b>X&#225;c nhận bỏ c&#226;y</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-19.webp" width="391" height="844" loading="lazy" decoding="async" alt="Tile Bloom — Khu vườn &#183; Trang chủ"></div><figcaption><b>19</b>Khu vườn &#183; Trang chủ</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-20.webp" width="391" height="844" loading="lazy" decoding="async" alt="Tile Bloom — Khu vườn &#183; Chọn &#244; trồng"></div><figcaption><b>20</b>Khu vườn &#183; Chọn &#244; trồng</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-21.webp" width="390" height="844" loading="lazy" decoding="async" alt="Tile Bloom — Hướng dẫn nh&#226;n vật Grook"></div><figcaption><b>21</b>Hướng dẫn nh&#226;n vật Grook</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-22.webp" width="390" height="846" loading="lazy" decoding="async" alt="Tile Bloom — M&#224;n h&#236;nh khởi động"></div><figcaption><b>22</b>M&#224;n h&#236;nh khởi động</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-23.webp" width="390" height="844" loading="lazy" decoding="async" alt="Tile Bloom — Mở kh&#243;a hoa mới"></div><figcaption><b>23</b>Mở kh&#243;a hoa mới</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-24.webp" width="390" height="844" loading="lazy" decoding="async" alt="Tile Bloom — Thua m&#224;n &#183; Khay đầy"></div><figcaption><b>24</b>Thua m&#224;n &#183; Khay đầy</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-25.webp" width="390" height="844" loading="lazy" decoding="async" alt="Tile Bloom — Rương thưởng"></div><figcaption><b>25</b>Rương thưởng</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-26.webp" width="390" height="844" loading="lazy" decoding="async" alt="Tile Bloom — Chiến thắng"></div><figcaption><b>26</b>Chiến thắng</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/game3-m-27.webp" width="390" height="844" loading="lazy" decoding="async" alt="Tile Bloom — C&#226;y lớn l&#234;n"></div><figcaption><b>27</b>C&#226;y lớn l&#234;n</figcaption></figure>
+</div></div></main>
 <nav class="pager" aria-label="Dự án khác">
   <a href="project-game2.html"><small>← Dự án trước</small><strong>Color Sort: Streak Puzzle</strong></a>
   <a href="project-kimdong.html"><small>Dự án tiếp →</small><strong>Kim Đồng Bookstore</strong></a>
@@ -109,5 +169,87 @@ footer a:hover{color:var(--accent)}
   <a href="https://www.facebook.com/ntrugkien1510/" target="_blank" rel="noopener">Facebook</a>
   <a href="https://www.behance.net/croster1510" target="_blank" rel="noopener">Behance</a>
 </footer>
+<!--lb-->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Xem màn hình">
+  <div class="lb-box">
+    <div class="lb-head">
+      <div><div class="lb-name" id="lbName"></div><div class="lb-sub" id="lbSub"></div></div>
+      <div class="lb-tools">
+        <button class="lb-btn" id="lbOut" aria-label="Thu nhỏ">−</button>
+        <span class="lb-zoom" id="lbZoom">100%</span>
+        <button class="lb-btn" id="lbIn" aria-label="Phóng to">+</button>
+        <button class="lb-btn" id="lbFit" aria-label="Vừa khung">Vừa khung</button>
+        <button class="lb-btn" id="lbClose" aria-label="Đóng">✕</button>
+      </div>
+    </div>
+    <div class="lb-stage" id="lbStage"><img id="lbImg" alt=""></div>
+    <div class="lb-foot">
+      <button class="lb-btn" id="lbPrev">← Trước</button>
+      <button class="lb-btn" id="lbNext">Sau →</button>
+    </div>
+  </div>
+</div>
+<!--/lb-->
+<script id="fgjs">
+(function(){
+  var items=[].slice.call(document.querySelectorAll('.fg-item')); if(!items.length)return;
+  var lb=document.getElementById('lb'),st=document.getElementById('lbStage'),im=document.getElementById('lbImg');
+  var nm=document.getElementById('lbName'),sb=document.getElementById('lbSub'),zl=document.getElementById('lbZoom');
+  var proj=(document.querySelector('h1')||{}).textContent||'';
+  var cur=0,z=1,MAX=4,MIN=1,lastFocus=null,base=0;
+  function setZ(nz,cx,cy){
+    nz=Math.max(MIN,Math.min(MAX,nz)); if(nz===z)return;
+    var r=st.getBoundingClientRect(); cx=cx==null?r.width/2:cx; cy=cy==null?r.height/2:cy;
+    var px=(st.scrollLeft+cx)/(im.offsetWidth||1), py=(st.scrollTop+cy)/(im.offsetHeight||1);
+    if(!base)base=st.clientWidth-2; z=nz; im.style.width=(base*z)+'px'; st.classList.toggle('z',z>1); zl.textContent=Math.round(z*100)+'%';
+    st.scrollLeft=px*im.offsetWidth-cx; st.scrollTop=py*im.offsetHeight-cy;
+  }
+  function show(i){
+    cur=(i+items.length)%items.length; var it=items[cur], src=it.querySelector('img');
+    z=1; base=0; im.style.width='100%'; im.onload=function(){base=(im.naturalWidth<800)?Math.min(st.clientWidth-2,im.naturalWidth*1.4):st.clientWidth-2; im.style.width=(base*z)+'px';};
+    im.src=src.getAttribute('data-full')||src.currentSrc||src.src; im.alt=src.alt; st.classList.remove('z'); zl.textContent='100%';
+    st.scrollTop=0; st.scrollLeft=0;
+    nm.textContent=(it.querySelector('figcaption')||{}).textContent.replace(/^\d+/,'');
+    sb.textContent=proj+' · '+(cur+1)+' / '+items.length;
+  }
+  function open(i){ lastFocus=document.activeElement; show(i); lb.classList.add('open'); document.body.style.overflow='hidden'; document.getElementById('lbClose').focus(); }
+  function close(){ lb.classList.remove('open'); document.body.style.overflow=''; if(lastFocus&&lastFocus.focus)lastFocus.focus(); }
+  items.forEach(function(it,i){
+    var box=it.querySelector('.fg-img'); box.setAttribute('role','button'); box.setAttribute('tabindex','0'); box.setAttribute('aria-label','Xem lớn: '+it.querySelector('figcaption').textContent);
+    box.addEventListener('click',function(){open(i)});
+    box.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(i)}});
+  });
+  document.getElementById('lbClose').onclick=close;
+  document.getElementById('lbPrev').onclick=function(){show(cur-1)};
+  document.getElementById('lbNext').onclick=function(){show(cur+1)};
+  document.getElementById('lbIn').onclick=function(){setZ(z*1.5)};
+  document.getElementById('lbOut').onclick=function(){setZ(z/1.5)};
+  document.getElementById('lbFit').onclick=function(){setZ(1)};
+  lb.addEventListener('click',function(e){if(e.target===lb)close()});
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open'))return;
+    if(e.key==='Escape')close(); else if(e.key==='ArrowLeft')show(cur-1); else if(e.key==='ArrowRight')show(cur+1);
+    else if(e.key==='+'||e.key==='=')setZ(z*1.5); else if(e.key==='-')setZ(z/1.5); else if(e.key==='0')setZ(1);
+  });
+  st.addEventListener('wheel',function(e){
+    if(!(e.ctrlKey||e.metaKey))return; e.preventDefault();
+    var r=st.getBoundingClientRect(); setZ(z*(e.deltaY<0?1.15:1/1.15),e.clientX-r.left,e.clientY-r.top);
+  },{passive:false});
+  st.addEventListener('dblclick',function(e){var r=st.getBoundingClientRect(); setZ(z>1?1:2.2,e.clientX-r.left,e.clientY-r.top)});
+  var pts={},d0=0,z0=1,drag=null;
+  st.addEventListener('pointerdown',function(e){
+    pts[e.pointerId]=e; var k=Object.keys(pts);
+    if(k.length===2){var a=pts[k[0]],b=pts[k[1]]; d0=Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY); z0=z; drag=null;}
+    else if(e.pointerType==='mouse'&&z>1){drag={x:e.clientX,y:e.clientY,l:st.scrollLeft,t:st.scrollTop}; st.classList.add('drag'); st.setPointerCapture(e.pointerId);}
+  });
+  st.addEventListener('pointermove',function(e){
+    if(pts[e.pointerId])pts[e.pointerId]=e; var k=Object.keys(pts);
+    if(k.length===2&&d0){var a=pts[k[0]],b=pts[k[1]],r=st.getBoundingClientRect(); setZ(z0*Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY)/d0,(a.clientX+b.clientX)/2-r.left,(a.clientY+b.clientY)/2-r.top);}
+    else if(drag){st.scrollLeft=drag.l-(e.clientX-drag.x); st.scrollTop=drag.t-(e.clientY-drag.y);}
+  });
+  function up(e){delete pts[e.pointerId]; if(Object.keys(pts).length<2)d0=0; if(drag){drag=null; st.classList.remove('drag');}}
+  st.addEventListener('pointerup',up); st.addEventListener('pointercancel',up);
+})();
+</script>
 </body>
 </html>

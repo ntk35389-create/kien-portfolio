@@ -9,8 +9,9 @@ Website tĩnh (HTML), deploy trên Vercel với Framework Preset `Other`, không
 ## Cấu trúc trang (cập nhật)
 - `apps.html`, `webapps.html`, `websites.html`: 3 trang danh mục (App / Web App / Website), mỗi trang liệt kê dự án.
 - `project-*.html`: trang chi tiết từng dự án (18 trang). Ảnh nằm trong `assets/projects/`.
-- Chưa có trang: `project-fitapp.html`.
+- Tất cả thẻ trên trang chủ đều đã có trang chi tiết.
 - `build-projects.ps1` (8 trang từ Behance) và `build-figma.ps1` (10 trang từ Figma + 3 trang danh mục) dùng để tạo lại các trang; chạy `build-projects.ps1` trước, `build-figma.ps1` sau.
 
 - Web App và Landing Page (vime, pcu, thinkiz, vcb, vbim, vuonxanh, ielts, forever, laptop, noithat, horeca, longgiang): sau khi chạy uild-projects.ps1 và uild-figma.ps1, chạy thêm uild-webapps.ps1 để dựng lại thân trang (thumb lớn + lưới màn hình có chú thích, ảnh *-web.webp và *-fg-NN.webp).
 - Ảnh Landing Page: màn hình xuất từ Figma ở độ phân giải gốc (ssets/projects/<slug>-fg-NN.webp, dùng cho khung xem to) và bản cắt đầu trang (<slug>-fgt-NN.webp, dùng cho lưới); kích thước ghi trong ssets/projects/manifest_landing.json.
+- Mobile: chạy thêm uild-webapps.ps1 (sau build-projects và build-figma) để dựng lưới screen có chú thích và khung xem to; ảnh screen xuất từ Figma ở độ phân giải gốc (<slug>-m-NN.webp), 3 dự án showcase (Kim Đồng, HeartWise, FitApp) dùng nguyên frame Figma cắt đoạn (<slug>-sc-NN.webp). Kích thước ghi trong ssets/projects/manifest_mobile.json.

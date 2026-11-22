@@ -7,6 +7,8 @@ $projects = @(
      desc='Thiết kế lại giao diện ứng dụng nhà sách Kim Đồng. Dự án cải thiện điều hướng, cá nhân hóa gợi ý và hiện đại hóa thiết kế, hướng tới trải nghiệm mua sắm liền mạch, hấp dẫn cho cả phụ huynh và các bạn đọc nhỏ tuổi, đúng với sứ mệnh gieo yêu thích đọc sách của Kim Đồng.'; tags=@('UX/UI','User flow','Mobile App') },
   @{ slug='heartwise'; title='HeartWise'; cat='Mobile App/Game'; anchor='apps'; color='#4CC76A'; client='Dự án UI/UX'; kind='Ứng dụng xây dựng thói quen';
      desc='Ứng dụng xây dựng thói quen ăn uống và vận động để phòng ngừa bệnh tim. HeartWise giúp bạn tạo lối sống lành mạnh mới bằng cách quản lý thói quen hằng ngày, theo dõi tiến độ và giữ động lực mỗi ngày qua các tương tác mang tính trò chơi.'; tags=@('UX/UI','Gamification','Mobile App') },
+  @{ slug='fitapp'; title='FitApp'; cat='Mobile App/Game'; anchor='apps'; color='#9B6CFF'; client='Dự án UI/UX'; kind='Ứng dụng tập luyện và dinh dưỡng';
+     desc='Ứng dụng tập luyện và dinh dưỡng cá nhân hoá, giúp người dùng đạt mục tiêu sức khoẻ qua kế hoạch bài tập và thực đơn thông minh. Dự án gồm hơn 250 màn hình, từ onboarding, hồ sơ thể chất, kế hoạch tập luyện đến theo dõi dinh dưỡng và tiến độ.'; tags=@('UX/UI','Health & Fitness','Mobile App') },
   @{ slug='vime';      title='VIME x TechPro'; cat='Web App'; anchor='systems'; color='#8B7CFF'; client='TechPro'; kind='Hệ thống quản lý phòng họp';
      desc='Nền tảng quản lý phòng họp và lịch họp cho doanh nghiệp do TechPro phát triển. VIME cung cấp giải pháp toàn diện để tối ưu việc đặt phòng, lên lịch họp và theo dõi hiệu quả sử dụng không gian làm việc, với giao diện hiện đại, thân thiện, dễ dùng.'; tags=@('Web App','Dashboard','Lịch họp') },
   @{ slug='vcb';       title='Vietcombank TCHM'; cat='Web App'; anchor='systems'; color='#3DBC8D'; client='Vietcombank'; kind='Hệ thống quản lý lưu trú';
@@ -116,7 +118,7 @@ footer a:hover{color:var(--accent)}
 '@
 
 # thứ tự trong trang chủ: apps -> systems -> webs
-$order = @('kimdong','heartwise','vime','vcb','pcu','thinkiz','forever','ielts','vuonxanh','laptop','noithat','horeca','longgiang')
+$order = @('kimdong','heartwise','fitapp','vime','vcb','pcu','thinkiz','forever','ielts','vuonxanh','laptop','noithat','horeca','longgiang')
 $bySlug = @{}; foreach ($p in $projects) { $bySlug[$p.slug] = $p }
 
 for ($i = 0; $i -lt $order.Count; $i++) {

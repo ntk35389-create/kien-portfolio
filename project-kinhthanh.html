@@ -72,6 +72,48 @@ footer a:hover{color:var(--accent)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.card .media img{transition:none}}
 :root{--accent:#C9A66B}
 </style>
+<style id="fg">
+.fg-wrap{max-width:1400px;margin:0 auto}
+.fg-hero{border-radius:20px;overflow:hidden;background:#0D060A;border:1px solid var(--line)}
+.fg-title{font-family:var(--mono);font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:9vh 0 4vh;display:flex;align-items:center;gap:16px}
+.fg-title::before{content:"";width:48px;height:1px;background:var(--accent)}
+.fg-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 28px;align-items:start}
+.fg-item{margin:0}
+.fg-item .fg-img{border-radius:16px;overflow:hidden;background:#0D060A;border:1px solid var(--line)}
+.fg-item figcaption{margin-top:14px;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:var(--muted)}
+.fg-item figcaption b{color:var(--ink);font-weight:400;margin-right:10px}
+.fg-grid.cols3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.fg-grid.cols4{grid-template-columns:repeat(4,minmax(0,1fr));gap:40px 22px}
+.fg-item .fg-img.ph{aspect-ratio:9/19.5;background:#0D060A}
+.fg-item .fg-img.ph img{height:100%;object-fit:cover;object-position:top}
+@media(max-width:1100px){.fg-grid.cols4{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:800px){.fg-grid.cols4{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 14px}}
+.fg-item .fg-img.win{aspect-ratio:4/5}
+.fg-item .fg-img.win img{height:100%;object-fit:cover;object-position:top}
+@media(max-width:1000px){.fg-grid.cols3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.fg-grid.cols3{grid-template-columns:1fr}}
+.fg-item .fg-img{cursor:zoom-in;transition:transform .35s,border-color .35s}
+.fg-item:hover .fg-img{transform:translateY(-4px);border-color:var(--accent)}
+.fg-item .fg-img:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.lb{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:3vh 3vw;background:rgba(8,4,6,.82);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.lb.open{display:flex}
+.lb-box{width:min(1180px,100%);max-height:100%;display:flex;flex-direction:column;background:#150A0F;border:1px solid var(--line);border-radius:18px;padding:18px 18px 16px;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.lb-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:14px}
+.lb-name{font-weight:600;font-size:1rem}
+.lb-sub{font-family:var(--mono);font-size:.74rem;letter-spacing:.05em;color:var(--muted);margin-top:4px}
+.lb-tools{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.lb-btn{font-family:var(--mono);font-size:.78rem;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:10px;padding:8px 13px;cursor:pointer;line-height:1;transition:border-color .25s,color .25s}
+.lb-btn:hover{border-color:var(--accent);color:var(--accent)}
+.lb-btn:disabled{opacity:.35;cursor:default}
+.lb-zoom{min-width:3.4em;text-align:center;font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+.lb-stage{flex:1;min-height:0;overflow:auto;border-radius:12px;background:#0D060A;border:1px solid var(--line);cursor:zoom-in;touch-action:pan-x pan-y;overscroll-behavior:contain}
+.lb-stage.z{cursor:grab}
+.lb-stage.drag{cursor:grabbing;user-select:none}
+.lb-stage img{display:block;max-width:none;height:auto;margin:0 auto;-webkit-user-drag:none;user-select:none}
+.lb-foot{display:flex;justify-content:space-between;margin-top:14px}
+@media(max-width:700px){.lb{padding:0}.lb-box{width:100%;height:100%;border-radius:0;padding:12px}.lb-tools .lb-btn{padding:8px 10px}}
+@media(max-width:700px){.fg-grid{grid-template-columns:1fr;gap:32px}.fg-hero,.fg-item .fg-img{border-radius:12px}}
+</style>
 </head><body>
 <nav class="nav"><a class="logo" href="index.html">KIÊN.</a><a class="back" href="apps.html">← Mobile App/Game</a></nav>
 <header class="hero">
@@ -86,15 +128,44 @@ footer a:hover{color:var(--accent)}
     <div><dt>Nội dung</dt><dd class="tags"><span>Mobile App</span><span>Onboarding</span><span>C&#225; nh&#226;n h&#243;a</span></dd></div>
   </dl>
 </header>
-<main class="case">
-<figure class="shot"><figcaption>1. Onboarding</figcaption><a class="frame" href="assets/projects/kinhthanh-1.webp" target="_blank" rel="noopener"><img src="assets/projects/kinhthanh-1.webp" width="2200" height="1977" loading="eager" decoding="async" alt="1. Onboarding"></a></figure>
-<figure class="shot"><figcaption>2. Home</figcaption><a class="frame" href="assets/projects/kinhthanh-2.webp" target="_blank" rel="noopener"><img src="assets/projects/kinhthanh-2.webp" width="2200" height="1268" loading="lazy" decoding="async" alt="2. Home"></a></figure>
-<figure class="shot"><figcaption>4. Plan</figcaption><a class="frame" href="assets/projects/kinhthanh-3.webp" target="_blank" rel="noopener"><img src="assets/projects/kinhthanh-3.webp" width="2200" height="1260" loading="lazy" decoding="async" alt="4. Plan"></a></figure>
-<figure class="shot"><figcaption>Quiz</figcaption><a class="frame" href="assets/projects/kinhthanh-4.webp" target="_blank" rel="noopener"><img src="assets/projects/kinhthanh-4.webp" width="2200" height="1069" loading="lazy" decoding="async" alt="Quiz"></a></figure>
-<figure class="shot"><figcaption>Personalized Prayer</figcaption><a class="frame" href="assets/projects/kinhthanh-5.webp" target="_blank" rel="noopener"><img src="assets/projects/kinhthanh-5.webp" width="2200" height="805" loading="lazy" decoding="async" alt="Personalized Prayer"></a></figure>
-<figure class="shot"><figcaption>5. Profile</figcaption><a class="frame" href="assets/projects/kinhthanh-6.webp" target="_blank" rel="noopener"><img src="assets/projects/kinhthanh-6.webp" width="2200" height="1420" loading="lazy" decoding="async" alt="5. Profile"></a></figure>
-
-</main>
+<main class="case"><div class="fg-wrap">
+<div class="fg-hero"><img src="assets/projects/kinhthanh-mock4.webp" width="1254" height="1254" loading="eager" decoding="async" alt="Holy Bible"></div>
+<h2 class="fg-title">Màn hình thiết kế</h2>
+<div class="fg-grid cols4">
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-01.webp" width="402" height="966" loading="lazy" decoding="async" alt="Holy Bible — Chọn s&#225;ch v&#224; chương"></div><figcaption><b>01</b>Chọn s&#225;ch v&#224; chương</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-02.webp" width="402" height="874" loading="lazy" decoding="async" alt="Holy Bible — Kế hoạch đọc"></div><figcaption><b>02</b>Kế hoạch đọc</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-03.webp" width="402" height="874" loading="lazy" decoding="async" alt="Holy Bible — Tiếp tục đọc"></div><figcaption><b>03</b>Tiếp tục đọc</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-04.webp" width="402" height="1354" loading="lazy" decoding="async" alt="Holy Bible — Trang chủ"></div><figcaption><b>04</b>Trang chủ</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-05.webp" width="402" height="874" loading="lazy" decoding="async" alt="Holy Bible — Tốc độ ph&#225;t"></div><figcaption><b>05</b>Tốc độ ph&#225;t</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-06.webp" width="402" height="932" loading="lazy" decoding="async" alt="Holy Bible — Chi tiết kế hoạch"></div><figcaption><b>06</b>Chi tiết kế hoạch</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-07.webp" width="402" height="958" loading="lazy" decoding="async" alt="Holy Bible — Chọn c&#226;u &#183; Đ&#225;nh dấu"></div><figcaption><b>07</b>Chọn c&#226;u &#183; Đ&#225;nh dấu</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-08.webp" width="402" height="966" loading="lazy" decoding="async" alt="Holy Bible — Chọn c&#226;u &#183; Menu thao t&#225;c"></div><figcaption><b>08</b>Chọn c&#226;u &#183; Menu thao t&#225;c</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-09.webp" width="402" height="874" loading="lazy" decoding="async" alt="Holy Bible — Chia sẻ c&#226;u Kinh Th&#225;nh"></div><figcaption><b>09</b>Chia sẻ c&#226;u Kinh Th&#225;nh</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-10.webp" width="402" height="966" loading="lazy" decoding="async" alt="Holy Bible — Th&#234;m ghi ch&#250;"></div><figcaption><b>10</b>Th&#234;m ghi ch&#250;</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-11.webp" width="426" height="890" loading="lazy" decoding="async" alt="Holy Bible — Tr&#236;nh ph&#225;t &#226;m thanh"></div><figcaption><b>11</b>Tr&#236;nh ph&#225;t &#226;m thanh</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-12.webp" width="402" height="966" loading="lazy" decoding="async" alt="Holy Bible — Đọc Kinh Th&#225;nh"></div><figcaption><b>12</b>Đọc Kinh Th&#225;nh</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-13.webp" width="402" height="874" loading="lazy" decoding="async" alt="Holy Bible — Hẹn giờ tắt"></div><figcaption><b>13</b>Hẹn giờ tắt</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-14.webp" width="390" height="844" loading="lazy" decoding="async" alt="Holy Bible — Cầu nguyện &#183; Chọn người"></div><figcaption><b>14</b>Cầu nguyện &#183; Chọn người</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-15.webp" width="402" height="966" loading="lazy" decoding="async" alt="Holy Bible — Đ&#227; lưu dấu trang"></div><figcaption><b>15</b>Đ&#227; lưu dấu trang</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-16.webp" width="402" height="966" loading="lazy" decoding="async" alt="Holy Bible — Dấu trang &#183; Th&#244;ng b&#225;o"></div><figcaption><b>16</b>Dấu trang &#183; Th&#244;ng b&#225;o</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-17.webp" width="390" height="844" loading="lazy" decoding="async" alt="Holy Bible — Cầu nguyện &#183; Chọn chủ đề"></div><figcaption><b>17</b>Cầu nguyện &#183; Chọn chủ đề</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-18.webp" width="402" height="966" loading="lazy" decoding="async" alt="Holy Bible — Sao ch&#233;p c&#226;u"></div><figcaption><b>18</b>Sao ch&#233;p c&#226;u</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-19.webp" width="402" height="966" loading="lazy" decoding="async" alt="Holy Bible — Đọc &#183; Chuyển đến c&#226;u"></div><figcaption><b>19</b>Đọc &#183; Chuyển đến c&#226;u</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-20.webp" width="402" height="966" loading="lazy" decoding="async" alt="Holy Bible — Đọc &#183; Mặc định"></div><figcaption><b>20</b>Đọc &#183; Mặc định</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-21.webp" width="390" height="844" loading="lazy" decoding="async" alt="Holy Bible — Cầu nguyện &#183; Chi tiết"></div><figcaption><b>21</b>Cầu nguyện &#183; Chi tiết</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-22.webp" width="402" height="874" loading="lazy" decoding="async" alt="Holy Bible — T&#236;m kiếm"></div><figcaption><b>22</b>T&#236;m kiếm</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-23.webp" width="402" height="874" loading="lazy" decoding="async" alt="Holy Bible — Thư viện &#183; Highlight"></div><figcaption><b>23</b>Thư viện &#183; Highlight</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-24.webp" width="402" height="874" loading="lazy" decoding="async" alt="Holy Bible — Thư viện &#183; Ghi ch&#250;"></div><figcaption><b>24</b>Thư viện &#183; Ghi ch&#250;</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-25.webp" width="402" height="874" loading="lazy" decoding="async" alt="Holy Bible — Thư viện &#183; Dấu trang"></div><figcaption><b>25</b>Thư viện &#183; Dấu trang</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-26.webp" width="402" height="874" loading="lazy" decoding="async" alt="Holy Bible — Thư viện &#183; Vuốt để x&#243;a"></div><figcaption><b>26</b>Thư viện &#183; Vuốt để x&#243;a</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-27.webp" width="402" height="874" loading="lazy" decoding="async" alt="Holy Bible — Suy niệm hằng ng&#224;y"></div><figcaption><b>27</b>Suy niệm hằng ng&#224;y</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-28.webp" width="402" height="874" loading="lazy" decoding="async" alt="Holy Bible — Kết quả t&#236;m kiếm"></div><figcaption><b>28</b>Kết quả t&#236;m kiếm</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-29.webp" width="402" height="874" loading="lazy" decoding="async" alt="Holy Bible — Nhắc nhở kế hoạch"></div><figcaption><b>29</b>Nhắc nhở kế hoạch</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-30.webp" width="402" height="874" loading="lazy" decoding="async" alt="Holy Bible — Sửa ghi ch&#250;"></div><figcaption><b>30</b>Sửa ghi ch&#250;</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-31.webp" width="402" height="874" loading="lazy" decoding="async" alt="Holy Bible — Chưa c&#243; highlight"></div><figcaption><b>31</b>Chưa c&#243; highlight</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-32.webp" width="402" height="874" loading="lazy" decoding="async" alt="Holy Bible — Giới thiệu &#183; Lời Ch&#250;a mọi nơi"></div><figcaption><b>32</b>Giới thiệu &#183; Lời Ch&#250;a mọi nơi</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/kinhthanh-m-33.webp" width="402" height="874" loading="lazy" decoding="async" alt="Holy Bible — Giới thiệu &#183; B&#236;nh an trong cầu nguyện"></div><figcaption><b>33</b>Giới thiệu &#183; B&#236;nh an trong cầu nguyện</figcaption></figure>
+</div></div></main>
 <nav class="pager" aria-label="Dự án khác">
   <a href="project-kinhnguyet.html"><small>← Dự án trước</small><strong>Flovia</strong></a>
   <a href="project-wallpaper.html"><small>Dự án tiếp →</small><strong>Depth Wallpaper</strong></a>
@@ -104,5 +175,87 @@ footer a:hover{color:var(--accent)}
   <a href="https://www.facebook.com/ntrugkien1510/" target="_blank" rel="noopener">Facebook</a>
   <a href="https://www.behance.net/croster1510" target="_blank" rel="noopener">Behance</a>
 </footer>
+<!--lb-->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Xem màn hình">
+  <div class="lb-box">
+    <div class="lb-head">
+      <div><div class="lb-name" id="lbName"></div><div class="lb-sub" id="lbSub"></div></div>
+      <div class="lb-tools">
+        <button class="lb-btn" id="lbOut" aria-label="Thu nhỏ">−</button>
+        <span class="lb-zoom" id="lbZoom">100%</span>
+        <button class="lb-btn" id="lbIn" aria-label="Phóng to">+</button>
+        <button class="lb-btn" id="lbFit" aria-label="Vừa khung">Vừa khung</button>
+        <button class="lb-btn" id="lbClose" aria-label="Đóng">✕</button>
+      </div>
+    </div>
+    <div class="lb-stage" id="lbStage"><img id="lbImg" alt=""></div>
+    <div class="lb-foot">
+      <button class="lb-btn" id="lbPrev">← Trước</button>
+      <button class="lb-btn" id="lbNext">Sau →</button>
+    </div>
+  </div>
+</div>
+<!--/lb-->
+<script id="fgjs">
+(function(){
+  var items=[].slice.call(document.querySelectorAll('.fg-item')); if(!items.length)return;
+  var lb=document.getElementById('lb'),st=document.getElementById('lbStage'),im=document.getElementById('lbImg');
+  var nm=document.getElementById('lbName'),sb=document.getElementById('lbSub'),zl=document.getElementById('lbZoom');
+  var proj=(document.querySelector('h1')||{}).textContent||'';
+  var cur=0,z=1,MAX=4,MIN=1,lastFocus=null,base=0;
+  function setZ(nz,cx,cy){
+    nz=Math.max(MIN,Math.min(MAX,nz)); if(nz===z)return;
+    var r=st.getBoundingClientRect(); cx=cx==null?r.width/2:cx; cy=cy==null?r.height/2:cy;
+    var px=(st.scrollLeft+cx)/(im.offsetWidth||1), py=(st.scrollTop+cy)/(im.offsetHeight||1);
+    if(!base)base=st.clientWidth-2; z=nz; im.style.width=(base*z)+'px'; st.classList.toggle('z',z>1); zl.textContent=Math.round(z*100)+'%';
+    st.scrollLeft=px*im.offsetWidth-cx; st.scrollTop=py*im.offsetHeight-cy;
+  }
+  function show(i){
+    cur=(i+items.length)%items.length; var it=items[cur], src=it.querySelector('img');
+    z=1; base=0; im.style.width='100%'; im.onload=function(){base=(im.naturalWidth<800)?Math.min(st.clientWidth-2,im.naturalWidth*1.4):st.clientWidth-2; im.style.width=(base*z)+'px';};
+    im.src=src.getAttribute('data-full')||src.currentSrc||src.src; im.alt=src.alt; st.classList.remove('z'); zl.textContent='100%';
+    st.scrollTop=0; st.scrollLeft=0;
+    nm.textContent=(it.querySelector('figcaption')||{}).textContent.replace(/^\d+/,'');
+    sb.textContent=proj+' · '+(cur+1)+' / '+items.length;
+  }
+  function open(i){ lastFocus=document.activeElement; show(i); lb.classList.add('open'); document.body.style.overflow='hidden'; document.getElementById('lbClose').focus(); }
+  function close(){ lb.classList.remove('open'); document.body.style.overflow=''; if(lastFocus&&lastFocus.focus)lastFocus.focus(); }
+  items.forEach(function(it,i){
+    var box=it.querySelector('.fg-img'); box.setAttribute('role','button'); box.setAttribute('tabindex','0'); box.setAttribute('aria-label','Xem lớn: '+it.querySelector('figcaption').textContent);
+    box.addEventListener('click',function(){open(i)});
+    box.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(i)}});
+  });
+  document.getElementById('lbClose').onclick=close;
+  document.getElementById('lbPrev').onclick=function(){show(cur-1)};
+  document.getElementById('lbNext').onclick=function(){show(cur+1)};
+  document.getElementById('lbIn').onclick=function(){setZ(z*1.5)};
+  document.getElementById('lbOut').onclick=function(){setZ(z/1.5)};
+  document.getElementById('lbFit').onclick=function(){setZ(1)};
+  lb.addEventListener('click',function(e){if(e.target===lb)close()});
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open'))return;
+    if(e.key==='Escape')close(); else if(e.key==='ArrowLeft')show(cur-1); else if(e.key==='ArrowRight')show(cur+1);
+    else if(e.key==='+'||e.key==='=')setZ(z*1.5); else if(e.key==='-')setZ(z/1.5); else if(e.key==='0')setZ(1);
+  });
+  st.addEventListener('wheel',function(e){
+    if(!(e.ctrlKey||e.metaKey))return; e.preventDefault();
+    var r=st.getBoundingClientRect(); setZ(z*(e.deltaY<0?1.15:1/1.15),e.clientX-r.left,e.clientY-r.top);
+  },{passive:false});
+  st.addEventListener('dblclick',function(e){var r=st.getBoundingClientRect(); setZ(z>1?1:2.2,e.clientX-r.left,e.clientY-r.top)});
+  var pts={},d0=0,z0=1,drag=null;
+  st.addEventListener('pointerdown',function(e){
+    pts[e.pointerId]=e; var k=Object.keys(pts);
+    if(k.length===2){var a=pts[k[0]],b=pts[k[1]]; d0=Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY); z0=z; drag=null;}
+    else if(e.pointerType==='mouse'&&z>1){drag={x:e.clientX,y:e.clientY,l:st.scrollLeft,t:st.scrollTop}; st.classList.add('drag'); st.setPointerCapture(e.pointerId);}
+  });
+  st.addEventListener('pointermove',function(e){
+    if(pts[e.pointerId])pts[e.pointerId]=e; var k=Object.keys(pts);
+    if(k.length===2&&d0){var a=pts[k[0]],b=pts[k[1]],r=st.getBoundingClientRect(); setZ(z0*Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY)/d0,(a.clientX+b.clientX)/2-r.left,(a.clientY+b.clientY)/2-r.top);}
+    else if(drag){st.scrollLeft=drag.l-(e.clientX-drag.x); st.scrollTop=drag.t-(e.clientY-drag.y);}
+  });
+  function up(e){delete pts[e.pointerId]; if(Object.keys(pts).length<2)d0=0; if(drag){drag=null; st.classList.remove('drag');}}
+  st.addEventListener('pointerup',up); st.addEventListener('pointercancel',up);
+})();
+</script>
 </body>
 </html>

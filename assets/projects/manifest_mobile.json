@@ -1,0 +1,1425 @@
+﻿{
+    "scancalo":  {
+                     "hero":  {
+                                  "f":  "scancalo-thumb-v2.webp",
+                                  "w":  1254,
+                                  "h":  1254
+                              },
+                     "shots":  [
+                                   {
+                                       "f":  "scancalo-m-01.webp",
+                                       "w":  360,
+                                       "h":  796
+                                   },
+                                   {
+                                       "f":  "scancalo-m-02.webp",
+                                       "w":  360,
+                                       "h":  796
+                                   },
+                                   {
+                                       "f":  "scancalo-m-03.webp",
+                                       "w":  360,
+                                       "h":  796
+                                   },
+                                   {
+                                       "f":  "scancalo-m-04.webp",
+                                       "w":  360,
+                                       "h":  796
+                                   },
+                                   {
+                                       "f":  "scancalo-m-05.webp",
+                                       "w":  360,
+                                       "h":  793
+                                   },
+                                   {
+                                       "f":  "scancalo-m-06.webp",
+                                       "w":  360,
+                                       "h":  793
+                                   },
+                                   {
+                                       "f":  "scancalo-m-07.webp",
+                                       "w":  360,
+                                       "h":  793
+                                   },
+                                   {
+                                       "f":  "scancalo-m-08.webp",
+                                       "w":  360,
+                                       "h":  793
+                                   },
+                                   {
+                                       "f":  "scancalo-m-09.webp",
+                                       "w":  360,
+                                       "h":  796
+                                   },
+                                   {
+                                       "f":  "scancalo-m-10.webp",
+                                       "w":  360,
+                                       "h":  793
+                                   },
+                                   {
+                                       "f":  "scancalo-m-11.webp",
+                                       "w":  360,
+                                       "h":  1682
+                                   },
+                                   {
+                                       "f":  "scancalo-m-12.webp",
+                                       "w":  360,
+                                       "h":  2328
+                                   },
+                                   {
+                                       "f":  "scancalo-m-13.webp",
+                                       "w":  360,
+                                       "h":  793
+                                   },
+                                   {
+                                       "f":  "scancalo-m-14.webp",
+                                       "w":  360,
+                                       "h":  1081
+                                   },
+                                   {
+                                       "f":  "scancalo-m-15.webp",
+                                       "w":  360,
+                                       "h":  793
+                                   },
+                                   {
+                                       "f":  "scancalo-m-16.webp",
+                                       "w":  360,
+                                       "h":  793
+                                   },
+                                   {
+                                       "f":  "scancalo-m-17.webp",
+                                       "w":  360,
+                                       "h":  796
+                                   },
+                                   {
+                                       "f":  "scancalo-m-18.webp",
+                                       "w":  360,
+                                       "h":  796
+                                   },
+                                   {
+                                       "f":  "scancalo-m-19.webp",
+                                       "w":  360,
+                                       "h":  796
+                                   },
+                                   {
+                                       "f":  "scancalo-m-20.webp",
+                                       "w":  360,
+                                       "h":  793
+                                   },
+                                   {
+                                       "f":  "scancalo-m-21.webp",
+                                       "w":  360,
+                                       "h":  1724
+                                   },
+                                   {
+                                       "f":  "scancalo-m-22.webp",
+                                       "w":  360,
+                                       "h":  1676
+                                   },
+                                   {
+                                       "f":  "scancalo-m-23.webp",
+                                       "w":  360,
+                                       "h":  796
+                                   },
+                                   {
+                                       "f":  "scancalo-m-24.webp",
+                                       "w":  360,
+                                       "h":  796
+                                   },
+                                   {
+                                       "f":  "scancalo-m-25.webp",
+                                       "w":  360,
+                                       "h":  1435
+                                   },
+                                   {
+                                       "f":  "scancalo-m-26.webp",
+                                       "w":  360,
+                                       "h":  793
+                                   },
+                                   {
+                                       "f":  "scancalo-m-27.webp",
+                                       "w":  360,
+                                       "h":  793
+                                   },
+                                   {
+                                       "f":  "scancalo-m-28.webp",
+                                       "w":  360,
+                                       "h":  793
+                                   },
+                                   {
+                                       "f":  "scancalo-m-29.webp",
+                                       "w":  360,
+                                       "h":  796
+                                   },
+                                   {
+                                       "f":  "scancalo-m-30.webp",
+                                       "w":  360,
+                                       "h":  860
+                                   },
+                                   {
+                                       "f":  "scancalo-m-31.webp",
+                                       "w":  360,
+                                       "h":  1281
+                                   },
+                                   {
+                                       "f":  "scancalo-m-32.webp",
+                                       "w":  360,
+                                       "h":  1002
+                                   },
+                                   {
+                                       "f":  "scancalo-m-33.webp",
+                                       "w":  360,
+                                       "h":  1046
+                                   },
+                                   {
+                                       "f":  "scancalo-m-34.webp",
+                                       "w":  360,
+                                       "h":  796
+                                   }
+                               ]
+                 },
+    "kinhnguyet":  {
+                       "hero":  {
+                                    "f":  "kinhnguyet-mock.webp",
+                                    "w":  1254,
+                                    "h":  1254
+                                },
+                       "shots":  [
+                                     {
+                                         "f":  "kinhnguyet-m-01.webp",
+                                         "w":  393,
+                                         "h":  852
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-02.webp",
+                                         "w":  393,
+                                         "h":  852
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-03.webp",
+                                         "w":  393,
+                                         "h":  852
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-04.webp",
+                                         "w":  393,
+                                         "h":  852
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-05.webp",
+                                         "w":  393,
+                                         "h":  852
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-06.webp",
+                                         "w":  393,
+                                         "h":  844
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-07.webp",
+                                         "w":  393,
+                                         "h":  852
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-08.webp",
+                                         "w":  393,
+                                         "h":  844
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-09.webp",
+                                         "w":  393,
+                                         "h":  844
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-10.webp",
+                                         "w":  393,
+                                         "h":  844
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-11.webp",
+                                         "w":  393,
+                                         "h":  1177
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-12.webp",
+                                         "w":  393,
+                                         "h":  1177
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-13.webp",
+                                         "w":  393,
+                                         "h":  844
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-14.webp",
+                                         "w":  393,
+                                         "h":  844
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-15.webp",
+                                         "w":  393,
+                                         "h":  844
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-16.webp",
+                                         "w":  393,
+                                         "h":  1177
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-17.webp",
+                                         "w":  393,
+                                         "h":  1106
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-18.webp",
+                                         "w":  393,
+                                         "h":  1721
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-19.webp",
+                                         "w":  393,
+                                         "h":  901
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-20.webp",
+                                         "w":  393,
+                                         "h":  899
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-21.webp",
+                                         "w":  393,
+                                         "h":  1653
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-22.webp",
+                                         "w":  393,
+                                         "h":  844
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-23.webp",
+                                         "w":  393,
+                                         "h":  844
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-24.webp",
+                                         "w":  393,
+                                         "h":  1778
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-25.webp",
+                                         "w":  393,
+                                         "h":  1625
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-26.webp",
+                                         "w":  393,
+                                         "h":  1625
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-27.webp",
+                                         "w":  393,
+                                         "h":  852
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-28.webp",
+                                         "w":  393,
+                                         "h":  852
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-29.webp",
+                                         "w":  393,
+                                         "h":  852
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-30.webp",
+                                         "w":  393,
+                                         "h":  852
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-31.webp",
+                                         "w":  393,
+                                         "h":  852
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-32.webp",
+                                         "w":  393,
+                                         "h":  852
+                                     },
+                                     {
+                                         "f":  "kinhnguyet-m-33.webp",
+                                         "w":  393,
+                                         "h":  852
+                                     }
+                                 ]
+                   },
+    "kinhthanh":  {
+                      "hero":  {
+                                   "f":  "kinhthanh-mock4.webp",
+                                   "w":  1254,
+                                   "h":  1254
+                               },
+                      "shots":  [
+                                    {
+                                        "f":  "kinhthanh-m-01.webp",
+                                        "w":  402,
+                                        "h":  966
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-02.webp",
+                                        "w":  402,
+                                        "h":  874
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-03.webp",
+                                        "w":  402,
+                                        "h":  874
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-04.webp",
+                                        "w":  402,
+                                        "h":  1354
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-05.webp",
+                                        "w":  402,
+                                        "h":  874
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-06.webp",
+                                        "w":  402,
+                                        "h":  932
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-07.webp",
+                                        "w":  402,
+                                        "h":  958
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-08.webp",
+                                        "w":  402,
+                                        "h":  966
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-09.webp",
+                                        "w":  402,
+                                        "h":  874
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-10.webp",
+                                        "w":  402,
+                                        "h":  966
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-11.webp",
+                                        "w":  426,
+                                        "h":  890
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-12.webp",
+                                        "w":  402,
+                                        "h":  966
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-13.webp",
+                                        "w":  402,
+                                        "h":  874
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-14.webp",
+                                        "w":  390,
+                                        "h":  844
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-15.webp",
+                                        "w":  402,
+                                        "h":  966
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-16.webp",
+                                        "w":  402,
+                                        "h":  966
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-17.webp",
+                                        "w":  390,
+                                        "h":  844
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-18.webp",
+                                        "w":  402,
+                                        "h":  966
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-19.webp",
+                                        "w":  402,
+                                        "h":  966
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-20.webp",
+                                        "w":  402,
+                                        "h":  966
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-21.webp",
+                                        "w":  390,
+                                        "h":  844
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-22.webp",
+                                        "w":  402,
+                                        "h":  874
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-23.webp",
+                                        "w":  402,
+                                        "h":  874
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-24.webp",
+                                        "w":  402,
+                                        "h":  874
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-25.webp",
+                                        "w":  402,
+                                        "h":  874
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-26.webp",
+                                        "w":  402,
+                                        "h":  874
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-27.webp",
+                                        "w":  402,
+                                        "h":  874
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-28.webp",
+                                        "w":  402,
+                                        "h":  874
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-29.webp",
+                                        "w":  402,
+                                        "h":  874
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-30.webp",
+                                        "w":  402,
+                                        "h":  874
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-31.webp",
+                                        "w":  402,
+                                        "h":  874
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-32.webp",
+                                        "w":  402,
+                                        "h":  874
+                                    },
+                                    {
+                                        "f":  "kinhthanh-m-33.webp",
+                                        "w":  402,
+                                        "h":  874
+                                    }
+                                ]
+                  },
+    "wallpaper":  {
+                      "hero":  {
+                                   "f":  "wallpaper-mock4.webp",
+                                   "w":  1254,
+                                   "h":  1254
+                               },
+                      "shots":  [
+                                    {
+                                        "f":  "wallpaper-m-01.webp",
+                                        "w":  402,
+                                        "h":  1638
+                                    },
+                                    {
+                                        "f":  "wallpaper-m-02.webp",
+                                        "w":  402,
+                                        "h":  1262
+                                    },
+                                    {
+                                        "f":  "wallpaper-m-03.webp",
+                                        "w":  402,
+                                        "h":  871
+                                    },
+                                    {
+                                        "f":  "wallpaper-m-04.webp",
+                                        "w":  402,
+                                        "h":  1151
+                                    },
+                                    {
+                                        "f":  "wallpaper-m-05.webp",
+                                        "w":  402,
+                                        "h":  1311
+                                    },
+                                    {
+                                        "f":  "wallpaper-m-06.webp",
+                                        "w":  402,
+                                        "h":  874
+                                    },
+                                    {
+                                        "f":  "wallpaper-m-07.webp",
+                                        "w":  402,
+                                        "h":  1100
+                                    },
+                                    {
+                                        "f":  "wallpaper-m-08.webp",
+                                        "w":  402,
+                                        "h":  874
+                                    },
+                                    {
+                                        "f":  "wallpaper-m-09.webp",
+                                        "w":  402,
+                                        "h":  883
+                                    },
+                                    {
+                                        "f":  "wallpaper-m-10.webp",
+                                        "w":  402,
+                                        "h":  883
+                                    },
+                                    {
+                                        "f":  "wallpaper-m-11.webp",
+                                        "w":  402,
+                                        "h":  874
+                                    },
+                                    {
+                                        "f":  "wallpaper-m-12.webp",
+                                        "w":  402,
+                                        "h":  2394
+                                    }
+                                ]
+                  },
+    "print":  {
+                  "hero":  {
+                               "f":  "print-mock4.webp",
+                               "w":  1254,
+                               "h":  1254
+                           },
+                  "shots":  [
+                                {
+                                    "f":  "print-m-01.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-02.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-03.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-04.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-05.webp",
+                                    "w":  393,
+                                    "h":  850
+                                },
+                                {
+                                    "f":  "print-m-06.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-07.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-08.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-09.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-10.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-11.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-12.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-13.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-14.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-15.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-16.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-17.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-18.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-19.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-20.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-21.webp",
+                                    "w":  393,
+                                    "h":  982
+                                },
+                                {
+                                    "f":  "print-m-22.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-23.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-24.webp",
+                                    "w":  390,
+                                    "h":  844
+                                },
+                                {
+                                    "f":  "print-m-25.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-26.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-27.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-28.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-29.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-30.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-31.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-32.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-33.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-34.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "print-m-35.webp",
+                                    "w":  393,
+                                    "h":  852
+                                }
+                            ]
+              },
+    "autogara":  {
+                     "hero":  {
+                                  "f":  "autogara-mock4.webp",
+                                  "w":  1536,
+                                  "h":  1024
+                              },
+                     "shots":  [
+                                   {
+                                       "f":  "autogara-m-01.webp",
+                                       "w":  390,
+                                       "h":  844
+                                   },
+                                   {
+                                       "f":  "autogara-m-02.webp",
+                                       "w":  390,
+                                       "h":  844
+                                   },
+                                   {
+                                       "f":  "autogara-m-03.webp",
+                                       "w":  390,
+                                       "h":  844
+                                   },
+                                   {
+                                       "f":  "autogara-m-04.webp",
+                                       "w":  390,
+                                       "h":  844
+                                   },
+                                   {
+                                       "f":  "autogara-m-05.webp",
+                                       "w":  390,
+                                       "h":  1339
+                                   },
+                                   {
+                                       "f":  "autogara-m-06.webp",
+                                       "w":  390,
+                                       "h":  1339
+                                   },
+                                   {
+                                       "f":  "autogara-m-07.webp",
+                                       "w":  390,
+                                       "h":  844
+                                   },
+                                   {
+                                       "f":  "autogara-m-08.webp",
+                                       "w":  390,
+                                       "h":  1049
+                                   },
+                                   {
+                                       "f":  "autogara-m-09.webp",
+                                       "w":  390,
+                                       "h":  844
+                                   },
+                                   {
+                                       "f":  "autogara-m-10.webp",
+                                       "w":  390,
+                                       "h":  1289
+                                   },
+                                   {
+                                       "f":  "autogara-m-11.webp",
+                                       "w":  390,
+                                       "h":  844
+                                   },
+                                   {
+                                       "f":  "autogara-m-12.webp",
+                                       "w":  390,
+                                       "h":  844
+                                   },
+                                   {
+                                       "f":  "autogara-m-13.webp",
+                                       "w":  390,
+                                       "h":  844
+                                   },
+                                   {
+                                       "f":  "autogara-m-14.webp",
+                                       "w":  390,
+                                       "h":  1167
+                                   },
+                                   {
+                                       "f":  "autogara-m-15.webp",
+                                       "w":  390,
+                                       "h":  1505
+                                   },
+                                   {
+                                       "f":  "autogara-m-16.webp",
+                                       "w":  390,
+                                       "h":  878
+                                   },
+                                   {
+                                       "f":  "autogara-m-17.webp",
+                                       "w":  390,
+                                       "h":  844
+                                   },
+                                   {
+                                       "f":  "autogara-m-18.webp",
+                                       "w":  390,
+                                       "h":  844
+                                   },
+                                   {
+                                       "f":  "autogara-m-19.webp",
+                                       "w":  390,
+                                       "h":  1225
+                                   },
+                                   {
+                                       "f":  "autogara-m-20.webp",
+                                       "w":  390,
+                                       "h":  844
+                                   },
+                                   {
+                                       "f":  "autogara-m-21.webp",
+                                       "w":  390,
+                                       "h":  844
+                                   },
+                                   {
+                                       "f":  "autogara-m-22.webp",
+                                       "w":  390,
+                                       "h":  844
+                                   },
+                                   {
+                                       "f":  "autogara-m-23.webp",
+                                       "w":  390,
+                                       "h":  844
+                                   },
+                                   {
+                                       "f":  "autogara-m-24.webp",
+                                       "w":  390,
+                                       "h":  844
+                                   },
+                                   {
+                                       "f":  "autogara-m-25.webp",
+                                       "w":  390,
+                                       "h":  844
+                                   },
+                                   {
+                                       "f":  "autogara-m-26.webp",
+                                       "w":  390,
+                                       "h":  844
+                                   },
+                                   {
+                                       "f":  "autogara-m-27.webp",
+                                       "w":  390,
+                                       "h":  844
+                                   },
+                                   {
+                                       "f":  "autogara-m-28.webp",
+                                       "w":  390,
+                                       "h":  844
+                                   },
+                                   {
+                                       "f":  "autogara-m-29.webp",
+                                       "w":  390,
+                                       "h":  844
+                                   },
+                                   {
+                                       "f":  "autogara-m-30.webp",
+                                       "w":  390,
+                                       "h":  844
+                                   },
+                                   {
+                                       "f":  "autogara-m-31.webp",
+                                       "w":  390,
+                                       "h":  844
+                                   },
+                                   {
+                                       "f":  "autogara-m-32.webp",
+                                       "w":  393,
+                                       "h":  852
+                                   }
+                               ]
+                 },
+    "giapha":  {
+                   "hero":  {
+                                "f":  "giapha-mock4.webp",
+                                "w":  1254,
+                                "h":  1254
+                            },
+                   "shots":  [
+                                 {
+                                     "f":  "giapha-m-01.webp",
+                                     "w":  390,
+                                     "h":  844
+                                 },
+                                 {
+                                     "f":  "giapha-m-02.webp",
+                                     "w":  390,
+                                     "h":  844
+                                 },
+                                 {
+                                     "f":  "giapha-m-03.webp",
+                                     "w":  390,
+                                     "h":  844
+                                 },
+                                 {
+                                     "f":  "giapha-m-04.webp",
+                                     "w":  390,
+                                     "h":  1007
+                                 },
+                                 {
+                                     "f":  "giapha-m-05.webp",
+                                     "w":  390,
+                                     "h":  1940
+                                 },
+                                 {
+                                     "f":  "giapha-m-06.webp",
+                                     "w":  390,
+                                     "h":  844
+                                 },
+                                 {
+                                     "f":  "giapha-m-07.webp",
+                                     "w":  390,
+                                     "h":  844
+                                 },
+                                 {
+                                     "f":  "giapha-m-08.webp",
+                                     "w":  390,
+                                     "h":  844
+                                 },
+                                 {
+                                     "f":  "giapha-m-09.webp",
+                                     "w":  390,
+                                     "h":  844
+                                 },
+                                 {
+                                     "f":  "giapha-m-10.webp",
+                                     "w":  390,
+                                     "h":  1240
+                                 },
+                                 {
+                                     "f":  "giapha-m-11.webp",
+                                     "w":  390,
+                                     "h":  844
+                                 },
+                                 {
+                                     "f":  "giapha-m-12.webp",
+                                     "w":  390,
+                                     "h":  844
+                                 },
+                                 {
+                                     "f":  "giapha-m-13.webp",
+                                     "w":  390,
+                                     "h":  844
+                                 },
+                                 {
+                                     "f":  "giapha-m-14.webp",
+                                     "w":  390,
+                                     "h":  844
+                                 },
+                                 {
+                                     "f":  "giapha-m-15.webp",
+                                     "w":  390,
+                                     "h":  844
+                                 },
+                                 {
+                                     "f":  "giapha-m-16.webp",
+                                     "w":  390,
+                                     "h":  919
+                                 },
+                                 {
+                                     "f":  "giapha-m-17.webp",
+                                     "w":  390,
+                                     "h":  844
+                                 },
+                                 {
+                                     "f":  "giapha-m-18.webp",
+                                     "w":  390,
+                                     "h":  2703
+                                 },
+                                 {
+                                     "f":  "giapha-m-19.webp",
+                                     "w":  390,
+                                     "h":  1055
+                                 },
+                                 {
+                                     "f":  "giapha-m-20.webp",
+                                     "w":  390,
+                                     "h":  844
+                                 },
+                                 {
+                                     "f":  "giapha-m-21.webp",
+                                     "w":  390,
+                                     "h":  844
+                                 },
+                                 {
+                                     "f":  "giapha-m-22.webp",
+                                     "w":  390,
+                                     "h":  1230
+                                 },
+                                 {
+                                     "f":  "giapha-m-23.webp",
+                                     "w":  390,
+                                     "h":  859
+                                 },
+                                 {
+                                     "f":  "giapha-m-24.webp",
+                                     "w":  390,
+                                     "h":  844
+                                 },
+                                 {
+                                     "f":  "giapha-m-25.webp",
+                                     "w":  390,
+                                     "h":  844
+                                 },
+                                 {
+                                     "f":  "giapha-m-26.webp",
+                                     "w":  390,
+                                     "h":  859
+                                 },
+                                 {
+                                     "f":  "giapha-m-27.webp",
+                                     "w":  390,
+                                     "h":  859
+                                 },
+                                 {
+                                     "f":  "giapha-m-28.webp",
+                                     "w":  390,
+                                     "h":  844
+                                 },
+                                 {
+                                     "f":  "giapha-m-29.webp",
+                                     "w":  390,
+                                     "h":  844
+                                 },
+                                 {
+                                     "f":  "giapha-m-30.webp",
+                                     "w":  390,
+                                     "h":  1191
+                                 },
+                                 {
+                                     "f":  "giapha-m-31.webp",
+                                     "w":  390,
+                                     "h":  844
+                                 },
+                                 {
+                                     "f":  "giapha-m-32.webp",
+                                     "w":  390,
+                                     "h":  844
+                                 },
+                                 {
+                                     "f":  "giapha-m-33.webp",
+                                     "w":  390,
+                                     "h":  844
+                                 },
+                                 {
+                                     "f":  "giapha-m-34.webp",
+                                     "w":  390,
+                                     "h":  844
+                                 },
+                                 {
+                                     "f":  "giapha-m-35.webp",
+                                     "w":  390,
+                                     "h":  844
+                                 }
+                             ]
+               },
+    "game2":  {
+                  "hero":  {
+                               "f":  "game2-mock5.webp",
+                               "w":  1254,
+                               "h":  1254
+                           },
+                  "shots":  [
+                                {
+                                    "f":  "game2-m-01.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "game2-m-02.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "game2-m-03.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "game2-m-04.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "game2-m-05.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "game2-m-06.webp",
+                                    "w":  393,
+                                    "h":  852
+                                },
+                                {
+                                    "f":  "game2-m-07.webp",
+                                    "w":  393,
+                                    "h":  852
+                                }
+                            ]
+              },
+    "game3":  {
+                  "hero":  {
+                               "f":  "game3-mock5.webp",
+                               "w":  1254,
+                               "h":  1254
+                           },
+                  "shots":  [
+                                {
+                                    "f":  "game3-m-01.webp",
+                                    "w":  390,
+                                    "h":  844
+                                },
+                                {
+                                    "f":  "game3-m-02.webp",
+                                    "w":  390,
+                                    "h":  844
+                                },
+                                {
+                                    "f":  "game3-m-03.webp",
+                                    "w":  390,
+                                    "h":  844
+                                },
+                                {
+                                    "f":  "game3-m-04.webp",
+                                    "w":  390,
+                                    "h":  844
+                                },
+                                {
+                                    "f":  "game3-m-05.webp",
+                                    "w":  390,
+                                    "h":  844
+                                },
+                                {
+                                    "f":  "game3-m-06.webp",
+                                    "w":  390,
+                                    "h":  844
+                                },
+                                {
+                                    "f":  "game3-m-07.webp",
+                                    "w":  390,
+                                    "h":  844
+                                },
+                                {
+                                    "f":  "game3-m-08.webp",
+                                    "w":  390,
+                                    "h":  844
+                                },
+                                {
+                                    "f":  "game3-m-09.webp",
+                                    "w":  390,
+                                    "h":  844
+                                },
+                                {
+                                    "f":  "game3-m-10.webp",
+                                    "w":  390,
+                                    "h":  844
+                                },
+                                {
+                                    "f":  "game3-m-11.webp",
+                                    "w":  390,
+                                    "h":  844
+                                },
+                                {
+                                    "f":  "game3-m-12.webp",
+                                    "w":  390,
+                                    "h":  844
+                                },
+                                {
+                                    "f":  "game3-m-13.webp",
+                                    "w":  390,
+                                    "h":  844
+                                },
+                                {
+                                    "f":  "game3-m-14.webp",
+                                    "w":  390,
+                                    "h":  844
+                                },
+                                {
+                                    "f":  "game3-m-15.webp",
+                                    "w":  390,
+                                    "h":  844
+                                },
+                                {
+                                    "f":  "game3-m-16.webp",
+                                    "w":  391,
+                                    "h":  844
+                                },
+                                {
+                                    "f":  "game3-m-17.webp",
+                                    "w":  390,
+                                    "h":  844
+                                },
+                                {
+                                    "f":  "game3-m-18.webp",
+                                    "w":  390,
+                                    "h":  844
+                                },
+                                {
+                                    "f":  "game3-m-19.webp",
+                                    "w":  391,
+                                    "h":  844
+                                },
+                                {
+                                    "f":  "game3-m-20.webp",
+                                    "w":  391,
+                                    "h":  844
+                                },
+                                {
+                                    "f":  "game3-m-21.webp",
+                                    "w":  390,
+                                    "h":  844
+                                },
+                                {
+                                    "f":  "game3-m-22.webp",
+                                    "w":  390,
+                                    "h":  846
+                                },
+                                {
+                                    "f":  "game3-m-23.webp",
+                                    "w":  390,
+                                    "h":  844
+                                },
+                                {
+                                    "f":  "game3-m-24.webp",
+                                    "w":  390,
+                                    "h":  844
+                                },
+                                {
+                                    "f":  "game3-m-25.webp",
+                                    "w":  390,
+                                    "h":  844
+                                },
+                                {
+                                    "f":  "game3-m-26.webp",
+                                    "w":  390,
+                                    "h":  844
+                                },
+                                {
+                                    "f":  "game3-m-27.webp",
+                                    "w":  390,
+                                    "h":  844
+                                }
+                            ]
+              },
+    "kimdong":  {
+                    "chunks":  [
+                                   {
+                                       "f":  "kimdong-sc-01.webp",
+                                       "w":  2400,
+                                       "h":  3000
+                                   },
+                                   {
+                                       "f":  "kimdong-sc-02.webp",
+                                       "w":  2400,
+                                       "h":  3000
+                                   },
+                                   {
+                                       "f":  "kimdong-sc-03.webp",
+                                       "w":  2400,
+                                       "h":  3000
+                                   },
+                                   {
+                                       "f":  "kimdong-sc-04.webp",
+                                       "w":  2400,
+                                       "h":  3000
+                                   },
+                                   {
+                                       "f":  "kimdong-sc-05.webp",
+                                       "w":  2400,
+                                       "h":  3000
+                                   },
+                                   {
+                                       "f":  "kimdong-sc-06.webp",
+                                       "w":  2400,
+                                       "h":  3000
+                                   },
+                                   {
+                                       "f":  "kimdong-sc-07.webp",
+                                       "w":  2400,
+                                       "h":  3000
+                                   },
+                                   {
+                                       "f":  "kimdong-sc-08.webp",
+                                       "w":  2400,
+                                       "h":  1907
+                                   }
+                               ]
+                },
+    "heartwise":  {
+                      "chunks":  [
+                                     {
+                                         "f":  "heartwise-sc-01.webp",
+                                         "w":  2400,
+                                         "h":  3000
+                                     },
+                                     {
+                                         "f":  "heartwise-sc-02.webp",
+                                         "w":  2400,
+                                         "h":  3000
+                                     },
+                                     {
+                                         "f":  "heartwise-sc-03.webp",
+                                         "w":  2400,
+                                         "h":  3000
+                                     },
+                                     {
+                                         "f":  "heartwise-sc-04.webp",
+                                         "w":  2400,
+                                         "h":  1334
+                                     }
+                                 ]
+                  },
+    "fitapp":  {
+                   "chunks":  [
+                                  {
+                                      "f":  "fitapp-sc-01.webp",
+                                      "w":  2400,
+                                      "h":  3000
+                                  },
+                                  {
+                                      "f":  "fitapp-sc-02.webp",
+                                      "w":  2400,
+                                      "h":  3000
+                                  },
+                                  {
+                                      "f":  "fitapp-sc-03.webp",
+                                      "w":  2400,
+                                      "h":  3000
+                                  },
+                                  {
+                                      "f":  "fitapp-sc-04.webp",
+                                      "w":  2400,
+                                      "h":  3000
+                                  },
+                                  {
+                                      "f":  "fitapp-sc-05.webp",
+                                      "w":  2400,
+                                      "h":  3000
+                                  },
+                                  {
+                                      "f":  "fitapp-sc-06.webp",
+                                      "w":  2400,
+                                      "h":  993
+                                  }
+                              ]
+               }
+}
