@@ -82,6 +82,11 @@ footer a:hover{color:var(--accent)}
 .fg-item .fg-img{border-radius:16px;overflow:hidden;background:#0D060A;border:1px solid var(--line)}
 .fg-item figcaption{margin-top:14px;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:var(--muted)}
 .fg-item figcaption b{color:var(--ink);font-weight:400;margin-right:10px}
+.fg-grid.cols3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.fg-item .fg-img.win{aspect-ratio:4/5}
+.fg-item .fg-img.win img{height:100%;object-fit:cover;object-position:top}
+@media(max-width:1000px){.fg-grid.cols3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.fg-grid.cols3{grid-template-columns:1fr}}
 .fg-item .fg-img{cursor:zoom-in;transition:transform .35s,border-color .35s}
 .fg-item:hover .fg-img{transform:translateY(-4px);border-color:var(--accent)}
 .fg-item .fg-img:focus-visible{outline:2px solid var(--accent);outline-offset:3px}

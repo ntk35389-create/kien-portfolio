@@ -9,7 +9,7 @@ Website tĩnh (HTML), deploy trên Vercel với Framework Preset `Other`, không
 ## Cấu trúc trang (cập nhật)
 - `apps.html`, `webapps.html`, `websites.html`: 3 trang danh mục (App / Web App / Website), mỗi trang liệt kê dự án.
 - `project-*.html`: trang chi tiết từng dự án (18 trang). Ảnh nằm trong `assets/projects/`.
-- Chưa có trang: `project-fitapp.html`, `project-vuonxanh.html`.
+- Chưa có trang: `project-fitapp.html`.
 - `build-projects.ps1` (8 trang từ Behance) và `build-figma.ps1` (10 trang từ Figma + 3 trang danh mục) dùng để tạo lại các trang; chạy `build-projects.ps1` trước, `build-figma.ps1` sau.
 
-- Web App (vime, pcu, thinkiz, vcb, vbim): sau khi chạy uild-projects.ps1 và uild-figma.ps1, chạy thêm uild-webapps.ps1 để dựng lại thân trang (thumb lớn + lưới màn hình có chú thích, ảnh *-web.webp và *-fg-NN.webp).
+- Web App và Landing Page (vime, pcu, thinkiz, vcb, vbim, vuonxanh, ielts, forever): sau khi chạy uild-projects.ps1 và uild-figma.ps1, chạy thêm uild-webapps.ps1 để dựng lại thân trang (thumb lớn + lưới màn hình có chú thích, ảnh *-web.webp và *-fg-NN.webp).

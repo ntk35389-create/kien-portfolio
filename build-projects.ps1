@@ -18,7 +18,9 @@ $projects = @(
   @{ slug='forever';   title='Forever Young'; cat='Landing Page'; anchor='webs'; color='#FF9EC4'; client='Forever Young Company'; kind='Website công ty';
      desc='Website chính thức giới thiệu Forever Young, công ty quản lý KOL, ca sĩ và nhạc sĩ hàng đầu Việt Nam. Với sứ mệnh phát triển tài năng và xây dựng thương hiệu cá nhân, website cung cấp thông tin về dịch vụ quản lý chuyên nghiệp, các dự án nổi bật và câu chuyện thành công của nghệ sĩ.'; tags=@('Landing Page','Entertainment','Dark UI') },
   @{ slug='ielts';     title='IELTS Lab'; cat='Landing Page'; anchor='webs'; color='#6FA8FF'; client='IELTS LAB'; kind='Website trung tâm Anh ngữ';
-     desc='Website giới thiệu trung tâm đào tạo tiếng Anh IELTS LAB, chuyên luyện thi IELTS cấp tốc với sứ mệnh giúp học viên đạt mục tiêu trong thời gian ngắn nhất. Website cung cấp thông tin chi tiết về khóa học, lịch học và tài nguyên hữu ích để học viên tự tin chinh phục kỳ thi.'; tags=@('Landing Page','Education','Responsive') }
+     desc='Website giới thiệu trung tâm đào tạo tiếng Anh IELTS LAB, chuyên luyện thi IELTS cấp tốc với sứ mệnh giúp học viên đạt mục tiêu trong thời gian ngắn nhất. Website cung cấp thông tin chi tiết về khóa học, lịch học và tài nguyên hữu ích để học viên tự tin chinh phục kỳ thi.'; tags=@('Landing Page','Education','Responsive') },
+  @{ slug='vuonxanh'; title='VuonXanh Connect'; cat='Landing Page'; anchor='webs'; color='#5FD068'; client='VuonXanh Connect'; kind='Sàn thương mại điện tử nông sản';
+     desc='Sàn thương mại điện tử nông sản toàn quốc, kết nối trực tiếp người tiêu dùng với nhà vườn. Website gồm trang chủ, gian hàng đối tác, danh mục sản phẩm, chi tiết sản phẩm và chuyên mục tin tức, tập trung vào sự tin cậy và trải nghiệm tìm mua nông sản sạch.'; tags=@('Landing Page','E-commerce','Agriculture') }
 )
 
 function Esc($s) { [System.Net.WebUtility]::HtmlEncode($s) }
@@ -106,7 +108,7 @@ footer a:hover{color:var(--accent)}
 '@
 
 # thứ tự trong trang chủ: apps -> systems -> webs
-$order = @('kimdong','heartwise','vime','vcb','pcu','thinkiz','forever','ielts')
+$order = @('kimdong','heartwise','vime','vcb','pcu','thinkiz','forever','ielts','vuonxanh')
 $bySlug = @{}; foreach ($p in $projects) { $bySlug[$p.slug] = $p }
 
 for ($i = 0; $i -lt $order.Count; $i++) {

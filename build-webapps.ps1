@@ -20,6 +20,19 @@ $apps = [ordered]@{
   'vbim' = @{ hero='1672x941'; title='VBIM x TDI Group'
     shots=@('1024x729','1024x729','1024x729','1024x729','1024x729','1024x729','1024x729','1024x729','1024x729','1024x729')
     caps=@('Đăng nhập','Trang chủ','Trợ lý trò chuyện','Trang chủ · Thông báo','Tổng quan quản lý','Khoá học gần đây','Chi tiết khoá học','Học phần nhân sự','Quản lý khoá học','Thư viện tài liệu') }
+  # Landing page: ảnh cả trang rất dài -> thẻ cắt phần đầu (win), bấm vào để cuộn xem đủ trong khung xem lớn
+  'vuonxanh' = @{ hero='1732x1156'; title='VuonXanh Connect'; cols=3
+    shots=@('1013x4096','1920x1057','1920x1532','1920x2762','1920x3269','1920x3241','1462x2478')
+    win=@($true,$false,$true,$true,$true,$true,$true)
+    caps=@('Trang chủ','Đăng nhập','Gian hàng đối tác','Danh mục sản phẩm','Chi tiết sản phẩm','Tin tức','Chi tiết tin tức') }
+  'ielts' = @{ hero='1732x1154'; title='IELTS Lab'; cols=3
+    shots=@('852x4096','1321x4096','1233x4096','1158x1908','1600x2331')
+    win=@($true,$true,$true,$true,$true)
+    caps=@('Trang chủ','Phương pháp học C.C.A.C','Giới thiệu','Lộ trình và lịch học','Đội ngũ giảng viên') }
+  'forever' = @{ hero='1732x1154'; title='Forever Young'; cols=3
+    shots=@('588x4096','803x3921','1141x4096','1600x1066')
+    win=@($true,$true,$true,$false)
+    caps=@('Trang chủ','Dịch vụ','Nghệ sĩ','Hiển thị trên thiết bị') }
 }
 
 $css = @'
@@ -33,6 +46,11 @@ $css = @'
 .fg-item .fg-img{border-radius:16px;overflow:hidden;background:#0D060A;border:1px solid var(--line)}
 .fg-item figcaption{margin-top:14px;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:var(--muted)}
 .fg-item figcaption b{color:var(--ink);font-weight:400;margin-right:10px}
+.fg-grid.cols3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.fg-item .fg-img.win{aspect-ratio:4/5}
+.fg-item .fg-img.win img{height:100%;object-fit:cover;object-position:top}
+@media(max-width:1000px){.fg-grid.cols3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.fg-grid.cols3{grid-template-columns:1fr}}
 .fg-item .fg-img{cursor:zoom-in;transition:transform .35s,border-color .35s}
 .fg-item:hover .fg-img{transform:translateY(-4px);border-color:var(--accent)}
 .fg-item .fg-img:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
@@ -149,10 +167,12 @@ foreach ($slug in $apps.Keys) {
   [void]$sb.AppendLine('<main class="case"><div class="fg-wrap">')
   [void]$sb.AppendLine(('<div class="fg-hero"><img src="assets/projects/{0}-web.webp" width="{1}" height="{2}" loading="eager" decoding="async" alt="{3}"></div>' -f $slug, $hw[0], $hw[1], $a.title))
   [void]$sb.AppendLine('<h2 class="fg-title">Màn hình thiết kế</h2>')
-  [void]$sb.AppendLine('<div class="fg-grid">')
+  $gcls = if ($a.cols -eq 3) { 'fg-grid cols3' } else { 'fg-grid' }
+  [void]$sb.AppendLine("<div class=`"$gcls`">")
   for ($i = 0; $i -lt $a.caps.Count; $i++) {
     $d = $a.shots[$i].Split('x'); $cap = [System.Net.WebUtility]::HtmlEncode($a.caps[$i])
-    [void]$sb.AppendLine(('<figure class="fg-item"><div class="fg-img"><img src="assets/projects/{0}-fg-{1:00}.webp" width="{2}" height="{3}" loading="lazy" decoding="async" alt="{4} — {5}"></div><figcaption><b>{1:00}</b>{5}</figcaption></figure>' -f $slug, ($i + 1), $d[0], $d[1], $a.title, $cap))
+    $wcls = if ($a.win -and $a.win[$i]) { 'fg-img win' } else { 'fg-img' }
+    [void]$sb.AppendLine(('<figure class="fg-item"><div class="' + $wcls + '"><img src="assets/projects/{0}-fg-{1:00}.webp" width="{2}" height="{3}" loading="lazy" decoding="async" alt="{4} — {5}"></div><figcaption><b>{1:00}</b>{5}</figcaption></figure>' -f $slug, ($i + 1), $d[0], $d[1], $a.title, $cap))
   }
   [void]$sb.AppendLine('</div></div></main>')
   $body = $sb.ToString().TrimEnd()
