@@ -545,7 +545,7 @@ body.has-cursor,body.has-cursor *{cursor:none!important}
         /* thẻ phía dưới đè lên: thẻ này thu nhỏ và tối dần */
         var next=list[i+1];
         if(next){
-          gsap.to(card,{scale:.93,filter:'brightness(.5)',ease:'none',scrollTrigger:{trigger:next,start:'top bottom',end:function(){return 'top '+parseFloat(getComputedStyle(next).top);},scrub:true,invalidateOnRefresh:true}});
+          gsap.to(card,{scale:.9,opacity:0,ease:'none',force3D:true,scrollTrigger:{trigger:next,start:'top bottom',end:function(){return 'top '+parseFloat(getComputedStyle(next).top);},scrub:true,invalidateOnRefresh:true}});
         }
       });
       return function(){list.forEach(function(c){var x=c.querySelectorAll('.ac-idx,.ac-kind,.ac-big');x.forEach(function(n){n.remove();});c.style.removeProperty('--i');});};
