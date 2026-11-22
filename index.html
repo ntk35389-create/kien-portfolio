@@ -165,7 +165,7 @@ body.has-cursor,body.has-cursor *{cursor:none!important}
 
 <header class="hero">
   <div class="hero-aura"></div><div class="hero-aura two"></div>
-  <div class="hero-meta"><span>Hà Nội, Việt Nam — GMT+7</span><span>Portfolio 2026 — 2027</span></div>
+  
   <h1 class="hero-title">
     <span class="line"><span>Nguyễn</span></span>
     <span class="line"><span class="outline">Trung Kiên</span></span>
@@ -389,7 +389,7 @@ body.has-cursor,body.has-cursor *{cursor:none!important}
     gsap.to('.hero-aura.two',{yPercent:-25,scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:1.4}});
     gsap.to('.hero-title',{yPercent:-12,opacity:.25,scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom 30%',scrub:true}});
     gsap.from('.hero-title .line > span',{y:'115%',duration:1.1,stagger:.12,ease:'power4.out',delay:1.35});
-    gsap.from(['.hero-meta','.hero-sub'],{opacity:0,y:40,duration:1,stagger:.15,ease:'power3.out',delay:1.9});
+    gsap.from(['.hero-sub'],{opacity:0,y:40,duration:1,stagger:.15,ease:'power3.out',delay:1.9});
     gsap.to('#aboutText .w',{opacity:1,stagger:.4,ease:'none',scrollTrigger:{trigger:'#aboutText',start:'top 78%',end:'bottom 45%',scrub:true}});
     gsap.fromTo('.about-photo',{y:60},{y:-60,ease:'none',scrollTrigger:{trigger:'.about',start:'top bottom',end:'bottom top',scrub:true}});
     var morph=function(bg,ac){
