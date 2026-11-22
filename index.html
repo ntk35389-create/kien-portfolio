@@ -55,7 +55,8 @@ body.has-cursor,body.has-cursor *{cursor:none!important}
 .eyebrow::before{content:"";width:48px;height:1px;background:var(--accent)}
 .sec-head{padding:0 var(--gutter) 7vh}
 .sec-head h2{font-family:var(--display);font-weight:600;font-size:clamp(2.1rem,6.4vw,5.4rem);text-transform:uppercase;line-height:1.02}
-.sec-head h2 .ghost{color:transparent;-webkit-text-stroke:1px var(--muted)}
+.sec-head h2 .ghost{color:transparent;-webkit-text-stroke:1px var(--muted);transition:color .45s,-webkit-text-stroke-color .45s;cursor:default}
+.sec-head h2 .ghost:hover{color:var(--accent);-webkit-text-stroke-color:var(--accent)}
 .sec-head p{color:var(--muted);max-width:60ch;line-height:1.75;margin-top:3vh;font-size:clamp(.95rem,1.15vw,1.08rem)}
 .about{padding:22vh var(--gutter);display:grid;grid-template-columns:1fr minmax(260px,min(34%,440px));gap:6vw;align-items:stretch}
 .about-text{font-size:clamp(1.45rem,3.1vw,2.7rem);line-height:1.4;letter-spacing:-.01em}
@@ -131,16 +132,16 @@ body.has-cursor,body.has-cursor *{cursor:none!important}
 .stat{background:var(--bg);padding:9vh 5vw;text-align:center;transition:background .9s cubic-bezier(.4,0,.2,1)}
 .stat-num{font-family:var(--display);font-weight:800;font-size:clamp(2.5rem,5.2vw,4.4rem);color:var(--accent);line-height:1}
 .stat-label{margin-top:14px;font-family:var(--mono);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-.cta{min-height:88svh;display:flex;flex-direction:column;justify-content:center;padding:14vh var(--gutter) 0;position:relative;overflow:hidden}
-.cta-big{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(2.6rem,10.5vw,9.5rem);line-height:.98;letter-spacing:-.02em}
+.cta{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-start;padding:16vh var(--gutter) 0;position:relative;overflow:hidden}
+.cta-big{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(2rem,min(7.4vw,11vh),7.5rem);line-height:1.14;letter-spacing:-.02em}
 .cta-big .row{display:block;overflow:hidden;padding:.5em 0 .06em;margin:-.5em 0 -.06em}
 .cta-big .row>span{display:inline-block}
 .cta-big a{color:transparent;-webkit-text-stroke:1.5px var(--ink);transition:color .45s,-webkit-text-stroke-color .45s}
 .cta-big a:hover{color:var(--accent);-webkit-text-stroke-color:var(--accent)}
-.cta-mail{margin-top:5vh;font-family:var(--mono);font-size:clamp(.85rem,1.4vw,1.05rem);letter-spacing:.08em;color:var(--muted)}
+.cta-mail{margin-top:7vh;font-family:var(--mono);font-size:clamp(.85rem,1.4vw,1.05rem);letter-spacing:.08em;color:var(--muted)}
 .cta-mail a{color:var(--ink);border-bottom:1px solid var(--accent);padding-bottom:3px;transition:color .35s}
 .cta-mail a:hover{color:var(--accent)}
-.cta-foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;padding:9vh 0 5vh;font-family:var(--mono);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.cta-foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;padding:6vh 0 5vh;font-family:var(--mono);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .socials{display:flex;gap:30px}
 .socials a:hover{color:var(--accent)}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.about-text .w{opacity:1}}
@@ -183,7 +184,7 @@ body.has-cursor,body.has-cursor *{cursor:none!important}
 .app-card .ac-media.contain img{width:auto;height:100%;object-fit:contain;object-position:top center;border-radius:20px 20px 0 0;transform:none!important}.to-top{position:fixed;right:24px;bottom:24px;z-index:950;width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:rgba(21,10,15,.55);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;transform:translateY(14px);pointer-events:none;transition:opacity .35s,transform .35s,background .3s,color .3s,border-color .3s}
 .to-top.show{opacity:1;transform:none;pointer-events:auto}
 .to-top:hover{background:var(--accent);color:var(--bg);border-color:var(--accent)}
-.to-top svg{width:20px;height:20px}</style>
+.to-top svg{width:20px;height:20px}@media(max-width:860px){.cta-foot{padding-bottom:92px}}</style>
 </head>
 <body>
 <div class="cursor-dot"></div><div class="cursor-ring"><span>Xem →</span></div>

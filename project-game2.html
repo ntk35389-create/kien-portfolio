@@ -26,7 +26,8 @@ img{display:block;width:100%;height:auto}
 .eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:16px;margin-bottom:4vh;position:relative}
 .eyebrow::before{content:"";width:48px;height:1px;background:var(--accent)}
 h1{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,8vw,6.8rem);line-height:1;letter-spacing:-.02em;text-transform:uppercase;position:relative}
-h1 .ghost{color:transparent;-webkit-text-stroke:1px var(--muted)}
+h1 .ghost{color:transparent;-webkit-text-stroke:1px var(--muted);transition:color .45s,-webkit-text-stroke-color .45s}
+h1 .ghost:hover{color:var(--accent);-webkit-text-stroke-color:var(--accent)}
 .lead{max-width:640px;font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.75;color:var(--muted);margin-top:5vh;position:relative}
 .meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:28px;margin-top:7vh;padding-top:4vh;border-top:1px solid var(--line);position:relative}
 .meta dt{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
