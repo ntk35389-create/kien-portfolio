@@ -83,7 +83,11 @@ footer a:hover{color:var(--accent)}
 .fg-item figcaption{margin-top:14px;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:var(--muted)}
 .fg-item figcaption b{color:var(--ink);font-weight:400;margin-right:10px}
 .fg-grid.cols3{grid-template-columns:repeat(3,minmax(0,1fr))}
-.fg-grid.cols4{grid-template-columns:repeat(4,minmax(0,1fr));gap:40px 22px}
+.fg-title.first{margin-top:2vh}
+.fg-grid.cols5{grid-template-columns:repeat(5,minmax(0,1fr));gap:36px 18px}
+@media(max-width:1200px){.fg-grid.cols5{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:900px){.fg-grid.cols5{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:560px){.fg-grid.cols5{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 12px}}
 .fg-item .fg-img.ph{aspect-ratio:9/19.5;background:#0D060A}
 .fg-item .fg-img.ph img{height:100%;object-fit:cover;object-position:top}
 @media(max-width:1100px){.fg-grid.cols4{grid-template-columns:repeat(3,minmax(0,1fr))}}
@@ -129,9 +133,8 @@ footer a:hover{color:var(--accent)}
   </dl>
 </header>
 <main class="case"><div class="fg-wrap">
-<div class="fg-hero"><img src="assets/projects/giapha-mock4.webp" width="1254" height="1254" loading="eager" decoding="async" alt="Tâm Hương"></div>
-<h2 class="fg-title">Màn hình thiết kế</h2>
-<div class="fg-grid cols4">
+<h2 class="fg-title first">Màn hình thiết kế</h2>
+<div class="fg-grid cols5">
 <figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/giapha-m-01.webp" width="390" height="844" loading="lazy" decoding="async" alt="Tâm Hương — Giới thiệu &#183; Ch&#224;o mừng"></div><figcaption><b>01</b>Giới thiệu &#183; Ch&#224;o mừng</figcaption></figure>
 <figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/giapha-m-02.webp" width="390" height="844" loading="lazy" decoding="async" alt="Tâm Hương — Đăng nhập"></div><figcaption><b>02</b>Đăng nhập</figcaption></figure>
 <figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/giapha-m-03.webp" width="390" height="844" loading="lazy" decoding="async" alt="Tâm Hương — X&#225;c minh OTP"></div><figcaption><b>03</b>X&#225;c minh OTP</figcaption></figure>

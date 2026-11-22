@@ -83,7 +83,11 @@ footer a:hover{color:var(--accent)}
 .fg-item figcaption{margin-top:14px;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:var(--muted)}
 .fg-item figcaption b{color:var(--ink);font-weight:400;margin-right:10px}
 .fg-grid.cols3{grid-template-columns:repeat(3,minmax(0,1fr))}
-.fg-grid.cols4{grid-template-columns:repeat(4,minmax(0,1fr));gap:40px 22px}
+.fg-title.first{margin-top:2vh}
+.fg-grid.cols5{grid-template-columns:repeat(5,minmax(0,1fr));gap:36px 18px}
+@media(max-width:1200px){.fg-grid.cols5{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:900px){.fg-grid.cols5{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:560px){.fg-grid.cols5{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 12px}}
 .fg-item .fg-img.ph{aspect-ratio:9/19.5;background:#0D060A}
 .fg-item .fg-img.ph img{height:100%;object-fit:cover;object-position:top}
 @media(max-width:1100px){.fg-grid.cols4{grid-template-columns:repeat(3,minmax(0,1fr))}}

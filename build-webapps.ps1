@@ -54,12 +54,21 @@ $mobile = [ordered]@{
   'kinhthanh' = @{ title='Holy Bible'; caps=@('Chọn sách và chương','Kế hoạch đọc','Tiếp tục đọc','Trang chủ','Tốc độ phát','Chi tiết kế hoạch','Chọn câu · Đánh dấu','Chọn câu · Menu thao tác','Chia sẻ câu Kinh Thánh','Thêm ghi chú','Trình phát âm thanh','Đọc Kinh Thánh','Hẹn giờ tắt','Cầu nguyện · Chọn người','Đã lưu dấu trang','Dấu trang · Thông báo','Cầu nguyện · Chọn chủ đề','Sao chép câu','Đọc · Chuyển đến câu','Đọc · Mặc định','Cầu nguyện · Chi tiết','Tìm kiếm','Thư viện · Highlight','Thư viện · Ghi chú','Thư viện · Dấu trang','Thư viện · Vuốt để xóa','Suy niệm hằng ngày','Kết quả tìm kiếm','Nhắc nhở kế hoạch','Sửa ghi chú','Chưa có highlight','Giới thiệu · Lời Chúa mọi nơi','Giới thiệu · Bình an trong cầu nguyện') }
   'wallpaper' = @{ title='Depth Wallpaper'; caps=@('Bộ sưu tập','Danh sách hình nền','Xem trước','Hình nền · Yêu thích','Hình nền · Tất cả','Hình nền · Chưa có yêu thích','Cài đặt','Chọn ngôn ngữ','Giới thiệu 1','Giới thiệu 2','Giới thiệu 3','Studio chỉnh sửa') }
   'print' = @{ title='Print Document'; caps=@('Giới thiệu · In tài liệu dễ dàng','Giới thiệu · In từ mọi nguồn','Xem trước','Trang chủ','Trang chủ · Mẫu có sẵn','Trình quét · Chưa có tài liệu','Trình quét · Chọn nguồn quét','Chỉnh ảnh quét','Quét thẻ ID','Cắt ảnh','Xem trước và chỉnh sửa','Công cụ PDF','Sắp xếp trang','Trích xuất văn bản · Gộp','Trích xuất văn bản · Theo trang','Tách và trích xuất trang','Sắp xếp trang · 10 trang','Tuỳ chọn in','Bố cục ảnh · Mỗi tờ','Bố cục ảnh · Bộ lọc','Thêm chữ vào ảnh','Chữ ký · Thêm chữ ký','Vẽ chữ ký','Kết nối máy in','Hướng dẫn kết nối máy in','Hướng dẫn gửi qua email','Lịch sử in','Chi tiết lần in','Danh bạ in · Danh sách','Danh bạ in · Thẻ','Mẫu · Kế hoạch ngày','In ảnh thẻ','Tách trang · Hoàn tất','Tách PDF · 7 tệp','Ảnh thành PDF') }
-  'autogara' = @{ title='AUTO GARA'; caps=@('Giới thiệu · Chào mừng','Giới thiệu · Chẩn đoán OBD','Đăng nhập','Đăng nhập · Đã nhập','Tổng quan','Tổng quan · Báo cáo doanh thu','Chọn khách hàng','Kết quả chẩn đoán','Phân công thợ sửa chữa','Nghiệm thu hạng mục','Chi tiết báo giá','Danh sách báo giá','Chi tiết phát sinh','Phát sinh · Thông tin khách','Phát sinh · Phương án sửa','Duyệt phương án thành công','Phụ tùng được cấp','Đang xác minh vật tư','Chi tiết phiếu xuất kho','Danh sách phiếu xuất kho','Chi tiết hóa đơn','Biên bản bàn giao','Thanh toán','Mã QR thanh toán','Chi tiết khách hàng','Nhắc lịch bảo dưỡng','Tạo hồ sơ gara','Tạo gara thành công','Hàng hóa','Tin nhắn','Tin nhắn · Duyệt phương án','Thông báo đẩy') }
+  'autogara' = @{ title='AUTO GARA'; caps=@('Giới thiệu · Chào mừng','Giới thiệu · Chẩn đoán OBD','Đăng nhập','Đăng nhập · Đã nhập','Tổng quan','Tạo hồ sơ tiếp nhận xe','Chọn khách hàng','Kết quả chẩn đoán','Phân công thợ sửa chữa','Nghiệm thu hạng mục','Chi tiết báo giá','Danh sách báo giá','Chi tiết phát sinh','Phát sinh · Thông tin khách','Phát sinh · Phương án sửa','Duyệt phương án thành công','Phụ tùng được cấp','Đang xác minh vật tư','Chi tiết phiếu xuất kho','Danh sách phiếu xuất kho','Chi tiết hóa đơn','Biên bản bàn giao','Thanh toán','Mã QR thanh toán','Chi tiết khách hàng','Nhắc lịch bảo dưỡng','Tạo hồ sơ gara','Tạo gara thành công','Hàng hóa','Chi tiết lệnh sửa chữa','Danh sách khách hàng','Thông báo đẩy') }
   'giapha' = @{ title='Tâm Hương'; caps=@('Giới thiệu · Chào mừng','Đăng nhập','Xác minh OTP','Điền thông tin cá nhân','Trang chủ','Trang chủ · Dịch vụ chăm sóc mộ phần','Danh sách gia phả','Tạo gia phả mới','Chọn sơ đồ phả hệ','Cây phả hệ','Thêm thành viên','Thông tin thành viên · Chọn ngày','Thông tin thành viên · Mã mời','Kênh gia đình','Kênh gia đình · Tạo lịch hẹn','Chọn người phụ trách','Lịch giỗ','Chi tiết nghi lễ','Danh sách nghi lễ','Mộ phần · Sơ đồ','Danh sách mộ phần','Thông tin mộ phần','Mộ phần · Gói dịch vụ','Mộ phần · Thân nhân','Đánh giá dịch vụ','Chi tiết dịch vụ · Thắp hương','Dịch vụ chăm sóc mộ','Thanh toán · Chọn ngày','Chi tiết công việc','Công việc · Thắp hương online','Bản đồ','Chi tiết khu vực','Bộ lọc','Thông báo','Hoàn thành công việc') }
   'game2' = @{ title='Color Sort: Streak Puzzle'; caps=@('Màn hình khởi động','Trang chủ','Màn chơi','Hướng dẫn vật phẩm ẩn','Hoàn thành màn','Kho hoa','Đơn đặt hoa') }
   'game3' = @{ title='Tile Bloom'; caps=@('Sưu tập · Hướng dương','Sưu tập · Cúc','Sưu tập · Cẩm tú cầu','Sưu tập · Hoa hồng','Sưu tập · Mẫu đơn','Bộ sưu tập · Trang 1','Bộ sưu tập · Trang 2','Màn chơi','Màn chơi · Siêu khó','Cửa hàng','Cửa hàng · Mua chậu','Cửa hàng · Không đủ xu','Lên cấp','Chi tiết hoa · Tưới nước','Mua thêm ô trồng','Khu vườn · Ô trống','Xác nhận bỏ chậu','Xác nhận bỏ cây','Khu vườn · Trang chủ','Khu vườn · Chọn ô trồng','Hướng dẫn nhân vật Grook','Màn hình khởi động','Mở khóa hoa mới','Thua màn · Khay đầy','Rương thưởng','Chiến thắng','Cây lớn lên') }
 }
-foreach ($k in $mobile.Keys) { $e = $mobile[$k]; $e.mobile = $true; $e.cols = 4; $apps[$k] = $e }
+foreach ($k in $mobile.Keys) { $e = $mobile[$k]; $e.mobile = $true; $e.cols = 5; $apps[$k] = $e }
+# Thứ tự hiển thị (số thứ tự 1-based trong danh sách caps): onboarding và trang chủ lên đầu
+$mobOrder = @{
+  'scancalo'   = @(1,2,3,11) + @(4..10) + @(12..34)
+  'kinhnguyet' = @(1,2,3,4,5) + @(27..33) + @(24,25,26) + @(6..23)
+  'kinhthanh'  = @(32,33,4,1,2,3) + @(5..31)
+  'wallpaper'  = @(9,10,11,1) + @(2..8) + @(12)
+  'print'      = @(1,2,4,5,3) + @(6..35)
+  'game3'      = @(22,21,19,20,16) + @(1..15) + @(17,18) + @(23..27)
+}
 # 3 dự án showcase: dùng nguyên frame Figma (xếp dọc, cắt đoạn)
 $showcase = [ordered]@{ 'kimdong' = 'Kim Đồng Bookstore'; 'heartwise' = 'HeartWise'; 'fitapp' = 'FitApp' }
 
@@ -75,7 +84,11 @@ $css = @'
 .fg-item figcaption{margin-top:14px;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:var(--muted)}
 .fg-item figcaption b{color:var(--ink);font-weight:400;margin-right:10px}
 .fg-grid.cols3{grid-template-columns:repeat(3,minmax(0,1fr))}
-.fg-grid.cols4{grid-template-columns:repeat(4,minmax(0,1fr));gap:40px 22px}
+.fg-title.first{margin-top:2vh}
+.fg-grid.cols5{grid-template-columns:repeat(5,minmax(0,1fr));gap:36px 18px}
+@media(max-width:1200px){.fg-grid.cols5{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:900px){.fg-grid.cols5{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:560px){.fg-grid.cols5{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 12px}}
 .fg-item .fg-img.ph{aspect-ratio:9/19.5;background:#0D060A}
 .fg-item .fg-img.ph img{height:100%;object-fit:cover;object-position:top}
 @media(max-width:1100px){.fg-grid.cols4{grid-template-columns:repeat(3,minmax(0,1fr))}}
@@ -200,16 +213,19 @@ foreach ($slug in $apps.Keys) {
   $sb = New-Object System.Text.StringBuilder
   [void]$sb.AppendLine('<main class="case"><div class="fg-wrap">')
   $heroSrc = if ($a.mobile) { "assets/projects/$($mobMan.$slug.hero.f)" } elseif ($a.cols -eq 3) { "assets/projects/$slug-web2.webp" } else { "assets/projects/$slug-web.webp" }
-  [void]$sb.AppendLine(('<div class="fg-hero"><img src="{0}" width="{1}" height="{2}" loading="eager" decoding="async" alt="{3}"></div>' -f $heroSrc, $hw[0], $hw[1], $a.title))
-  [void]$sb.AppendLine('<h2 class="fg-title">Màn hình thiết kế</h2>')
-  $gcls = if ($a.mobile) { 'fg-grid cols4' } elseif ($a.cols -eq 3) { 'fg-grid cols3' } else { 'fg-grid' }
+  if (-not $a.mobile) { [void]$sb.AppendLine(('<div class="fg-hero"><img src="{0}" width="{1}" height="{2}" loading="eager" decoding="async" alt="{3}"></div>' -f $heroSrc, $hw[0], $hw[1], $a.title)) }
+  [void]$sb.AppendLine($(if ($a.mobile) { '<h2 class="fg-title first">Màn hình thiết kế</h2>' } else { '<h2 class="fg-title">Màn hình thiết kế</h2>' }))
+  $gcls = if ($a.mobile) { 'fg-grid cols5' } elseif ($a.cols -eq 3) { 'fg-grid cols3' } else { 'fg-grid' }
   [void]$sb.AppendLine("<div class=`"$gcls`">")
-  for ($i = 0; $i -lt $a.caps.Count; $i++) {
+  $seq = if ($a.mobile -and $mobOrder.Contains($slug)) { @($mobOrder[$slug] | ForEach-Object { $_ - 1 }) } else { @(0..($a.caps.Count - 1)) }
+  $pos = 0
+  foreach ($i in $seq) {
+    $pos++
     $cap = [System.Net.WebUtility]::HtmlEncode($a.caps[$i])
     $wcls = if ($a.mobile) { 'fg-img ph' } elseif ($a.win -and $a.win[$i]) { 'fg-img win' } else { 'fg-img' }
     if ($a.mobile) {
       $s = $mobMan.$slug.shots[$i]
-      [void]$sb.AppendLine(('<figure class="fg-item"><div class="' + $wcls + '"><img src="assets/projects/{0}" width="{1}" height="{2}" loading="lazy" decoding="async" alt="{3} — {4}"></div><figcaption><b>{5:00}</b>{4}</figcaption></figure>' -f $s.f, $s.w, $s.h, $a.title, $cap, ($i + 1)))
+      [void]$sb.AppendLine(('<figure class="fg-item"><div class="' + $wcls + '"><img src="assets/projects/{0}" width="{1}" height="{2}" loading="lazy" decoding="async" alt="{3} — {4}"></div><figcaption><b>{5:00}</b>{4}</figcaption></figure>' -f $s.f, $s.w, $s.h, $a.title, $cap, $pos))
     } elseif ($a.manifest) {
       $s = $lm.shots[$i]
       [void]$sb.AppendLine(('<figure class="fg-item"><div class="' + $wcls + '"><img src="assets/projects/{0}" data-full="assets/projects/{1}" width="{2}" height="{3}" loading="lazy" decoding="async" alt="{4} — {5}"></div><figcaption><b>{6:00}</b>{5}</figcaption></figure>' -f $s.t, $s.f, $s.tw, $s.th, $a.title, $cap, ($i + 1)))

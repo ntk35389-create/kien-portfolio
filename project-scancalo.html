@@ -83,7 +83,11 @@ footer a:hover{color:var(--accent)}
 .fg-item figcaption{margin-top:14px;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:var(--muted)}
 .fg-item figcaption b{color:var(--ink);font-weight:400;margin-right:10px}
 .fg-grid.cols3{grid-template-columns:repeat(3,minmax(0,1fr))}
-.fg-grid.cols4{grid-template-columns:repeat(4,minmax(0,1fr));gap:40px 22px}
+.fg-title.first{margin-top:2vh}
+.fg-grid.cols5{grid-template-columns:repeat(5,minmax(0,1fr));gap:36px 18px}
+@media(max-width:1200px){.fg-grid.cols5{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:900px){.fg-grid.cols5{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:560px){.fg-grid.cols5{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 12px}}
 .fg-item .fg-img.ph{aspect-ratio:9/19.5;background:#0D060A}
 .fg-item .fg-img.ph img{height:100%;object-fit:cover;object-position:top}
 @media(max-width:1100px){.fg-grid.cols4{grid-template-columns:repeat(3,minmax(0,1fr))}}
@@ -129,20 +133,19 @@ footer a:hover{color:var(--accent)}
   </dl>
 </header>
 <main class="case"><div class="fg-wrap">
-<div class="fg-hero"><img src="assets/projects/scancalo-thumb-v2.webp" width="1254" height="1254" loading="eager" decoding="async" alt="Flashcal"></div>
-<h2 class="fg-title">Màn hình thiết kế</h2>
-<div class="fg-grid cols4">
+<h2 class="fg-title first">Màn hình thiết kế</h2>
+<div class="fg-grid cols5">
 <figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-01.webp" width="360" height="796" loading="lazy" decoding="async" alt="Flashcal — Giới thiệu &#183; Theo d&#245;i dinh dưỡng"></div><figcaption><b>01</b>Giới thiệu &#183; Theo d&#245;i dinh dưỡng</figcaption></figure>
 <figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-02.webp" width="360" height="796" loading="lazy" decoding="async" alt="Flashcal — Giới thiệu &#183; Chụp ảnh m&#243;n ăn"></div><figcaption><b>02</b>Giới thiệu &#183; Chụp ảnh m&#243;n ăn</figcaption></figure>
 <figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-03.webp" width="360" height="796" loading="lazy" decoding="async" alt="Flashcal — Giới thiệu &#183; Lối sống l&#224;nh mạnh"></div><figcaption><b>03</b>Giới thiệu &#183; Lối sống l&#224;nh mạnh</figcaption></figure>
-<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-04.webp" width="360" height="796" loading="lazy" decoding="async" alt="Flashcal — Mức độ vận động"></div><figcaption><b>04</b>Mức độ vận động</figcaption></figure>
-<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-05.webp" width="360" height="793" loading="lazy" decoding="async" alt="Flashcal — Tốc độ đạt mục ti&#234;u &#183; Chậm v&#224; đều"></div><figcaption><b>05</b>Tốc độ đạt mục ti&#234;u &#183; Chậm v&#224; đều</figcaption></figure>
-<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-06.webp" width="360" height="793" loading="lazy" decoding="async" alt="Flashcal — Tốc độ đạt mục ti&#234;u &#183; Vừa phải"></div><figcaption><b>06</b>Tốc độ đạt mục ti&#234;u &#183; Vừa phải</figcaption></figure>
-<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-07.webp" width="360" height="793" loading="lazy" decoding="async" alt="Flashcal — Tốc độ đạt mục ti&#234;u &#183; Nhanh"></div><figcaption><b>07</b>Tốc độ đạt mục ti&#234;u &#183; Nhanh</figcaption></figure>
-<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-08.webp" width="360" height="793" loading="lazy" decoding="async" alt="Flashcal — Tốc độ đạt mục ti&#234;u &#183; Tăng cơ"></div><figcaption><b>08</b>Tốc độ đạt mục ti&#234;u &#183; Tăng cơ</figcaption></figure>
-<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-09.webp" width="360" height="796" loading="lazy" decoding="async" alt="Flashcal — C&#226;n nặng mục ti&#234;u"></div><figcaption><b>09</b>C&#226;n nặng mục ti&#234;u</figcaption></figure>
-<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-10.webp" width="360" height="793" loading="lazy" decoding="async" alt="Flashcal — Bật nhắc nhở"></div><figcaption><b>10</b>Bật nhắc nhở</figcaption></figure>
-<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-11.webp" width="360" height="1682" loading="lazy" decoding="async" alt="Flashcal — Trang chủ"></div><figcaption><b>11</b>Trang chủ</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-11.webp" width="360" height="1682" loading="lazy" decoding="async" alt="Flashcal — Trang chủ"></div><figcaption><b>04</b>Trang chủ</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-04.webp" width="360" height="796" loading="lazy" decoding="async" alt="Flashcal — Mức độ vận động"></div><figcaption><b>05</b>Mức độ vận động</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-05.webp" width="360" height="793" loading="lazy" decoding="async" alt="Flashcal — Tốc độ đạt mục ti&#234;u &#183; Chậm v&#224; đều"></div><figcaption><b>06</b>Tốc độ đạt mục ti&#234;u &#183; Chậm v&#224; đều</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-06.webp" width="360" height="793" loading="lazy" decoding="async" alt="Flashcal — Tốc độ đạt mục ti&#234;u &#183; Vừa phải"></div><figcaption><b>07</b>Tốc độ đạt mục ti&#234;u &#183; Vừa phải</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-07.webp" width="360" height="793" loading="lazy" decoding="async" alt="Flashcal — Tốc độ đạt mục ti&#234;u &#183; Nhanh"></div><figcaption><b>08</b>Tốc độ đạt mục ti&#234;u &#183; Nhanh</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-08.webp" width="360" height="793" loading="lazy" decoding="async" alt="Flashcal — Tốc độ đạt mục ti&#234;u &#183; Tăng cơ"></div><figcaption><b>09</b>Tốc độ đạt mục ti&#234;u &#183; Tăng cơ</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-09.webp" width="360" height="796" loading="lazy" decoding="async" alt="Flashcal — C&#226;n nặng mục ti&#234;u"></div><figcaption><b>10</b>C&#226;n nặng mục ti&#234;u</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-10.webp" width="360" height="793" loading="lazy" decoding="async" alt="Flashcal — Bật nhắc nhở"></div><figcaption><b>11</b>Bật nhắc nhở</figcaption></figure>
 <figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-12.webp" width="360" height="2328" loading="lazy" decoding="async" alt="Flashcal — Ph&#226;n t&#237;ch theo ng&#224;y"></div><figcaption><b>12</b>Ph&#226;n t&#237;ch theo ng&#224;y</figcaption></figure>
 <figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-13.webp" width="360" height="793" loading="lazy" decoding="async" alt="Flashcal — Chỉnh sửa hoạt động"></div><figcaption><b>13</b>Chỉnh sửa hoạt động</figcaption></figure>
 <figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/scancalo-m-14.webp" width="360" height="1081" loading="lazy" decoding="async" alt="Flashcal — Th&#234;m hoạt động"></div><figcaption><b>14</b>Th&#234;m hoạt động</figcaption></figure>

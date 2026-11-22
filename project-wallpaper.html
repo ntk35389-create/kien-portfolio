@@ -83,7 +83,11 @@ footer a:hover{color:var(--accent)}
 .fg-item figcaption{margin-top:14px;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:var(--muted)}
 .fg-item figcaption b{color:var(--ink);font-weight:400;margin-right:10px}
 .fg-grid.cols3{grid-template-columns:repeat(3,minmax(0,1fr))}
-.fg-grid.cols4{grid-template-columns:repeat(4,minmax(0,1fr));gap:40px 22px}
+.fg-title.first{margin-top:2vh}
+.fg-grid.cols5{grid-template-columns:repeat(5,minmax(0,1fr));gap:36px 18px}
+@media(max-width:1200px){.fg-grid.cols5{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:900px){.fg-grid.cols5{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:560px){.fg-grid.cols5{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 12px}}
 .fg-item .fg-img.ph{aspect-ratio:9/19.5;background:#0D060A}
 .fg-item .fg-img.ph img{height:100%;object-fit:cover;object-position:top}
 @media(max-width:1100px){.fg-grid.cols4{grid-template-columns:repeat(3,minmax(0,1fr))}}
@@ -129,20 +133,19 @@ footer a:hover{color:var(--accent)}
   </dl>
 </header>
 <main class="case"><div class="fg-wrap">
-<div class="fg-hero"><img src="assets/projects/wallpaper-mock4.webp" width="1254" height="1254" loading="eager" decoding="async" alt="Depth Wallpaper"></div>
-<h2 class="fg-title">Màn hình thiết kế</h2>
-<div class="fg-grid cols4">
-<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/wallpaper-m-01.webp" width="402" height="1638" loading="lazy" decoding="async" alt="Depth Wallpaper — Bộ sưu tập"></div><figcaption><b>01</b>Bộ sưu tập</figcaption></figure>
-<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/wallpaper-m-02.webp" width="402" height="1262" loading="lazy" decoding="async" alt="Depth Wallpaper — Danh s&#225;ch h&#236;nh nền"></div><figcaption><b>02</b>Danh s&#225;ch h&#236;nh nền</figcaption></figure>
-<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/wallpaper-m-03.webp" width="402" height="871" loading="lazy" decoding="async" alt="Depth Wallpaper — Xem trước"></div><figcaption><b>03</b>Xem trước</figcaption></figure>
-<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/wallpaper-m-04.webp" width="402" height="1151" loading="lazy" decoding="async" alt="Depth Wallpaper — H&#236;nh nền &#183; Y&#234;u th&#237;ch"></div><figcaption><b>04</b>H&#236;nh nền &#183; Y&#234;u th&#237;ch</figcaption></figure>
-<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/wallpaper-m-05.webp" width="402" height="1311" loading="lazy" decoding="async" alt="Depth Wallpaper — H&#236;nh nền &#183; Tất cả"></div><figcaption><b>05</b>H&#236;nh nền &#183; Tất cả</figcaption></figure>
-<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/wallpaper-m-06.webp" width="402" height="874" loading="lazy" decoding="async" alt="Depth Wallpaper — H&#236;nh nền &#183; Chưa c&#243; y&#234;u th&#237;ch"></div><figcaption><b>06</b>H&#236;nh nền &#183; Chưa c&#243; y&#234;u th&#237;ch</figcaption></figure>
-<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/wallpaper-m-07.webp" width="402" height="1100" loading="lazy" decoding="async" alt="Depth Wallpaper — C&#224;i đặt"></div><figcaption><b>07</b>C&#224;i đặt</figcaption></figure>
-<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/wallpaper-m-08.webp" width="402" height="874" loading="lazy" decoding="async" alt="Depth Wallpaper — Chọn ng&#244;n ngữ"></div><figcaption><b>08</b>Chọn ng&#244;n ngữ</figcaption></figure>
-<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/wallpaper-m-09.webp" width="402" height="883" loading="lazy" decoding="async" alt="Depth Wallpaper — Giới thiệu 1"></div><figcaption><b>09</b>Giới thiệu 1</figcaption></figure>
-<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/wallpaper-m-10.webp" width="402" height="883" loading="lazy" decoding="async" alt="Depth Wallpaper — Giới thiệu 2"></div><figcaption><b>10</b>Giới thiệu 2</figcaption></figure>
-<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/wallpaper-m-11.webp" width="402" height="874" loading="lazy" decoding="async" alt="Depth Wallpaper — Giới thiệu 3"></div><figcaption><b>11</b>Giới thiệu 3</figcaption></figure>
+<h2 class="fg-title first">Màn hình thiết kế</h2>
+<div class="fg-grid cols5">
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/wallpaper-m-09.webp" width="402" height="883" loading="lazy" decoding="async" alt="Depth Wallpaper — Giới thiệu 1"></div><figcaption><b>01</b>Giới thiệu 1</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/wallpaper-m-10.webp" width="402" height="883" loading="lazy" decoding="async" alt="Depth Wallpaper — Giới thiệu 2"></div><figcaption><b>02</b>Giới thiệu 2</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/wallpaper-m-11.webp" width="402" height="874" loading="lazy" decoding="async" alt="Depth Wallpaper — Giới thiệu 3"></div><figcaption><b>03</b>Giới thiệu 3</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/wallpaper-m-01.webp" width="402" height="1638" loading="lazy" decoding="async" alt="Depth Wallpaper — Bộ sưu tập"></div><figcaption><b>04</b>Bộ sưu tập</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/wallpaper-m-02.webp" width="402" height="1262" loading="lazy" decoding="async" alt="Depth Wallpaper — Danh s&#225;ch h&#236;nh nền"></div><figcaption><b>05</b>Danh s&#225;ch h&#236;nh nền</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/wallpaper-m-03.webp" width="402" height="871" loading="lazy" decoding="async" alt="Depth Wallpaper — Xem trước"></div><figcaption><b>06</b>Xem trước</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/wallpaper-m-04.webp" width="402" height="1151" loading="lazy" decoding="async" alt="Depth Wallpaper — H&#236;nh nền &#183; Y&#234;u th&#237;ch"></div><figcaption><b>07</b>H&#236;nh nền &#183; Y&#234;u th&#237;ch</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/wallpaper-m-05.webp" width="402" height="1311" loading="lazy" decoding="async" alt="Depth Wallpaper — H&#236;nh nền &#183; Tất cả"></div><figcaption><b>08</b>H&#236;nh nền &#183; Tất cả</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/wallpaper-m-06.webp" width="402" height="874" loading="lazy" decoding="async" alt="Depth Wallpaper — H&#236;nh nền &#183; Chưa c&#243; y&#234;u th&#237;ch"></div><figcaption><b>09</b>H&#236;nh nền &#183; Chưa c&#243; y&#234;u th&#237;ch</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/wallpaper-m-07.webp" width="402" height="1100" loading="lazy" decoding="async" alt="Depth Wallpaper — C&#224;i đặt"></div><figcaption><b>10</b>C&#224;i đặt</figcaption></figure>
+<figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/wallpaper-m-08.webp" width="402" height="874" loading="lazy" decoding="async" alt="Depth Wallpaper — Chọn ng&#244;n ngữ"></div><figcaption><b>11</b>Chọn ng&#244;n ngữ</figcaption></figure>
 <figure class="fg-item"><div class="fg-img ph"><img src="assets/projects/wallpaper-m-12.webp" width="402" height="2394" loading="lazy" decoding="async" alt="Depth Wallpaper — Studio chỉnh sửa"></div><figcaption><b>12</b>Studio chỉnh sửa</figcaption></figure>
 </div></div></main>
 <nav class="pager" aria-label="Dự án khác">
