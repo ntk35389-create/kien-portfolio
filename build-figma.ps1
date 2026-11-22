@@ -17,7 +17,7 @@ Add-P 'scancalo'  @{ source='figma'; cover='scancalo-thumb-v2.webp'; cat='apps';
   desc='Ứng dụng theo dõi dinh dưỡng và calo: quét món ăn bằng camera, thêm hoạt động, check-in hằng ngày, công thức nấu ăn, tủ lạnh, chuỗi streak, mục tiêu uống nước và gói trả phí trong ứng dụng.'; tags=@('Mobile App','User flow','Health') }
 Add-P 'kinhnguyet' @{ source='figma'; cover='kinhnguyet-mock.webp'; cat='apps'; title='Flovia'; tag='Women''s Health · Mobile App'; color='#FF6B8B'; platform='Mobile App'; kind='Ứng dụng theo dõi chu kỳ';
   desc='Ứng dụng theo dõi chu kỳ kinh nguyệt: onboarding, trang chủ dạng lịch, phân tích chu kỳ, ghi chú hằng ngày, trò chuyện với trợ lý AI và các thiết lập cá nhân.'; tags=@('Mobile App','Lịch','AI chat') }
-Add-P 'kinhthanh' @{ source='figma'; cover='kinhthanh-mock4.webp'; cat='apps'; title='Holly Bible'; tag='Lifestyle · Mobile App'; color='#C9A66B'; platform='Mobile App'; kind='Ứng dụng đọc và cầu nguyện';
+Add-P 'kinhthanh' @{ source='figma'; cover='kinhthanh-mock4.webp'; cat='apps'; title='Holy Bible'; tag='Lifestyle · Mobile App'; color='#C9A66B'; platform='Mobile App'; kind='Ứng dụng đọc và cầu nguyện';
   desc='Ứng dụng đồng hành đời sống tâm linh: onboarding, trang chủ, kế hoạch đọc, bài quiz, lời cầu nguyện cá nhân hóa và trang hồ sơ.'; tags=@('Mobile App','Onboarding','Cá nhân hóa') }
 Add-P 'wallpaper' @{ source='figma'; cover='wallpaper-mock4.webp'; cat='apps'; title='Depth Wallpaper'; tag='Personalization · Mobile App'; color='#8B7CFF'; platform='Mobile App'; kind='Ứng dụng hình nền';
   desc='Ứng dụng hình nền: duyệt kho hình, bộ sưu tập, studio chỉnh sửa với hiệu ứng chiều sâu, đổi font đồng hồ và các thiết lập.'; tags=@('Mobile App','Studio','Personalization') }
@@ -33,12 +33,12 @@ Add-P 'game3'     @{ source='figma'; cover='game3-mock5.webp'; cat='apps'; title
   desc='Game ghép 3 ô giống nhau thư giãn: dọn sạch bảng, kiếm nước để gieo hạt và làm khu vườn nở rộ. Thiết kế UI/UX toàn bộ game, đã phát hành trên Google Play.'; tags=@('Game','Mobile','Tutorial') }
 
 # --- Web App ---
-Add-P 'vime'      @{ source='behance'; cat='webapps'; title='VIME × TechPro'; tag='Web App · Dashboard'; color='#8B7CFF'; desc='Nền tảng quản lý phòng họp và lịch họp cho doanh nghiệp: đặt phòng, phê duyệt, check-in và báo cáo hiệu suất sử dụng.' }
-Add-P 'vcb'       @{ source='behance'; cat='webapps'; title='Vietcombank TCHM'; tag='Web App · Quản lý nội bộ'; color='#3DBC8D'; desc='Hệ thống quản lý lưu trú cho cán bộ nhân viên Vietcombank: check-in, sơ đồ phòng, kế hoạch theo quý và đánh giá dịch vụ.' }
-Add-P 'pcu'       @{ source='behance'; cat='webapps'; title='PCU × TDI Group'; tag='Web App · Enterprise'; color='#FF5C5C'; desc='Số hóa quy trình khối cung ứng: yêu cầu mua sắm, so sánh báo giá, phê duyệt vật tư, quản lý nhà cung cấp và tồn kho.' }
-Add-P 'vbim'      @{ source='figma'; cat='webapps'; title='VBIM × TDI Group'; tag='Web App · E-learning'; color='#2F6BFF'; platform='Web App (desktop)'; kind='Nền tảng học tập trực tuyến';
+Add-P 'vime'      @{ source='behance'; cover='vime-web.webp'; cat='webapps'; title='VIME × TechPro'; tag='Web App · Dashboard'; color='#8B7CFF'; desc='Nền tảng quản lý phòng họp và lịch họp cho doanh nghiệp: đặt phòng, phê duyệt, check-in và báo cáo hiệu suất sử dụng.' }
+Add-P 'vcb'       @{ source='behance'; cover='vcb-web.webp'; cat='webapps'; title='Vietcombank TCHM'; tag='Web App · Quản lý nội bộ'; color='#3DBC8D'; desc='Hệ thống quản lý lưu trú cho cán bộ nhân viên Vietcombank: check-in, sơ đồ phòng, kế hoạch theo quý và đánh giá dịch vụ.' }
+Add-P 'pcu'       @{ source='behance'; cover='pcu-web.webp'; cat='webapps'; title='PCU × TDI Group'; tag='Web App · Enterprise'; color='#FF5C5C'; desc='Số hóa quy trình khối cung ứng: yêu cầu mua sắm, so sánh báo giá, phê duyệt vật tư, quản lý nhà cung cấp và tồn kho.' }
+Add-P 'vbim'      @{ source='figma'; cover='vbim-web.webp'; cat='webapps'; title='VBIM × TDI Group'; tag='Web App · E-learning'; color='#2F6BFF'; platform='Web App (desktop)'; kind='Nền tảng học tập trực tuyến';
   desc='Nền tảng học tập trực tuyến: đăng nhập, trang chủ có trợ lý trò chuyện, danh sách và chi tiết khóa học, bài học kèm bài kiểm tra cuối khóa, kho cá nhân để lưu video và thư viện tài liệu.'; tags=@('Web App','E-learning','Dashboard') }
-Add-P 'thinkiz'   @{ source='behance'; cat='webapps'; title='Thinkiz × Effi AI'; tag='Web App · AI Workspace'; color='#5EA8FF'; desc='Agentic workspace cho cộng tác người và AI: canvas dự án nơi các AI agent tự phân rã tác vụ, nghiên cứu và tạo nội dung.' }
+Add-P 'thinkiz'   @{ source='behance'; cover='thinkiz-web.webp'; cat='webapps'; title='Thinkiz × Effi AI'; tag='Web App · AI Workspace'; color='#5EA8FF'; desc='Agentic workspace cho cộng tác người và AI: canvas dự án nơi các AI agent tự phân rã tác vụ, nghiên cứu và tạo nội dung.' }
 
 # --- Website ---
 Add-P 'forever'   @{ source='behance'; cat='websites'; title='Forever Young'; tag='Entertainment · Corporate Site'; color='#FF9EC4'; desc='Website công ty quản lý KOL, ca sĩ và nhạc sĩ hàng đầu Việt Nam, thẩm mỹ neon đen hồng.' }
