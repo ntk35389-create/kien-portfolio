@@ -25,6 +25,8 @@ Add-P 'print'     @{ source='figma'; cover='print-mock4.webp'; cat='apps'; title
   desc='Ứng dụng in tài liệu từ điện thoại: hướng dẫn kết nối máy in qua Wi-Fi, in tài liệu, ảnh, trang web và email, bộ công cụ PDF và Print Studio.'; tags=@('Mobile App','Utility','PDF') }
 Add-P 'autogara'  @{ source='figma'; cover='autogara-mock4.webp'; cat='apps'; title='AUTO GARA'; tag='Mobile App · Quản lý gara'; color='#E5484D'; platform='Mobile App (hệ thống quản lý gara)'; kind='Hệ thống quản lý quy trình gara';
   desc='Hệ thống quản lý quy trình gara ô tô: tiếp nhận xe, lệnh sửa chữa, báo giá, phát sinh, phiếu xuất kho, hóa đơn, thanh toán và hồ sơ khách hàng.'; tags=@('Hệ thống','Quy trình','Mobile') }
+Add-P 'giapha'    @{ source='figma'; cover='giapha-mock4.webp'; cat='apps'; title='Tâm Hương'; tag='Gia phả · Mobile App'; color='#C8963E'; platform='App di động và trang quản lý web'; kind='App gia phả kết hợp dịch vụ mộ phần';
+  desc='Ứng dụng gia phả kết hợp dịch vụ mộ phần: cây phả hệ, kênh gia đình, lịch giỗ, bản đồ và thông tin mộ phần, gói dịch vụ, trò chuyện chung, cùng trang quản lý dành cho đơn vị cung cấp dịch vụ.'; tags=@('Mobile App','Gia phả','Dịch vụ') }
 Add-P 'game2'     @{ source='figma'; cover='game2-mock.webp'; cat='apps'; title='Game 2'; tag='Mobile Game · UI/UX'; color='#4CC76A'; platform='Mobile Game'; kind='Thiết kế UI/UX game';
   desc='Thiết kế giao diện game di động: đặt hàng, level khó, hướng dẫn vật phẩm ẩn, hiệu ứng nhận thưởng, kho đồ và bộ phần tử giao diện.'; tags=@('Game','Mobile','UI kit') }
 Add-P 'game3'     @{ source='figma'; cover='game3-mock.webp'; cat='apps'; title='Game 3'; tag='Mobile Game · UI/UX'; color='#FF7A59'; platform='Mobile Game (điện thoại và iPad)'; kind='Thiết kế UI/UX game';
