@@ -28,9 +28,9 @@ Add-P 'autogara'  @{ source='figma'; cover='autogara-mock4.webp'; cat='apps'; ti
 Add-P 'giapha'    @{ source='figma'; cover='giapha-mock4.webp'; cat='apps'; title='Tâm Hương'; tag='Gia phả · Mobile App'; color='#C8963E'; platform='App di động và trang quản lý web'; kind='App gia phả kết hợp dịch vụ mộ phần';
   desc='Ứng dụng gia phả kết hợp dịch vụ mộ phần: cây phả hệ, kênh gia đình, lịch giỗ, bản đồ và thông tin mộ phần, gói dịch vụ, trò chuyện chung, cùng trang quản lý dành cho đơn vị cung cấp dịch vụ.'; tags=@('Mobile App','Gia phả','Dịch vụ') }
 Add-P 'game2'     @{ source='figma'; cover='game2-mock5.webp'; cat='apps'; title='Color Sort: Streak Puzzle'; tag='Mobile Game · UI/UX'; color='#4CC76A'; platform='Mobile Game'; kind='Thiết kế UI/UX game';
-  desc='Thiết kế giao diện game di động: đặt hàng, level khó, hướng dẫn vật phẩm ẩn, hiệu ứng nhận thưởng, kho đồ và bộ phần tử giao diện.'; tags=@('Game','Mobile','UI kit') }
-Add-P 'game3'     @{ source='figma'; cover='game3-mock5.webp'; cat='apps'; title='Title Bloom'; tag='Mobile Game · UI/UX'; color='#FF7A59'; platform='Mobile Game (điện thoại và iPad)'; kind='Thiết kế UI/UX game';
-  desc='Thiết kế giao diện game di động: trạng thái tương tác ở màn hình chính, gameplay, hướng dẫn đầu game, bộ sưu tập, cửa hàng, hiệu ứng trợ giúp và màn kết thúc.'; tags=@('Game','Mobile','Tutorial') }
+  desc='Game xếp hoa thư giãn: kéo thả hoa trên dây leo, lấp đầy chậu và hoàn thành đơn đặt hoa để nhận thưởng. Thiết kế UI/UX toàn bộ game, đã phát hành trên Google Play.'; tags=@('Game','Mobile','UI kit') }
+Add-P 'game3'     @{ source='figma'; cover='game3-mock5.webp'; cat='apps'; title='Tile Bloom'; tag='Mobile Game · UI/UX'; color='#FF7A59'; platform='Mobile Game (điện thoại và iPad)'; kind='Thiết kế UI/UX game';
+  desc='Game ghép 3 ô giống nhau thư giãn: dọn sạch bảng, kiếm nước để gieo hạt và làm khu vườn nở rộ. Thiết kế UI/UX toàn bộ game, đã phát hành trên Google Play.'; tags=@('Game','Mobile','Tutorial') }
 
 # --- Web App ---
 Add-P 'vime'      @{ source='behance'; cat='webapps'; title='VIME × TechPro'; tag='Web App · Dashboard'; color='#8B7CFF'; desc='Nền tảng quản lý phòng họp và lịch họp cho doanh nghiệp: đặt phòng, phê duyệt, check-in và báo cáo hiệu suất sử dụng.' }
