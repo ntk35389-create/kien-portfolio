@@ -407,7 +407,7 @@ body.has-cursor,body.has-cursor *{cursor:none!important}
     document.querySelectorAll('.web-media .wm-inner').forEach(function(inner){
       gsap.fromTo(inner,{yPercent:-7},{yPercent:7,ease:'none',scrollTrigger:{trigger:inner.closest('.web-media'),start:'top bottom',end:'bottom top',scrub:true}});
     });
-    gsap.utils.toArray('.sec-head,.app-card,.web-item,.sys-row,.exp-row,.chips').forEach(function(el){
+    gsap.utils.toArray('.sec-head:not(#apps .sec-head):not(#webs .sec-head),.sys-row,.exp-row,.chips').forEach(function(el){
       gsap.from(el,{y:70,opacity:0,duration:1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}});
     });
     document.querySelectorAll('.stat-num').forEach(function(el){
@@ -429,6 +429,69 @@ body.has-cursor,body.has-cursor *{cursor:none!important}
   }catch(e){console.warn('fx',e);}
 })();
 
+/* ===== GSAP nâng cao: Mobile App + Landing Page (tuỳ chọn) ===== */
+(function(){
+  if(!(window.gsap&&window.ScrollTrigger))return;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  try{
+    gsap.registerPlugin(ScrollTrigger);
+    var mm=gsap.matchMedia();
+
+    /* tiêu đề mục: lộ chữ từ dưới lên + đường kẻ eyebrow */
+    ['#apps','#webs'].forEach(function(id){
+      var h=document.querySelector(id+' .sec-head h2'),p=document.querySelector(id+' .sec-head p'),e=document.querySelector(id+' .eyebrow');
+      if(!h)return;
+      var tl=gsap.timeline({scrollTrigger:{trigger:id+' .sec-head',start:'top 82%'}});
+      if(e)tl.from(e,{opacity:0,x:-40,duration:.7,ease:'power3.out'});
+      tl.fromTo(h,{clipPath:'inset(0 0 105% 0)',yPercent:55},{clipPath:'inset(0 0 -12% 0)',yPercent:0,duration:1.2,ease:'power4.out'},e?'-=.4':0);
+      if(p)tl.from(p,{opacity:0,y:40,duration:.9,ease:'power3.out'},'-=.7');
+      var sa=document.querySelector(id+' .see-all');if(sa)tl.from(sa,{opacity:0,y:24,duration:.7,ease:'power3.out'},'-=.5');
+    });
+
+    /* ===== MOBILE APP: thẻ vào theo lớp 3D, ảnh lộ dần, nội dung nổi từng dòng ===== */
+    var cards=gsap.utils.toArray('#apps .app-card');
+    cards.forEach(function(card,i){
+      var img=card.querySelector('.ac-media img'),media=card.querySelector('.ac-media'),body=card.querySelectorAll('.ac-tag,.ac-name,.ac-desc,.ac-cta');
+      var tl=gsap.timeline({scrollTrigger:{trigger:card,start:'top 86%'}});
+      tl.from(card,{y:140,rotateX:-16,scale:.9,opacity:0,transformPerspective:1000,transformOrigin:'50% 100%',duration:1.25,ease:'power4.out',delay:(i%3)*.12});
+      tl.fromTo(media,{clipPath:'inset(0 0 100% 0)'},{clipPath:'inset(0 0 0% 0)',duration:1.1,ease:'power3.inOut'},'-=1.0');
+      tl.from(img,{scale:1.45,duration:1.6,ease:'power3.out'},'-=1.1');
+      tl.from(body,{y:34,opacity:0,duration:.8,stagger:.09,ease:'power3.out'},'-=.8');
+      /* parallax ảnh trong thẻ theo cuộn */
+      gsap.fromTo(img,{yPercent:-7},{yPercent:7,ease:'none',scrollTrigger:{trigger:card,start:'top bottom',end:'bottom top',scrub:true}});
+    });
+
+    /* ===== LANDING PAGE: ảnh mở như màn trập, nội dung trượt ngược chiều, đường kẻ chạy ===== */
+    gsap.utils.toArray('#webs .web-item').forEach(function(item,i){
+      var media=item.querySelector('.web-media'),img=item.querySelector('.web-media img'),info=item.querySelector('.web-info'),
+          parts=info?info.querySelectorAll('.web-tagrow,.web-name,.web-desc,.web-cta'):[],dir=(i%2===0)?1:-1;
+      var tl=gsap.timeline({scrollTrigger:{trigger:item,start:'top 78%'}});
+      tl.fromTo(media,{clipPath:dir>0?'inset(0 100% 0 0 round 18px)':'inset(0 0 0 100% round 18px)'},{clipPath:'inset(0 0% 0 0% round 18px)',duration:1.3,ease:'power4.inOut'});
+      tl.from(img,{scale:1.5,duration:1.7,ease:'power3.out'},'-=1.2');
+      tl.from(parts,{x:70*dir*-1,opacity:0,duration:.9,stagger:.1,ease:'power3.out'},'-=1.0');
+      /* đường kẻ dưới mỗi mục chạy theo cuộn */
+      item.style.borderBottomColor='transparent';
+      var line=document.createElement('span');line.style.cssText='position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--line);transform-origin:'+(dir>0?'left':'right')+';transform:scaleX(0)';
+      item.style.position='relative';item.appendChild(line);
+      gsap.to(line,{scaleX:1,ease:'none',scrollTrigger:{trigger:item,start:'top 70%',end:'bottom 70%',scrub:true}});
+      /* tên dự án đổi sắc khi tới giữa màn hình */
+      var nm=item.querySelector('.web-name');
+      if(nm)ScrollTrigger.create({trigger:item,start:'top 55%',end:'bottom 45%',onToggle:function(s){gsap.to(nm,{color:s.isActive?'var(--accent)':'#FBF2F4',duration:.5});}});
+    });
+
+    /* thẻ nghiêng nhẹ theo tốc độ cuộn (chỉ desktop) */
+    mm.add('(min-width: 861px)',function(){
+      var targets=gsap.utils.toArray('#apps .app-card,#webs .web-media');
+      var set=gsap.quickTo?targets.map(function(el){return gsap.quickTo(el,'skewY',{duration:.5,ease:'power3.out'});}):null;
+      ScrollTrigger.create({trigger:'#apps',start:'top bottom',endTrigger:'#webs',end:'bottom top',onUpdate:function(self){
+        var v=gsap.utils.clamp(-3,3,self.getVelocity()/-450);
+        if(set)set.forEach(function(q){q(v);});
+      }});
+    });
+
+    window.addEventListener('load',function(){ScrollTrigger.refresh();});
+  }catch(e){console.warn('fx2',e);}
+})();
 /* ===== floating preview (vanilla, tuỳ chọn) ===== */
 (function(){
   try{
