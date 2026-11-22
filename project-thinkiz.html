@@ -57,6 +57,26 @@ footer a:hover{color:var(--accent)}
 .fg-item .fg-img{border-radius:16px;overflow:hidden;background:#0D060A;border:1px solid var(--line)}
 .fg-item figcaption{margin-top:14px;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:var(--muted)}
 .fg-item figcaption b{color:var(--ink);font-weight:400;margin-right:10px}
+.fg-item .fg-img{cursor:zoom-in;transition:transform .35s,border-color .35s}
+.fg-item:hover .fg-img{transform:translateY(-4px);border-color:var(--accent)}
+.fg-item .fg-img:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.lb{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:3vh 3vw;background:rgba(8,4,6,.82);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.lb.open{display:flex}
+.lb-box{width:min(1180px,100%);max-height:100%;display:flex;flex-direction:column;background:#150A0F;border:1px solid var(--line);border-radius:18px;padding:18px 18px 16px;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.lb-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:14px}
+.lb-name{font-weight:600;font-size:1rem}
+.lb-sub{font-family:var(--mono);font-size:.74rem;letter-spacing:.05em;color:var(--muted);margin-top:4px}
+.lb-tools{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.lb-btn{font-family:var(--mono);font-size:.78rem;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:10px;padding:8px 13px;cursor:pointer;line-height:1;transition:border-color .25s,color .25s}
+.lb-btn:hover{border-color:var(--accent);color:var(--accent)}
+.lb-btn:disabled{opacity:.35;cursor:default}
+.lb-zoom{min-width:3.4em;text-align:center;font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+.lb-stage{flex:1;min-height:0;overflow:auto;border-radius:12px;background:#0D060A;border:1px solid var(--line);cursor:zoom-in;touch-action:pan-x pan-y;overscroll-behavior:contain}
+.lb-stage.z{cursor:grab}
+.lb-stage.drag{cursor:grabbing;user-select:none}
+.lb-stage img{display:block;max-width:none;height:auto;margin:0 auto;-webkit-user-drag:none;user-select:none}
+.lb-foot{display:flex;justify-content:space-between;margin-top:14px}
+@media(max-width:700px){.lb{padding:0}.lb-box{width:100%;height:100%;border-radius:0;padding:12px}.lb-tools .lb-btn{padding:8px 10px}}
 @media(max-width:700px){.fg-grid{grid-template-columns:1fr;gap:32px}.fg-hero,.fg-item .fg-img{border-radius:12px}}
 </style>
 </head>
@@ -96,5 +116,86 @@ footer a:hover{color:var(--accent)}
   <a href="https://www.behance.net/croster1510" target="_blank" rel="noopener">Behance</a>
 </footer>
 
+<!--lb-->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Xem màn hình">
+  <div class="lb-box">
+    <div class="lb-head">
+      <div><div class="lb-name" id="lbName"></div><div class="lb-sub" id="lbSub"></div></div>
+      <div class="lb-tools">
+        <button class="lb-btn" id="lbOut" aria-label="Thu nhỏ">−</button>
+        <span class="lb-zoom" id="lbZoom">100%</span>
+        <button class="lb-btn" id="lbIn" aria-label="Phóng to">+</button>
+        <button class="lb-btn" id="lbFit" aria-label="Vừa khung">Vừa khung</button>
+        <button class="lb-btn" id="lbClose" aria-label="Đóng">✕</button>
+      </div>
+    </div>
+    <div class="lb-stage" id="lbStage"><img id="lbImg" alt=""></div>
+    <div class="lb-foot">
+      <button class="lb-btn" id="lbPrev">← Trước</button>
+      <button class="lb-btn" id="lbNext">Sau →</button>
+    </div>
+  </div>
+</div>
+<!--/lb-->
+<script id="fgjs">
+(function(){
+  var items=[].slice.call(document.querySelectorAll('.fg-item')); if(!items.length)return;
+  var lb=document.getElementById('lb'),st=document.getElementById('lbStage'),im=document.getElementById('lbImg');
+  var nm=document.getElementById('lbName'),sb=document.getElementById('lbSub'),zl=document.getElementById('lbZoom');
+  var proj=(document.querySelector('h1')||{}).textContent||'';
+  var cur=0,z=1,MAX=4,MIN=1,lastFocus=null;
+  function setZ(nz,cx,cy){
+    nz=Math.max(MIN,Math.min(MAX,nz)); if(nz===z)return;
+    var r=st.getBoundingClientRect(); cx=cx==null?r.width/2:cx; cy=cy==null?r.height/2:cy;
+    var px=(st.scrollLeft+cx)/(im.offsetWidth||1), py=(st.scrollTop+cy)/(im.offsetHeight||1);
+    z=nz; im.style.width=(z*100)+'%'; st.classList.toggle('z',z>1); zl.textContent=Math.round(z*100)+'%';
+    st.scrollLeft=px*im.offsetWidth-cx; st.scrollTop=py*im.offsetHeight-cy;
+  }
+  function show(i){
+    cur=(i+items.length)%items.length; var it=items[cur], src=it.querySelector('img');
+    im.src=src.currentSrc||src.src; im.alt=src.alt; im.style.width='100%'; z=1; st.classList.remove('z'); zl.textContent='100%';
+    st.scrollTop=0; st.scrollLeft=0;
+    nm.textContent=(it.querySelector('figcaption')||{}).textContent.replace(/^\d+/,'');
+    sb.textContent=proj+' · '+(cur+1)+' / '+items.length;
+  }
+  function open(i){ lastFocus=document.activeElement; show(i); lb.classList.add('open'); document.body.style.overflow='hidden'; document.getElementById('lbClose').focus(); }
+  function close(){ lb.classList.remove('open'); document.body.style.overflow=''; if(lastFocus&&lastFocus.focus)lastFocus.focus(); }
+  items.forEach(function(it,i){
+    var box=it.querySelector('.fg-img'); box.setAttribute('role','button'); box.setAttribute('tabindex','0'); box.setAttribute('aria-label','Xem lớn: '+it.querySelector('figcaption').textContent);
+    box.addEventListener('click',function(){open(i)});
+    box.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(i)}});
+  });
+  document.getElementById('lbClose').onclick=close;
+  document.getElementById('lbPrev').onclick=function(){show(cur-1)};
+  document.getElementById('lbNext').onclick=function(){show(cur+1)};
+  document.getElementById('lbIn').onclick=function(){setZ(z*1.5)};
+  document.getElementById('lbOut').onclick=function(){setZ(z/1.5)};
+  document.getElementById('lbFit').onclick=function(){setZ(1)};
+  lb.addEventListener('click',function(e){if(e.target===lb)close()});
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open'))return;
+    if(e.key==='Escape')close(); else if(e.key==='ArrowLeft')show(cur-1); else if(e.key==='ArrowRight')show(cur+1);
+    else if(e.key==='+'||e.key==='=')setZ(z*1.5); else if(e.key==='-')setZ(z/1.5); else if(e.key==='0')setZ(1);
+  });
+  st.addEventListener('wheel',function(e){
+    if(!(e.ctrlKey||e.metaKey))return; e.preventDefault();
+    var r=st.getBoundingClientRect(); setZ(z*(e.deltaY<0?1.15:1/1.15),e.clientX-r.left,e.clientY-r.top);
+  },{passive:false});
+  st.addEventListener('dblclick',function(e){var r=st.getBoundingClientRect(); setZ(z>1?1:2.2,e.clientX-r.left,e.clientY-r.top)});
+  var pts={},d0=0,z0=1,drag=null;
+  st.addEventListener('pointerdown',function(e){
+    pts[e.pointerId]=e; var k=Object.keys(pts);
+    if(k.length===2){var a=pts[k[0]],b=pts[k[1]]; d0=Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY); z0=z; drag=null;}
+    else if(e.pointerType==='mouse'&&z>1){drag={x:e.clientX,y:e.clientY,l:st.scrollLeft,t:st.scrollTop}; st.classList.add('drag'); st.setPointerCapture(e.pointerId);}
+  });
+  st.addEventListener('pointermove',function(e){
+    if(pts[e.pointerId])pts[e.pointerId]=e; var k=Object.keys(pts);
+    if(k.length===2&&d0){var a=pts[k[0]],b=pts[k[1]],r=st.getBoundingClientRect(); setZ(z0*Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY)/d0,(a.clientX+b.clientX)/2-r.left,(a.clientY+b.clientY)/2-r.top);}
+    else if(drag){st.scrollLeft=drag.l-(e.clientX-drag.x); st.scrollTop=drag.t-(e.clientY-drag.y);}
+  });
+  function up(e){delete pts[e.pointerId]; if(Object.keys(pts).length<2)d0=0; if(drag){drag=null; st.classList.remove('drag');}}
+  st.addEventListener('pointerup',up); st.addEventListener('pointercancel',up);
+})();
+</script>
 </body>
 </html>
