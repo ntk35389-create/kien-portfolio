@@ -45,7 +45,7 @@ Add-P 'forever'   @{ source='behance'; cat='websites'; title='Forever Young'; ta
 Add-P 'ielts'     @{ source='behance'; cat='websites'; title='IELTS Lab'; tag='Education · Landing Page'; color='#6FA8FF'; desc='Website trung tâm luyện thi IELTS: phương pháp học, lộ trình khóa học, đội ngũ giảng viên và bảng vàng thành tích.' }
 
 $cats = [ordered]@{
-  apps     = @{ title='Mobile App'; ghost='Dự án'; file='apps.html';     lead='Các ứng dụng di động tôi thiết kế: từ nghiên cứu vấn đề, user flow, style guide đến hệ thống giao diện hoàn chỉnh. Bấm vào từng dự án để xem chi tiết.'; anchor='apps' }
+  apps     = @{ title='Mobile App/Game'; ghost='Dự án'; file='apps.html';     lead='Các ứng dụng di động tôi thiết kế: từ nghiên cứu vấn đề, user flow, style guide đến hệ thống giao diện hoàn chỉnh. Bấm vào từng dự án để xem chi tiết.'; anchor='apps' }
   webapps  = @{ title='Web App'; ghost='/ Hệ thống'; file='webapps.html'; lead='Các nền tảng và hệ thống quản trị doanh nghiệp tôi thiết kế. Bấm vào từng dự án để xem các màn hình chính.'; anchor='systems' }
   websites = @{ title='Website'; ghost='/ Landing page'; file='websites.html'; lead='Website giới thiệu doanh nghiệp và dịch vụ. Bấm vào từng dự án để xem toàn bộ thiết kế.'; anchor='webs' }
 }

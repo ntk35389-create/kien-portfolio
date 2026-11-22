@@ -3,9 +3,9 @@ $root = Split-Path -Parent $MyInvocation.MyCommand.Path
 $manifest = Get-Content "$root\assets\projects\manifest.json" -Raw -Encoding UTF8 | ConvertFrom-Json
 
 $projects = @(
-  @{ slug='kimdong';   title='Kim Đồng Bookstore'; cat='Mobile App'; anchor='apps';    color='#E8485E'; client='Nhà sách Kim Đồng'; kind='Thiết kế lại ứng dụng';
+  @{ slug='kimdong';   title='Kim Đồng Bookstore'; cat='Mobile App/Game'; anchor='apps';    color='#E8485E'; client='Nhà sách Kim Đồng'; kind='Thiết kế lại ứng dụng';
      desc='Thiết kế lại giao diện ứng dụng nhà sách Kim Đồng. Dự án cải thiện điều hướng, cá nhân hóa gợi ý và hiện đại hóa thiết kế, hướng tới trải nghiệm mua sắm liền mạch, hấp dẫn cho cả phụ huynh và các bạn đọc nhỏ tuổi, đúng với sứ mệnh gieo yêu thích đọc sách của Kim Đồng.'; tags=@('UX/UI','User flow','Mobile App') },
-  @{ slug='heartwise'; title='HeartWise'; cat='Mobile App'; anchor='apps'; color='#4CC76A'; client='Dự án UI/UX'; kind='Ứng dụng xây dựng thói quen';
+  @{ slug='heartwise'; title='HeartWise'; cat='Mobile App/Game'; anchor='apps'; color='#4CC76A'; client='Dự án UI/UX'; kind='Ứng dụng xây dựng thói quen';
      desc='Ứng dụng xây dựng thói quen ăn uống và vận động để phòng ngừa bệnh tim. HeartWise giúp bạn tạo lối sống lành mạnh mới bằng cách quản lý thói quen hằng ngày, theo dõi tiến độ và giữ động lực mỗi ngày qua các tương tác mang tính trò chơi.'; tags=@('UX/UI','Gamification','Mobile App') },
   @{ slug='vime';      title='VIME x TechPro'; cat='Web App'; anchor='systems'; color='#8B7CFF'; client='TechPro'; kind='Hệ thống quản lý phòng họp';
      desc='Nền tảng quản lý phòng họp và lịch họp cho doanh nghiệp do TechPro phát triển. VIME cung cấp giải pháp toàn diện để tối ưu việc đặt phòng, lên lịch họp và theo dõi hiệu quả sử dụng không gian làm việc, với giao diện hiện đại, thân thiện, dễ dùng.'; tags=@('Web App','Dashboard','Lịch họp') },
